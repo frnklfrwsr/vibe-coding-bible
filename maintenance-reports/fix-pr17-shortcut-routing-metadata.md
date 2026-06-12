@@ -41,7 +41,7 @@ Address unresolved Codex Review feedback from PR #17 and verify related PR #1 an
 
 ## Codex Review Status
 
-Pending new PR creation and Codex Review inspection.
+PR #18 first automated Codex Review left one actionable comment on the Chunk 41 validator count check. The branch now removes the live-register-to-historical-snapshot comparison for Chunk 41 while preserving live register validation and historical package snapshots separately. Follow-up Codex Review is pending after the fix commit.
 
 ## Follow-Up
 

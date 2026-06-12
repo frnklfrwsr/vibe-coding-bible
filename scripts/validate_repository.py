@@ -8643,14 +8643,6 @@ def validate_chunk_41_finalization_readiness_audit(manifest: dict[str, Any], err
         "active_pricing_snapshots": int(pricing_counts.get("active_snapshot", 0)),
         "deferred_pricing_snapshots": int(pricing_counts.get("deferred", 0)),
     }
-    required_values = {
-        **FINAL_RELEASE_1_HISTORICAL_REGISTER_SNAPSHOT,
-        "planned_tool_categories": 14,
-    }
-    for key, required in required_values.items():
-        if expected_counts.get(key) != required:
-            errors.append(f"Chunk 41 register count mismatch for {key}: {expected_counts.get(key)!r} != {required}")
-
     readiness = manifest.get("finalization_readiness_audit", {}) if isinstance(manifest.get("finalization_readiness_audit"), dict) else {}
     if readiness.get("status") != "audit_complete_waiting_for_editor_review":
         errors.append("manifest.finalization_readiness_audit.status must be audit_complete_waiting_for_editor_review")
