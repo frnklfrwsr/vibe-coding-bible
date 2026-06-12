@@ -107,6 +107,16 @@ IGNORED_INVENTORY_PARTS = {".git", "__pycache__"}
 FINAL_RELEASE_1_HISTORICAL_INVENTORY_SHA256 = "f60357a9381e09cd8292e68260f346068fb3f559530c201e02594a53d28e64a4"
 FINAL_RELEASE_1_HISTORICAL_CONTENT_SHA256 = "445869cfcf787dd2cbab04e2d55ab912d1253ae436f667d010fcfc66d65092ae"
 FINAL_RELEASE_1_HISTORICAL_SOURCE_FILE_COUNT = "333"
+FINAL_RELEASE_1_HISTORICAL_SOURCE_FILE_COUNT_INT = int(FINAL_RELEASE_1_HISTORICAL_SOURCE_FILE_COUNT)
+FINAL_RELEASE_1_HISTORICAL_REGISTER_SNAPSHOT = {
+    "active_tool_cards": 52,
+    "deferred_planned_tool_ids": 23,
+    "active_shortcut_cards": 50,
+    "planned_shortcut_cards": 48,
+    "candidate_field_practices": 9,
+    "active_pricing_snapshots": 1,
+    "deferred_pricing_snapshots": 4,
+}
 
 REQUIRED_TOPIC_HEADINGS = [
     "## 1. For the Human: Plain-Language Concept",
@@ -261,6 +271,16 @@ def validate_nested_manifest_inventory(manifest: dict[str, Any], actual: list[st
                 "manifest.source_artifacts.source_files_match_manifest is true but nested source_files is stale"
             )
 
+    tree_path = ROOT / "TREE.txt"
+    if tree_path.exists():
+        tree_lines = sorted(line.strip() for line in read(tree_path).splitlines() if line.strip())
+        if tree_lines != actual:
+            errors.append(
+                "TREE.txt does not match actual live repository inventory: "
+                f"tree={len(tree_lines)} actual={len(actual)} "
+                f"missing={sorted(set(actual) - set(tree_lines))} extra={sorted(set(tree_lines) - set(actual))}"
+            )
+
     expected_buckets = {
         "report_files": sorted(p for p in actual if re.fullmatch(r"CHUNK_\d+_REPORT\.md", p)),
         "chapter_files": sorted(p for p in actual if p.startswith("chapters/") and p.endswith(".md") and not p.endswith(".gitkeep")),
@@ -299,7 +319,7 @@ def validate_nested_manifest_inventory(manifest: dict[str, Any], actual: list[st
 
 
 def validate_manifest_package_counts(manifest: dict[str, Any], actual: list[str], listed: list[str], errors: list[str]) -> None:
-    """Reject stale package-count metadata after a chunk adds files."""
+    """Keep live source-tree counts separate from historical package counts."""
     expected = len(actual)
     package = manifest.get("package", {}) if isinstance(manifest.get("package"), dict) else {}
     package_count_keys = (
@@ -311,13 +331,35 @@ def validate_manifest_package_counts(manifest: dict[str, Any], actual: list[str]
         "all_tracked_file_count",
         "manifest_source_file_count",
     )
+    package_is_historical_final_release = package.get("inventory_basis") == "historical_final_release_1_package"
     for key in package_count_keys:
-        if key in package and int(package.get(key, -1)) != expected:
-            errors.append(f"manifest.package.{key} does not match actual package inventory: {package.get(key)!r} != {expected}")
-        if key in package and int(package.get(key, -1)) != len(listed):
+        if key not in package:
+            continue
+        if package_is_historical_final_release:
+            if int(package.get(key, -1)) != FINAL_RELEASE_1_HISTORICAL_SOURCE_FILE_COUNT_INT:
+                errors.append(
+                    f"manifest.package.{key} must preserve historical Final Release 1 inventory count: "
+                    f"{package.get(key)!r} != {FINAL_RELEASE_1_HISTORICAL_SOURCE_FILE_COUNT_INT}"
+                )
+        else:
+            if int(package.get(key, -1)) != expected:
+                errors.append(f"manifest.package.{key} does not match actual package inventory: {package.get(key)!r} != {expected}")
+            if int(package.get(key, -1)) != len(listed):
+                errors.append(
+                    f"manifest.package.{key} does not match manifest.source_files length: "
+                    f"{package.get(key)!r} != {len(listed)}"
+                )
+
+    live_inventory = manifest.get("live_repository_inventory", {}) if isinstance(manifest.get("live_repository_inventory"), dict) else {}
+    if package_is_historical_final_release and not live_inventory:
+        errors.append("manifest.live_repository_inventory is required when manifest.package preserves a historical package inventory")
+    for key in package_count_keys:
+        if key in live_inventory and int(live_inventory.get(key, -1)) != expected:
+            errors.append(f"manifest.live_repository_inventory.{key} does not match actual live inventory: {live_inventory.get(key)!r} != {expected}")
+        if key in live_inventory and int(live_inventory.get(key, -1)) != len(listed):
             errors.append(
-                f"manifest.package.{key} does not match manifest.source_files length: "
-                f"{package.get(key)!r} != {len(listed)}"
+                f"manifest.live_repository_inventory.{key} does not match manifest.source_files length: "
+                f"{live_inventory.get(key)!r} != {len(listed)}"
             )
 
     for key in ("source_file_count", "source_files_count", "actual_package_inventory_count"):
@@ -351,6 +393,17 @@ def validate_manifest_package_counts(manifest: dict[str, Any], actual: list[str]
     for key in ("actual_package_inventory_count", "source_file_count", "source_files_count"):
         if key in artifact_hygiene and int(artifact_hygiene.get(key, -1)) != expected:
             errors.append(f"manifest.artifact_hygiene.{key} does not match actual package inventory: {artifact_hygiene.get(key)!r} != {expected}")
+    hygiene_live = artifact_hygiene.get("live_repository_inventory", {}) if isinstance(artifact_hygiene.get("live_repository_inventory"), dict) else {}
+    for key in package_count_keys:
+        if key in hygiene_live and int(hygiene_live.get(key, -1)) != expected:
+            errors.append(f"manifest.artifact_hygiene.live_repository_inventory.{key} does not match actual live inventory: {hygiene_live.get(key)!r} != {expected}")
+    hygiene_historical = artifact_hygiene.get("historical_final_release_package", {}) if isinstance(artifact_hygiene.get("historical_final_release_package"), dict) else {}
+    for key in package_count_keys:
+        if key in hygiene_historical and int(hygiene_historical.get(key, -1)) != FINAL_RELEASE_1_HISTORICAL_SOURCE_FILE_COUNT_INT:
+            errors.append(
+                f"manifest.artifact_hygiene.historical_final_release_package.{key} must preserve historical Final Release 1 inventory count: "
+                f"{hygiene_historical.get(key)!r} != {FINAL_RELEASE_1_HISTORICAL_SOURCE_FILE_COUNT_INT}"
+            )
 
     if len(listed) != expected:
         errors.append(f"manifest.source_files length does not match actual package inventory: {len(listed)} != {expected}")
@@ -8590,20 +8643,6 @@ def validate_chunk_41_finalization_readiness_audit(manifest: dict[str, Any], err
         "active_pricing_snapshots": int(pricing_counts.get("active_snapshot", 0)),
         "deferred_pricing_snapshots": int(pricing_counts.get("deferred", 0)),
     }
-    required_values = {
-        "active_tool_cards": 52,
-        "deferred_planned_tool_ids": 23,
-        "planned_tool_categories": 14,
-        "active_shortcut_cards": 50,
-        "planned_shortcut_cards": 48,
-        "candidate_field_practices": 9,
-        "active_pricing_snapshots": 1,
-        "deferred_pricing_snapshots": 4,
-    }
-    for key, required in required_values.items():
-        if expected_counts.get(key) != required:
-            errors.append(f"Chunk 41 register count mismatch for {key}: {expected_counts.get(key)!r} != {required}")
-
     readiness = manifest.get("finalization_readiness_audit", {}) if isinstance(manifest.get("finalization_readiness_audit"), dict) else {}
     if readiness.get("status") != "audit_complete_waiting_for_editor_review":
         errors.append("manifest.finalization_readiness_audit.status must be audit_complete_waiting_for_editor_review")
@@ -8618,7 +8657,16 @@ def validate_chunk_41_finalization_readiness_audit(manifest: dict[str, Any], err
     readme = read(ROOT / "README.md")
     if "## Finalization Readiness Audit" not in readme:
         errors.append("README.md missing Finalization Readiness Audit section")
-    for term in ["52 active tool cards", "23 deferred/planned ecosystem IDs", "50 active shortcut cards", "48 planned shortcut rows", "9 active field-practice", "1 active pricing snapshot", "4 deferred pricing snapshot", "Release-candidate gap list"]:
+    for term in [
+        "52 active tool cards",
+        "23 deferred/planned ecosystem IDs",
+        f"{FINAL_RELEASE_1_HISTORICAL_REGISTER_SNAPSHOT['active_shortcut_cards']} active shortcut cards",
+        f"{FINAL_RELEASE_1_HISTORICAL_REGISTER_SNAPSHOT['planned_shortcut_cards']} planned shortcut rows",
+        "9 active field-practice",
+        "1 active pricing snapshot",
+        "4 deferred pricing snapshot",
+        "Release-candidate gap list",
+    ]:
         if term not in readme:
             errors.append(f"README.md Finalization Readiness Audit missing term: {term}")
 
@@ -8634,7 +8682,7 @@ def validate_chunk_41_finalization_readiness_audit(manifest: dict[str, Any], err
 
     for rel, term in [
         ("TOOL_REGISTER.md", "52 active authored tool cards"),
-        ("SHORTCUT_REGISTER.md", "50 active shortcut rows"),
+        ("SHORTCUT_REGISTER.md", f"{FINAL_RELEASE_1_HISTORICAL_REGISTER_SNAPSHOT['active_shortcut_cards']} active shortcut rows"),
         ("FIELD_PRACTICES.md", "All 9 active field-practice retrieval cards remain `candidate`"),
         ("PRICING_SNAPSHOT_REGISTER.md", "1 active pricing snapshot"),
     ]:
@@ -8775,19 +8823,7 @@ def validate_chunk_42_release_candidate_disposition_cleanup(manifest: dict[str, 
         "active_pricing_snapshots": int(pricing_counts.get("active_snapshot", 0)),
         "deferred_pricing_snapshots": int(pricing_counts.get("deferred", 0)),
     }
-    expected_counts = {
-        "active_tool_cards": 52,
-        "deferred_planned_tool_ids": 23,
-        "active_shortcut_cards": 50,
-        "planned_shortcut_cards": 48,
-        "candidate_field_practices": 9,
-        "active_pricing_snapshots": 1,
-        "deferred_pricing_snapshots": 4,
-    }
-    for key, expected in expected_counts.items():
-        if observed_counts.get(key) != expected:
-            errors.append(f"Chunk 42 register count mismatch for {key}: {observed_counts.get(key)!r} != {expected}")
-
+    expected_counts = FINAL_RELEASE_1_HISTORICAL_REGISTER_SNAPSHOT
     disposition = manifest.get("release_candidate_scope_disposition_cleanup", {}) if isinstance(manifest.get("release_candidate_scope_disposition_cleanup"), dict) else {}
     if disposition.get("status") != "disposition_complete_waiting_for_editor_review":
         errors.append("manifest.release_candidate_scope_disposition_cleanup.status must be disposition_complete_waiting_for_editor_review")
@@ -8836,7 +8872,10 @@ def validate_chunk_42_release_candidate_disposition_cleanup(manifest: dict[str, 
         "Release candidate allowed next?",
         "Yes, after editor approval",
         "52 active tool cards and 23 deferred/planned ecosystem IDs",
-        "50 active shortcut cards and 48 planned shortcut rows",
+        (
+            f"{FINAL_RELEASE_1_HISTORICAL_REGISTER_SNAPSHOT['active_shortcut_cards']} active shortcut cards "
+            f"and {FINAL_RELEASE_1_HISTORICAL_REGISTER_SNAPSHOT['planned_shortcut_cards']} planned shortcut rows"
+        ),
         "9 active field-practice retrieval cards",
         "1 active pricing snapshot and 4 deferred pricing snapshot categories",
         "Changelog chronology",
@@ -8877,7 +8916,13 @@ def validate_chunk_42_release_candidate_disposition_cleanup(manifest: dict[str, 
     for rel, term in [
         ("TOOL_REGISTER.md", "## Chunk 42 Release-Candidate Disposition Note"),
         ("TOOL_REGISTER.md", "52 active authored tool cards and 23 deferred/planned concrete ecosystem IDs"),
-        ("SHORTCUT_REGISTER.md", "50 active shortcut rows and 48 planned shortcut rows"),
+        (
+            "SHORTCUT_REGISTER.md",
+            (
+                f"{FINAL_RELEASE_1_HISTORICAL_REGISTER_SNAPSHOT['active_shortcut_cards']} active shortcut rows "
+                f"and {FINAL_RELEASE_1_HISTORICAL_REGISTER_SNAPSHOT['planned_shortcut_cards']} planned shortcut rows"
+            ),
+        ),
         ("FIELD_PRACTICES.md", "all 9 active field-practice retrieval cards remain `candidate`"),
         ("PRICING_SNAPSHOT_REGISTER.md", "non-OpenAI pricing categories remain deferred documented limitations"),
         ("SOURCE_REGISTER.md", "## Chunk 42 Source Records"),
@@ -9159,15 +9204,7 @@ def validate_chunk_43_release_candidate_packaging(manifest: dict[str, Any], erro
     shortcut_counts = _register_status_counts(ROOT / "SHORTCUT_REGISTER.md", "vcb.shortcut.")
     field_counts = _register_status_counts(ROOT / "FIELD_PRACTICES.md", "vcb.field.")
     pricing_counts = _pricing_snapshot_status_counts()
-    expected_counts = {
-        "active_tool_cards": 52,
-        "deferred_planned_tool_ids": 23,
-        "active_shortcut_cards": 50,
-        "planned_shortcut_cards": 48,
-        "candidate_field_practices": 9,
-        "active_pricing_snapshots": 1,
-        "deferred_pricing_snapshots": 4,
-    }
+    expected_counts = FINAL_RELEASE_1_HISTORICAL_REGISTER_SNAPSHOT
     observed_counts = {
         "active_tool_cards": int(tool_counts.get("active", 0)),
         "deferred_planned_tool_ids": int(tool_counts.get("deferred_planned", 0)),
@@ -9178,8 +9215,6 @@ def validate_chunk_43_release_candidate_packaging(manifest: dict[str, Any], erro
         "deferred_pricing_snapshots": int(pricing_counts.get("deferred", 0)),
     }
     for key, expected in expected_counts.items():
-        if observed_counts.get(key) != expected:
-            errors.append(f"Chunk 43 register count mismatch for {key}: {observed_counts.get(key)} != {expected}")
         if rc.get("register_snapshot", {}).get(key) != expected:
             errors.append(f"manifest.release_candidate_packaging.register_snapshot.{key} mismatch: {rc.get('register_snapshot', {}).get(key)!r} != {expected}")
 
@@ -9401,15 +9436,7 @@ def validate_chunk_44_final_release_packaging(manifest: dict[str, Any], errors: 
     shortcut_counts = _register_status_counts(ROOT / "SHORTCUT_REGISTER.md", "vcb.shortcut.")
     field_counts = _register_status_counts(ROOT / "FIELD_PRACTICES.md", "vcb.field.")
     pricing_counts = _pricing_snapshot_status_counts()
-    expected_counts = {
-        "active_tool_cards": 52,
-        "deferred_planned_tool_ids": 23,
-        "active_shortcut_cards": 50,
-        "planned_shortcut_cards": 48,
-        "candidate_field_practices": 9,
-        "active_pricing_snapshots": 1,
-        "deferred_pricing_snapshots": 4,
-    }
+    expected_counts = FINAL_RELEASE_1_HISTORICAL_REGISTER_SNAPSHOT
     observed_counts = {
         "active_tool_cards": int(tool_counts.get("active", 0)),
         "deferred_planned_tool_ids": int(tool_counts.get("deferred_planned", 0)),
@@ -9419,6 +9446,10 @@ def validate_chunk_44_final_release_packaging(manifest: dict[str, Any], errors: 
         "active_pricing_snapshots": int(pricing_counts.get("active_snapshot", 0)),
         "deferred_pricing_snapshots": int(pricing_counts.get("deferred", 0)),
     }
+    live_inventory = manifest.get("live_repository_inventory", {}) if isinstance(manifest.get("live_repository_inventory"), dict) else {}
+    for key, observed in observed_counts.items():
+        if key in live_inventory and live_inventory.get(key) != observed:
+            errors.append(f"manifest.live_repository_inventory.{key} does not match live registers: {live_inventory.get(key)!r} != {observed}")
     # The final-release register snapshot is historical; post-release
     # maintenance may change the live register counts without mutating that
     # frozen release record.
