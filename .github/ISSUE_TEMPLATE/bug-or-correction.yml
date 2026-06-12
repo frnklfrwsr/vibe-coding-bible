@@ -1,0 +1,42 @@
+name: Bug or correction
+description: Report a factual error, unclear guidance, broken link, or incorrect routing.
+title: "[Correction]: "
+labels:
+  - correction
+body:
+  - type: input
+    id: affected
+    attributes:
+      label: Affected topic, card, or file
+      description: Include the topic ID, card ID, or path if known.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem description
+      description: What is wrong, unclear, stale, or misrouted?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected correction
+      description: What should the repository say or route to instead?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Source or evidence
+      description: Add links or source IDs if available.
+  - type: dropdown
+    id: retrieval
+    attributes:
+      label: Does this affect LLM retrieval?
+      options:
+        - "yes"
+        - "no"
+        - "not sure"
+    validations:
+      required: true

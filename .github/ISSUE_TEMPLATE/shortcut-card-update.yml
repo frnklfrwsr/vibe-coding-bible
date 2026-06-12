@@ -1,0 +1,48 @@
+name: Shortcut-card update
+description: Propose a shortcut or risk-managed-practice update.
+title: "[Shortcut]: "
+labels:
+  - shortcut-card
+body:
+  - type: input
+    id: shortcut
+    attributes:
+      label: Shortcut being described
+    validations:
+      required: true
+  - type: textarea
+    id: acceptable
+    attributes:
+      label: When it may be acceptable
+    validations:
+      required: true
+  - type: textarea
+    id: bad_idea
+    attributes:
+      label: When it is a bad idea
+    validations:
+      required: true
+  - type: textarea
+    id: blast_radius
+    attributes:
+      label: Blast radius
+    validations:
+      required: true
+  - type: textarea
+    id: recoverability
+    attributes:
+      label: Recoverability
+    validations:
+      required: true
+  - type: textarea
+    id: guardrails
+    attributes:
+      label: Minimum guardrails
+    validations:
+      required: true
+  - type: textarea
+    id: recovery_plan
+    attributes:
+      label: Recovery plan
+    validations:
+      required: true

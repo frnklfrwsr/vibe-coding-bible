@@ -1,0 +1,57 @@
+name: Field-practice proposal
+description: Propose a user-discovered or community-reported practice.
+title: "[Field practice]: "
+labels:
+  - field-practice
+body:
+  - type: dropdown
+    id: evidence_level
+    attributes:
+      label: Evidence level
+      options:
+        - E0_OFFICIAL_DOCS
+        - E1_MAINTAINER_SYNTHESIS
+        - E2_REPRODUCIBLE_TEST
+        - E3_EXPERT_REPORT
+        - E4_COMMUNITY_REPORT
+        - E5_SPECULATION
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source links
+      description: Add links, citations, or source IDs.
+  - type: textarea
+    id: reproducibility
+    attributes:
+      label: Reproducibility notes
+      description: Describe where and how this practice was observed.
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks
+      description: Include failure modes, safety concerns, and where this can mislead users.
+    validations:
+      required: true
+  - type: input
+    id: project_type
+    attributes:
+      label: Project type where it worked
+  - type: dropdown
+    id: conflicts
+    attributes:
+      label: Conflicts with official guidance?
+      options:
+        - "yes"
+        - "no"
+        - "not sure"
+    validations:
+      required: true
+  - type: textarea
+    id: obsolescence
+    attributes:
+      label: Suggested obsolescence watch trigger
+      description: What change would make this practice stale or unsafe?

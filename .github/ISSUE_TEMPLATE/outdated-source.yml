@@ -1,0 +1,52 @@
+name: Outdated source
+description: Report stale OpenAI, Codex, tool, vendor, pricing, or source claims.
+title: "[Outdated source]: "
+labels:
+  - source-refresh
+body:
+  - type: input
+    id: source_id
+    attributes:
+      label: Source ID
+      description: Include the source ID if known.
+  - type: input
+    id: affected
+    attributes:
+      label: Affected file or topic ID
+    validations:
+      required: true
+  - type: textarea
+    id: old_claim
+    attributes:
+      label: Old claim
+      description: Quote or summarize the stale claim.
+    validations:
+      required: true
+  - type: input
+    id: current_source
+    attributes:
+      label: Current source link
+      description: Link to current official or primary source when possible.
+    validations:
+      required: true
+  - type: dropdown
+    id: volatility
+    attributes:
+      label: Volatility level
+      options:
+        - stable
+        - moderate
+        - volatile
+        - unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: pricing_availability
+    attributes:
+      label: Pricing, tool, or model availability affected?
+      options:
+        - "yes"
+        - "no"
+        - "not sure"
+    validations:
+      required: true
