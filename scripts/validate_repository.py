@@ -102,6 +102,11 @@ except Exception as exc:  # pragma: no cover
 ROOT = Path(__file__).resolve().parents[1]
 BACKTICK_ID_RE = re.compile(r"`([A-Za-z][A-Za-z0-9_]*(?:\.[A-Za-z0-9_.-]+)+)`")
 VCB_INDEX_ID_RE = re.compile(r"`((?:vcb|tool)\.[A-Za-z0-9_.-]+)`")
+IGNORED_INVENTORY_PARTS = {".git", "__pycache__"}
+
+FINAL_RELEASE_1_HISTORICAL_INVENTORY_SHA256 = "f60357a9381e09cd8292e68260f346068fb3f559530c201e02594a53d28e64a4"
+FINAL_RELEASE_1_HISTORICAL_CONTENT_SHA256 = "445869cfcf787dd2cbab04e2d55ab912d1253ae436f667d010fcfc66d65092ae"
+FINAL_RELEASE_1_HISTORICAL_SOURCE_FILE_COUNT = "333"
 
 REQUIRED_TOPIC_HEADINGS = [
     "## 1. For the Human: Plain-Language Concept",
@@ -118,6 +123,25 @@ REQUIRED_TOPIC_HEADINGS = [
 
 def read(path: Path) -> str:
     return path.read_text(encoding="utf-8")
+
+
+def rel_path(path: Path) -> str:
+    """Return a stable repository-relative path for manifest comparisons."""
+    return path.relative_to(ROOT).as_posix()
+
+
+def is_inventory_file(path: Path) -> bool:
+    """True when a filesystem path should be part of the repository inventory."""
+    if not path.is_file():
+        return False
+    rel_parts = path.relative_to(ROOT).parts
+    if any(part in IGNORED_INVENTORY_PARTS for part in rel_parts):
+        return False
+    return path.suffix != ".pyc"
+
+
+def actual_source_paths() -> list[str]:
+    return sorted(rel_path(path) for path in ROOT.rglob("*") if is_inventory_file(path))
 
 
 def parse_frontmatter(path: Path) -> dict[str, Any] | None:
@@ -8915,11 +8939,7 @@ CHUNK_43_REQUIRED_UPDATED_FILES = {
 
 
 def _chunk_43_actual_source_paths() -> list[str]:
-    return sorted(
-        str(p.relative_to(ROOT))
-        for p in ROOT.rglob("*")
-        if p.is_file() and "__pycache__" not in p.parts and p.suffix != ".pyc"
-    )
+    return actual_source_paths()
 
 
 def _chunk_43_manifest_inventory_sha256(paths: list[str]) -> str:
@@ -9296,24 +9316,44 @@ def validate_chunk_44_final_release_packaging(manifest: dict[str, Any], errors: 
             errors.append(f"{integrity_rel} must label the sidecar as a convention, not a submitted internal artifact")
         if "submitted sidecar" in integrity.lower() or "submitted `.sha256` sidecar" in integrity.lower():
             errors.append(f"{integrity_rel} must not claim the external sidecar is embedded or submitted inside the source tree")
-        actual_paths = _chunk_43_actual_source_paths()
-        expected_inventory_hash = _chunk_43_manifest_inventory_sha256(actual_paths)
+        governance = manifest.get("public_repository_governance", {}) if isinstance(manifest.get("public_repository_governance"), dict) else {}
+        compatibility = governance.get("validator_compatibility", {}) if isinstance(governance.get("validator_compatibility"), dict) else {}
+        historical_final_record = compatibility.get("final_release_integrity_records_preserved_as_historical") is True
         observed_inventory_hash = _chunk_43_integrity_table_value(integrity, "manifest_inventory_sha256")
-        if observed_inventory_hash != expected_inventory_hash:
-            errors.append(
-                f"{integrity_rel} manifest_inventory_sha256 mismatch: "
-                f"{observed_inventory_hash!r} != {expected_inventory_hash}"
-            )
-        expected_content_hash = _chunk_43_source_content_manifest_sha256({integrity_rel})
         observed_content_hash = _chunk_43_integrity_table_value(integrity, "source_content_manifest_sha256_excluding_this_file")
-        if observed_content_hash != expected_content_hash:
-            errors.append(
-                f"{integrity_rel} source_content_manifest_sha256_excluding_this_file mismatch: "
-                f"{observed_content_hash!r} != {expected_content_hash}"
-            )
         observed_count = _chunk_43_integrity_table_value(integrity, "source_file_count")
-        if observed_count != str(len(actual_paths)):
-            errors.append(f"{integrity_rel} source_file_count mismatch: {observed_count!r} != {len(actual_paths)}")
+        if historical_final_record:
+            if observed_inventory_hash != FINAL_RELEASE_1_HISTORICAL_INVENTORY_SHA256:
+                errors.append(
+                    f"{integrity_rel} historical manifest_inventory_sha256 changed: "
+                    f"{observed_inventory_hash!r} != {FINAL_RELEASE_1_HISTORICAL_INVENTORY_SHA256}"
+                )
+            if observed_content_hash != FINAL_RELEASE_1_HISTORICAL_CONTENT_SHA256:
+                errors.append(
+                    f"{integrity_rel} historical source_content_manifest_sha256_excluding_this_file changed: "
+                    f"{observed_content_hash!r} != {FINAL_RELEASE_1_HISTORICAL_CONTENT_SHA256}"
+                )
+            if observed_count != FINAL_RELEASE_1_HISTORICAL_SOURCE_FILE_COUNT:
+                errors.append(
+                    f"{integrity_rel} historical source_file_count changed: "
+                    f"{observed_count!r} != {FINAL_RELEASE_1_HISTORICAL_SOURCE_FILE_COUNT}"
+                )
+        else:
+            actual_paths = _chunk_43_actual_source_paths()
+            expected_inventory_hash = _chunk_43_manifest_inventory_sha256(actual_paths)
+            if observed_inventory_hash != expected_inventory_hash:
+                errors.append(
+                    f"{integrity_rel} manifest_inventory_sha256 mismatch: "
+                    f"{observed_inventory_hash!r} != {expected_inventory_hash}"
+                )
+            expected_content_hash = _chunk_43_source_content_manifest_sha256({integrity_rel})
+            if observed_content_hash != expected_content_hash:
+                errors.append(
+                    f"{integrity_rel} source_content_manifest_sha256_excluding_this_file mismatch: "
+                    f"{observed_content_hash!r} != {expected_content_hash}"
+                )
+            if observed_count != str(len(actual_paths)):
+                errors.append(f"{integrity_rel} source_file_count mismatch: {observed_count!r} != {len(actual_paths)}")
 
     tree_lines = set(read(ROOT / "TREE.txt").splitlines()) if (ROOT / "TREE.txt").exists() else set()
     manifest_source_files = set(manifest.get("source_files", []) or [])
@@ -9419,11 +9459,7 @@ def main() -> int:
     errors: list[str] = []
 
     manifest = json.loads(read(ROOT / "manifest.json"))
-    actual = sorted(
-        str(p.relative_to(ROOT))
-        for p in ROOT.rglob("*")
-        if p.is_file() and "__pycache__" not in p.parts and p.suffix != ".pyc"
-    )
+    actual = actual_source_paths()
     listed = manifest_source_paths(manifest)
     if actual != listed:
         missing = sorted(set(actual) - set(listed))

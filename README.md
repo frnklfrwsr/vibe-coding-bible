@@ -53,6 +53,10 @@ The durable thesis:
 | Shortcut layer | `SHORTCUT_REGISTER.md`, `indexes/INDEX_BY_SHORTCUT.md` |
 | Tool layer | `TOOL_REGISTER.md`, `indexes/INDEX_BY_TOOL_CATEGORY.md` |
 
+## Public Repository Support
+
+Licensing and contribution rules are documented in `LICENSE.md`, `LICENSE-CODE.md`, `NOTICE.md`, `CONTRIBUTING.md`, and `SECURITY.md`.
+
 ## Active Chapters
 
 | Chapter | ID | File |

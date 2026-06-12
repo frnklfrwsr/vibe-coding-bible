@@ -1,0 +1,54 @@
+name: Tool-card update
+description: Propose a tool catalog addition or correction.
+title: "[Tool card]: "
+labels:
+  - tool-card
+body:
+  - type: input
+    id: official_source
+    attributes:
+      label: Official vendor source
+      description: Link to official documentation or vendor source.
+    validations:
+      required: true
+  - type: textarea
+    id: setup_cost
+    attributes:
+      label: Setup cost
+    validations:
+      required: true
+  - type: textarea
+    id: maintenance_cost
+    attributes:
+      label: Maintenance cost
+    validations:
+      required: true
+  - type: textarea
+    id: monetary_cost
+    attributes:
+      label: Monetary cost notes
+      description: Include date and source for pricing claims.
+  - type: textarea
+    id: lock_in
+    attributes:
+      label: Lock-in risk
+  - type: textarea
+    id: codex_value
+    attributes:
+      label: Codex integration value
+  - type: textarea
+    id: makes_sense
+    attributes:
+      label: When it does and does not make sense
+    validations:
+      required: true
+  - type: dropdown
+    id: pricing_snapshot
+    attributes:
+      label: Dated pricing snapshot needed?
+      options:
+        - "yes"
+        - "no"
+        - "not sure"
+    validations:
+      required: true
