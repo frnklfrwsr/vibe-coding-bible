@@ -37,7 +37,7 @@ Final-release packaging from Chunk 44 is active.
 
 - This package is **Final Release 1** produced from the approved RC gate using Release Candidate 1 revision 2.
 - Narrative chapters `chapters/00-*.md` through `chapters/46-*.md` are active.
-- Field-practice candidate cards from Chunk 38 remain active retrieval targets, but all nine remain candidate practices.
+- Field-practice cards from Chunk 38 remain active retrieval targets; Issue #7 live source grades are 2 bounded reproduced, 5 candidate, and 2 needs_more_evidence.
 - Chunk 40 active/deferred ecosystem coverage, Chunk 41 finalization audit, Chunk 42 RC disposition cleanup, Chunk 43 approved RC packaging, and Chunk 44 final packaging remain active governance context.
 - Use `README.md` / `## Active Tool Cards` or `TOOL_REGISTER.md` for the canonical active tool-card inventory.
 - `pricing-snapshots/2026-06-09-openai-codex.md` is the active exact OpenAI/Codex pricing snapshot; exact non-OpenAI pricing remains deferred.
@@ -47,15 +47,15 @@ Final-release packaging from Chunk 44 is active.
 - User asks whether a final release package exists or whether the current package is final → retrieve `CHUNK_44_REPORT.md`, `manifest.json`, and `README.md`; state that Final Release 1 has been packaged from the approved RC1 revision 2 baseline with no substantive content expansion.
 - User asks what was packaged or verified for the final release → retrieve `CHUNK_44_REPORT.md` / `## Final-Release Packaging Result`, `## Validation`, and `## Artifact Hygiene`; retrieve `FINAL_RELEASE_1_INTEGRITY.md` for source-tree integrity and sidecar checksum verification mechanics.
 - User asks how the final release relates to the RC → retrieve `CHUNK_43_REPORT.md`, `RELEASE_CANDIDATE_1_INTEGRITY.md`, and `CHUNK_44_REPORT.md`; state that RC1 revision 2 was approved for a packaging-only final-release step.
-- User asks which limitations remain in the final release → retrieve `CHUNK_44_REPORT.md` / `## Documented Final-Release Limitations`; preserve the limitations that exact non-OpenAI pricing is deferred, tool coverage is curated, field practices remain candidate-only, and changelog ordering follows the documented convention.
+- User asks which limitations remain in the final release → retrieve `CHUNK_44_REPORT.md` / `## Documented Final-Release Limitations`; preserve the historical Final Release 1 limitations that exact non-OpenAI pricing is deferred, tool coverage is curated, field practices were candidate-only in that package, and changelog ordering follows the documented convention; retrieve `FIELD_PRACTICES.md` for live post-release grades.
 - User asks whether tool coverage is complete → retrieve `TOOL_REGISTER.md` and `README.md` / `## Active Tool Cards`; treat the catalog as curated, not exhaustive, because 23 ecosystem IDs remain deferred/planned.
-- User asks whether field practices are official, reproduced, promoted, or safe to present as rules → retrieve `FIELD_PRACTICES.md`; all active field-practice retrieval cards remain candidate.
+- User asks whether field practices are official, reproduced, promoted, or safe to present as rules → retrieve `FIELD_PRACTICES.md`; no active field practice is official or promoted, and reproduced statuses are bounded to the audit notes.
 - User asks for exact prices, limits, quotas, or plan packaging → retrieve `PRICING_SNAPSHOT_REGISTER.md`; only the OpenAI/Codex pricing snapshot is active and non-OpenAI pricing categories remain deferred.
 - User asks about changelog order or release-note chronology → retrieve `CHANGELOG.md` / `## Changelog Ordering Convention`; current/recent governance entries appear first while older historical entries may retain authoring/revision order.
 
-## Field Practice Candidate Fast Routing
+## Field Practice Status Fast Routing
 
-- User asks whether to adopt, test, promote, retire, or trust an unofficial Codex/vibe-coding practice → retrieve the smallest matching active candidate field-practice card before broad field-notes chapters; preserve candidate status and E4_COMMUNITY_FIELD_REPORT posture unless a later evidence review changes it: `vcb.field.chatgpt_pm_codex_implementer`, `vcb.field.fresh_agent_review`, `vcb.field.context_reset_between_tasks`, `vcb.field.agents_md_first`, `vcb.field.skeleton_todo_first`, `vcb.field.strict_typecheck_lint_gates`, `vcb.field.greenfield_vs_production_rule`, `vcb.field.lessons_file_loop`, `vcb.field.multi_agent_review_consensus`.
+- User asks whether to adopt, test, promote, retire, or trust an unofficial Codex/vibe-coding practice -> retrieve the smallest matching active field-practice card before broad field-notes chapters; preserve the card status and evidence label exactly. Current live grades: `vcb.field.fresh_agent_review` and `vcb.field.strict_typecheck_lint_gates` are bounded `reproduced`; `vcb.field.chatgpt_pm_codex_implementer` and `vcb.field.multi_agent_review_consensus` are `needs_more_evidence`; the other five remain `candidate`.
 - User asks for PM/planning model plus Codex implementation split → retrieve `vcb.field.chatgpt_pm_codex_implementer` first; use `tool.chatgpt`, `tool.codex`, and `vcb.chapter.when_to_use_other_ais` as companions.
 - User asks for independent or fresh review → retrieve `vcb.field.fresh_agent_review` first; use `vcb.field.multi_agent_review_consensus`, `tool.codex_github_review`, and `vcb.workflow.reviewing_diffs` as companions.
 - User asks about stale context, starting fresh, or context reset between tasks → retrieve `vcb.field.context_reset_between_tasks` first; use `vcb.prompting.context_management` and `vcb.failure.context_pollution` as companions.
@@ -63,17 +63,17 @@ Final-release packaging from Chunk 44 is active.
 - User asks about skeleton/TODO-first, strict checks, or greenfield-versus-production prompting → retrieve `vcb.field.skeleton_todo_first`, `vcb.field.strict_typecheck_lint_gates`, or `vcb.field.greenfield_vs_production_rule` first.
 - User asks about multiple agents agreeing, fresh-agent consensus, or multi-agent review reliability → retrieve `vcb.field.multi_agent_review_consensus` first; use `vcb.shortcut.consensus_as_correctness` and `vcb.shortcut.best_of_n_without_review` as risk companions.
 
-## Active Chunk 38 Field Practice Candidate Cards
+## Active Field Practice Cards After Issue #7
 
-- `vcb.field.chatgpt_pm_codex_implementer` — `topics/field-practices/chatgpt-pm-codex-implementer.md` — active candidate: ChatGPT PM / Codex implementer split.
-- `vcb.field.fresh_agent_review` — `topics/field-practices/fresh-agent-review.md` — active candidate: fresh independent agent/session diff review.
+- `vcb.field.chatgpt_pm_codex_implementer` — `topics/field-practices/chatgpt-pm-codex-implementer.md` — active needs_more_evidence: ChatGPT PM / Codex implementer split remains too broad for bounded local reproduction.
+- `vcb.field.fresh_agent_review` — `topics/field-practices/fresh-agent-review.md` — active reproduced: bounded local reproduction through PR review gate; not promoted as universal proof.
 - `vcb.field.context_reset_between_tasks` — `topics/field-practices/context-reset-between-tasks.md` — active candidate: reset or summarize context between unrelated tasks.
 - `vcb.field.agents_md_first` — `topics/field-practices/agents-md-first.md` — active candidate: minimal AGENTS.md early in durable repos.
 - `vcb.field.skeleton_todo_first` — `topics/field-practices/skeleton-todo-first.md` — active candidate: human skeleton/TODOs before agent implementation.
-- `vcb.field.strict_typecheck_lint_gates` — `topics/field-practices/strict-typecheck-lint-gates.md` — active candidate: typecheck/lint/test gates after agent changes.
+- `vcb.field.strict_typecheck_lint_gates` — `topics/field-practices/strict-typecheck-lint-gates.md` — active reproduced: bounded local reproduction through VCB validator gate; not promoted as universal proof.
 - `vcb.field.greenfield_vs_production_rule` — `topics/field-practices/greenfield-vs-production-rule.md` — active candidate: explicit project phase and compatibility posture.
 - `vcb.field.lessons_file_loop` — `topics/field-practices/lessons-file-loop.md` — active candidate: temporary lessons loop before durable guidance promotion.
-- `vcb.field.multi_agent_review_consensus` — `topics/field-practices/multi-agent-review-consensus.md` — active candidate: multi-agent review with evidence, not consensus-as-proof.
+- `vcb.field.multi_agent_review_consensus` — `topics/field-practices/multi-agent-review-consensus.md` — active needs_more_evidence: multi-agent review must not treat agreement as proof.
 
 
 ## Tool-Catalog Coverage Gap Fast Routing

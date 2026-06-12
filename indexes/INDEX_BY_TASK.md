@@ -456,17 +456,17 @@ review_cadence: quarterly
 - `vcb.constraints.recovery_budget` → active companion
 ## Evaluate or adopt an unofficial Codex practice
 
-- `vcb.field.chatgpt_pm_codex_implementer` → active candidate: ChatGPT PM / Codex implementer split
-- `vcb.field.fresh_agent_review` → active candidate: fresh independent agent/session diff review
+- `vcb.field.chatgpt_pm_codex_implementer` → active needs_more_evidence: ChatGPT PM / Codex implementer split remains too broad for bounded local reproduction
+- `vcb.field.fresh_agent_review` → active reproduced: bounded local reproduction through PR review gate; not promoted as universal proof
 - `vcb.field.context_reset_between_tasks` → active candidate: reset or summarize context between unrelated tasks
 - `vcb.field.agents_md_first` → active candidate: minimal AGENTS.md early in durable repos
 - `vcb.field.skeleton_todo_first` → active candidate: human skeleton/TODOs before agent implementation
-- `vcb.field.strict_typecheck_lint_gates` → active candidate: typecheck/lint/test gates after agent changes
+- `vcb.field.strict_typecheck_lint_gates` → active reproduced: bounded local reproduction through VCB validator gate; not promoted as universal proof
 - `vcb.field.greenfield_vs_production_rule` → active candidate: explicit project phase and compatibility posture
 - `vcb.field.lessons_file_loop` → active candidate: temporary lessons loop before durable guidance promotion
-- `vcb.field.multi_agent_review_consensus` → active candidate: multi-agent review with evidence, not consensus-as-proof
+- `vcb.field.multi_agent_review_consensus` → active needs_more_evidence: multi-agent review must not treat agreement as proof
 - `vcb.chapter.field_notes_unofficial_practices` → active fallback: field-practice policy, evidence labels, and non-promotion rules
-- `FIELD_PRACTICES.md` → register: candidate status, promotion path, and review trigger for each practice
+- `FIELD_PRACTICES.md` → register: Issue #7 status, promotion path, and review trigger for each practice
 - `vcb.chapter.maintaining_updating_bible` → active companion: updating source/register/index posture
 - `vcb.chapter.risk_managed_shortcuts` → active companion: shortcut harm-reduction layer
 

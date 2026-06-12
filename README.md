@@ -396,19 +396,19 @@ This repository is the living source package. Issue #3 promoted eight high-prior
 - `vcb.shortcut.manual_testing_only` - `topics/shortcuts/manual-testing-only.md`
 - `vcb.shortcut.debugging_without_repro` - `topics/shortcuts/debugging-without-repro.md`
 
-## Active Field Practice Candidate Cards
+## Active Field Practice Cards
 
-These cards are active retrieval targets, but their practice status remains candidate. Do not present them as official best practice or as locally reproduced unless a later evidence review changes the status.
+These cards are active retrieval targets. Issue #7 graded their live source status after Final Release 1: 2 reproduced with bounded local evidence, 5 candidate, 2 needs_more_evidence, 0 promoted, 0 deferred, and 0 retired. Do not present any field practice as official best practice.
 
-- `vcb.field.chatgpt_pm_codex_implementer` — `topics/field-practices/chatgpt-pm-codex-implementer.md` — active candidate: ChatGPT PM / Codex implementer split.
-- `vcb.field.fresh_agent_review` — `topics/field-practices/fresh-agent-review.md` — active candidate: fresh independent agent/session diff review.
-- `vcb.field.context_reset_between_tasks` — `topics/field-practices/context-reset-between-tasks.md` — active candidate: reset or summarize context between unrelated tasks.
-- `vcb.field.agents_md_first` — `topics/field-practices/agents-md-first.md` — active candidate: minimal AGENTS.md early in durable repos.
-- `vcb.field.skeleton_todo_first` — `topics/field-practices/skeleton-todo-first.md` — active candidate: human skeleton/TODOs before agent implementation.
-- `vcb.field.strict_typecheck_lint_gates` — `topics/field-practices/strict-typecheck-lint-gates.md` — active candidate: typecheck/lint/test gates after agent changes.
-- `vcb.field.greenfield_vs_production_rule` — `topics/field-practices/greenfield-vs-production-rule.md` — active candidate: explicit project phase and compatibility posture.
-- `vcb.field.lessons_file_loop` — `topics/field-practices/lessons-file-loop.md` — active candidate: temporary lessons loop before durable guidance promotion.
-- `vcb.field.multi_agent_review_consensus` — `topics/field-practices/multi-agent-review-consensus.md` — active candidate: multi-agent review with evidence, not consensus-as-proof.
+- `vcb.field.chatgpt_pm_codex_implementer` - `topics/field-practices/chatgpt-pm-codex-implementer.md` - active needs_more_evidence: ChatGPT PM / Codex implementer split remains too broad for bounded local reproduction.
+- `vcb.field.fresh_agent_review` - `topics/field-practices/fresh-agent-review.md` - active reproduced: bounded local reproduction through PR review gate; not promoted as universal proof.
+- `vcb.field.context_reset_between_tasks` - `topics/field-practices/context-reset-between-tasks.md` - active candidate: reset or summarize context between unrelated tasks.
+- `vcb.field.agents_md_first` - `topics/field-practices/agents-md-first.md` - active candidate: minimal AGENTS.md early in durable repos.
+- `vcb.field.skeleton_todo_first` - `topics/field-practices/skeleton-todo-first.md` - active candidate: human skeleton/TODOs before agent implementation.
+- `vcb.field.strict_typecheck_lint_gates` - `topics/field-practices/strict-typecheck-lint-gates.md` - active reproduced: bounded local reproduction through VCB validator gate; not promoted as universal proof.
+- `vcb.field.greenfield_vs_production_rule` - `topics/field-practices/greenfield-vs-production-rule.md` - active candidate: explicit project phase and compatibility posture.
+- `vcb.field.lessons_file_loop` - `topics/field-practices/lessons-file-loop.md` - active candidate: temporary lessons loop before durable guidance promotion.
+- `vcb.field.multi_agent_review_consensus` - `topics/field-practices/multi-agent-review-consensus.md` - active needs_more_evidence: multi-agent review must not treat agreement as proof.
 
 ## Chunk Gate
 

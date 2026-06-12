@@ -1,8 +1,8 @@
-<!-- VCB:BEGIN_TOPIC id=vcb.field.fresh_agent_review version=0.39.0-draft.chunk38 -->
+<!-- VCB:BEGIN_TOPIC id=vcb.field.fresh_agent_review version=1.0.1-post-release.issue7 -->
 ---
-version: 0.39.0-draft.chunk38
-last_verified: '2026-06-11'
-last_reviewed: '2026-06-11'
+version: 1.0.1-post-release.issue7
+last_verified: '2026-06-12'
+last_reviewed: '2026-06-12'
 audiences:
 - human
 - ai_coach
@@ -11,12 +11,10 @@ source_status:
   official_vendor: false
   community_field_practice: true
   speculative: false
-evidence_level: E4_COMMUNITY_FIELD_REPORT
+evidence_level: E2_REPRODUCED_LOCALLY
 evidence_basis: VCB_SYNTHESIS_STABLE_ENGINEERING_PRACTICE
-source_kind: community_field_report
-evidence_scope: candidate field-practice card; official sources support underlying product
-  behavior or engineering principle, but the specific ritual remains unpromoted until locally
-  reproduced or otherwise strengthened
+source_kind: local_reproduction
+evidence_scope: bounded local reproduction in VCB PR #18 review gate; official sources support review mechanics, but the practice is not promoted as universal guidance
 budget_profiles:
 - plus_constrained
 - pro_high_throughput
@@ -43,10 +41,11 @@ id: vcb.field.fresh_agent_review
 title: Fresh Agent Review
 type: field_practice
 status: active
-field_practice_status: candidate
+field_practice_status: reproduced
+local_reproduction_basis: 'PR #18 Codex Review independently found an actionable validator issue; bounded to GitHub PR review workflow.'
 officially_endorsed: 'false'
 review_cadence: monthly
-next_review_due: '2026-07-11'
+next_review_due: '2026-07-12'
 applies_to:
 - Codex field practice
 - AI-assisted software development
@@ -82,7 +81,7 @@ related_topics:
 # Fresh Agent Review
 
 > Summary:
-> Candidate field practice: Ask a fresh session, agent, or review surface to inspect a diff before commit so it sees the work without the original conversation’s assumptions. This card labels the practice, gives safe trial conditions, and prevents the tactic from being treated as official best practice before evidence supports promotion.
+> Reproduced field practice (bounded): Ask a fresh session, agent, or review surface to inspect a diff before commit so it sees the work without the original conversation’s assumptions. This card labels the practice, gives safe trial conditions, and prevents the tactic from being treated as official best practice before evidence supports promotion.
 
 ## Quick Navigation
 
@@ -105,7 +104,7 @@ Ask a fresh session, agent, or review surface to inspect a diff before commit so
 
 ### Evidence status
 
-This is an authored candidate field-practice card. It is useful enough to evaluate, but it is not official guidance and it has not been promoted. The evidence label is `E4_COMMUNITY_FIELD_REPORT` for the practice ritual itself. Official documentation may support nearby product behavior or engineering principles, but that does not prove this ritual works in your repo.
+This field practice is marked `reproduced` only for the bounded VCB workflow documented in the Issue #7 audit. It is not official guidance and it has not been promoted. The evidence label is `E2_REPRODUCED_LOCALLY` for the local reproduction note; official documentation supports nearby mechanics, not universal adoption of the ritual.
 
 ### Why people try it
 
@@ -268,7 +267,7 @@ Review this card monthly. Retire, narrow, or rewrite it when:
 
 ## Evidence and Sources
 
-Evidence level for the practice ritual: `E4_COMMUNITY_FIELD_REPORT`. It remains a candidate field practice; do not present it as official best practice.
+Evidence level for the practice ritual: `E2_REPRODUCED_LOCALLY` in the bounded VCB audit context. It remains unpromoted; do not present it as official best practice or universal proof.
 
 Source anchors and principle support:
 
@@ -279,7 +278,7 @@ Source anchors and principle support:
 Notes:
 
 - Official sources support product behavior or related engineering principles, not automatic promotion of the field ritual.
-- No local reproduction claim is made in this card.
+- Issue #7 audit: Bounded local reproduction is based on PR #18, where independent Codex Review found an actionable validator issue after the initial branch push.
 - Promotion requires the local evidence rule stated in the field-practice register.
 
 ## Related Topics

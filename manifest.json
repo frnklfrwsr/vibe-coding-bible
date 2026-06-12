@@ -366,7 +366,7 @@
     ]
   },
   "source_artifacts": {
-    "total_files": 376,
+    "total_files": 377,
     "required_chunk_0_files": 19,
     "report_files": [
       "CHUNK_0_REPORT.md",
@@ -877,6 +877,7 @@
       "maintenance-reports/issue-3-shortcut-id-audit.md",
       "maintenance-reports/issue-5-docs-site-design.md",
       "maintenance-reports/issue-6-fresh-llm-retrieval-smoke-test.md",
+      "maintenance-reports/issue-7-field-practice-grading.md",
       "maintenance-reports/source-drift-watcher-phase-1.md",
       "manifest.json",
       "mkdocs.yml",
@@ -1336,6 +1337,7 @@
       "maintenance-reports/issue-3-shortcut-id-audit.md",
       "maintenance-reports/issue-5-docs-site-design.md",
       "maintenance-reports/issue-6-fresh-llm-retrieval-smoke-test.md",
+      "maintenance-reports/issue-7-field-practice-grading.md",
       "maintenance-reports/source-drift-watcher-phase-1.md",
       "manifest.json",
       "mkdocs.yml",
@@ -1634,13 +1636,13 @@
       "mkdocs.yml",
       "requirements-docs.txt"
     ],
-    "actual_package_inventory_count": 376,
-    "source_file_count": 376,
-    "source_files_count": 376,
-    "all_tracked_files_count": 376,
-    "manifest_source_file_count": 376,
-    "all_tracked_file_count": 376,
-    "file_count": 376,
+    "actual_package_inventory_count": 377,
+    "source_file_count": 377,
+    "source_files_count": 377,
+    "all_tracked_files_count": 377,
+    "manifest_source_file_count": 377,
+    "all_tracked_file_count": 377,
+    "file_count": 377,
     "chapter_files_count": 47,
     "topic_files_count": 197,
     "tool_catalog_files": [
@@ -1887,6 +1889,7 @@
     "maintenance-reports/issue-3-shortcut-id-audit.md",
     "maintenance-reports/issue-5-docs-site-design.md",
     "maintenance-reports/issue-6-fresh-llm-retrieval-smoke-test.md",
+    "maintenance-reports/issue-7-field-practice-grading.md",
     "maintenance-reports/source-drift-watcher-phase-1.md",
     "manifest.json",
     "mkdocs.yml",
@@ -2153,9 +2156,9 @@
     "generated_non_canonical_files": [
       "TREE.txt"
     ],
-    "source_file_count": 376,
-    "source_files_count": 376,
-    "actual_package_inventory_count": 376,
+    "source_file_count": 377,
+    "source_files_count": 377,
+    "actual_package_inventory_count": 377,
     "duplicate_zip_entries": 0,
     "pycache_entries": 0,
     "integrity_report": "FINAL_RELEASE_1_INTEGRITY.md",
@@ -2169,21 +2172,33 @@
       "source_tree_status": "living_source_package_after_final_release_1",
       "historical_package_reference": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip",
       "tree_txt": "TREE.txt",
-      "total_files": 376,
-      "file_count": 376,
-      "source_file_count": 376,
-      "source_files_count": 376,
-      "actual_package_inventory_count": 376,
-      "all_tracked_file_count": 376,
-      "manifest_source_file_count": 376,
+      "total_files": 377,
+      "file_count": 377,
+      "source_file_count": 377,
+      "source_files_count": 377,
+      "actual_package_inventory_count": 377,
+      "all_tracked_file_count": 377,
+      "manifest_source_file_count": 377,
       "active_tool_cards": 52,
       "deferred_planned_tool_ids": 23,
       "active_shortcut_cards": 58,
       "planned_shortcut_cards": 40,
-      "candidate_field_practices": 9,
+      "candidate_field_practices": 5,
       "active_pricing_snapshots": 1,
       "deferred_pricing_snapshots": 4,
-      "package_comparison": "live repository inventory may exceed the historical Final Release 1 zip without mutating that package record"
+      "package_comparison": "live repository inventory may exceed the historical Final Release 1 zip without mutating that package record",
+      "active_field_practice_cards": 9,
+      "reproduced_field_practices": 2,
+      "needs_more_evidence_field_practices": 2,
+      "promoted_field_practices": 0,
+      "deferred_field_practices": 0,
+      "retired_field_practices": 0,
+      "field_practice_status_counts": {
+        "candidate": 5,
+        "needs_more_evidence": 2,
+        "reproduced": 2
+      },
+      "field_practice_status_audit": "issue_7_field_practice_grading"
     },
     "historical_final_release_package": {
       "canonical_review_package": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip",
@@ -2452,21 +2467,33 @@
     "source_tree_status": "living_source_package_after_final_release_1",
     "historical_package_reference": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip",
     "tree_txt": "TREE.txt",
-    "total_files": 376,
-    "file_count": 376,
-    "source_file_count": 376,
-    "source_files_count": 376,
-    "actual_package_inventory_count": 376,
-    "all_tracked_file_count": 376,
-    "manifest_source_file_count": 376,
+    "total_files": 377,
+    "file_count": 377,
+    "source_file_count": 377,
+    "source_files_count": 377,
+    "actual_package_inventory_count": 377,
+    "all_tracked_file_count": 377,
+    "manifest_source_file_count": 377,
     "active_tool_cards": 52,
     "deferred_planned_tool_ids": 23,
     "active_shortcut_cards": 58,
     "planned_shortcut_cards": 40,
-    "candidate_field_practices": 9,
+    "candidate_field_practices": 5,
     "active_pricing_snapshots": 1,
     "deferred_pricing_snapshots": 4,
-    "package_comparison": "live repository inventory may exceed the historical Final Release 1 zip without mutating that package record"
+    "package_comparison": "live repository inventory may exceed the historical Final Release 1 zip without mutating that package record",
+    "active_field_practice_cards": 9,
+    "reproduced_field_practices": 2,
+    "needs_more_evidence_field_practices": 2,
+    "promoted_field_practices": 0,
+    "deferred_field_practices": 0,
+    "retired_field_practices": 0,
+    "field_practice_status_counts": {
+      "candidate": 5,
+      "needs_more_evidence": 2,
+      "reproduced": 2
+    },
+    "field_practice_status_audit": "issue_7_field_practice_grading"
   },
   "validation_expectations": {
     "manifest_inventory_matches_actual_files": true,
@@ -2959,7 +2986,7 @@
     "vcb.shortcut.unattended_mutation",
     "vcb.shortcut.always_allow_sensitive_apps"
   ],
-  "source_file_count": 376,
+  "source_file_count": 377,
   "process_setup_shortcut_cards": {
     "vcb.shortcut.skipping_setup": "topics/shortcuts/skipping-setup.md",
     "vcb.shortcut.default_config_forever": "topics/shortcuts/default-config-forever.md",
@@ -2980,7 +3007,7 @@
     "vcb.shortcut.hook_overreach",
     "vcb.shortcut.trusting_external_tool_output"
   ],
-  "source_files_count": 376,
+  "source_files_count": 377,
   "tool_sprawl_skill_shortcut_cards": {
     "vcb.shortcut.skill_overkill": "topics/shortcuts/skill-overkill.md",
     "vcb.shortcut.skill_sprawl": "topics/shortcuts/skill-sprawl.md",
@@ -3237,7 +3264,7 @@
     "topics/tool-catalog/github-copilot.md",
     "topics/tool-catalog/windsurf.md"
   ],
-  "actual_package_inventory_count": 376,
+  "actual_package_inventory_count": 377,
   "browser_app_builder_ui_prototyping_tool_cards": {
     "tool.replit": "topics/tool-catalog/replit.md",
     "tool.lovable": "topics/tool-catalog/lovable.md",
@@ -3618,5 +3645,36 @@
       "final_release_integrity_records_preserved_as_historical": true
     },
     "substantive_vcb_content_changed": false
+  },
+  "field_practice_status_audit": {
+    "issue": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/7",
+    "status": "issue_7_review_complete",
+    "date": "2026-06-12",
+    "active_field_practice_cards": 9,
+    "status_counts": {
+      "candidate": 5,
+      "needs_more_evidence": 2,
+      "reproduced": 2
+    },
+    "reproduced": [
+      "vcb.field.fresh_agent_review",
+      "vcb.field.strict_typecheck_lint_gates"
+    ],
+    "candidate": [
+      "vcb.field.context_reset_between_tasks",
+      "vcb.field.agents_md_first",
+      "vcb.field.skeleton_todo_first",
+      "vcb.field.greenfield_vs_production_rule",
+      "vcb.field.lessons_file_loop"
+    ],
+    "needs_more_evidence": [
+      "vcb.field.chatgpt_pm_codex_implementer",
+      "vcb.field.multi_agent_review_consensus"
+    ],
+    "promoted": [],
+    "deferred": [],
+    "retired": [],
+    "official_best_practice_promotions": 0,
+    "notes": "Issue #7 grades live post-release source cards; historical Final Release 1 candidate-only package records remain unchanged."
   }
 }

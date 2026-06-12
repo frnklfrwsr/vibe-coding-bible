@@ -1,6 +1,6 @@
 # Field Practices
 
-Field-practice cards are active retrieval targets, but their practice status remains candidate unless later evidence review changes it.
+Field-practice cards are active retrieval targets. Issue #7 graded current live status as reproduced, candidate, or needs_more_evidence while keeping every practice non-official and unpromoted.
 
 Canonical sources:
 
@@ -8,4 +8,4 @@ Canonical sources:
 - [topics/field-practices/](https://github.com/frnklfrwsr/vibe-coding-bible/tree/main/topics/field-practices)
 - [indexes/INDEX_FOR_AI_COACHES.md](https://github.com/frnklfrwsr/vibe-coding-bible/blob/main/indexes/INDEX_FOR_AI_COACHES.md)
 
-Do not present candidate field practices as official best practice or as locally reproduced unless the source file says so.
+Do not present field practices as official best practice. Treat reproduced labels as bounded to the source file audit note.

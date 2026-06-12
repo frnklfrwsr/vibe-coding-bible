@@ -52,15 +52,15 @@ review_cadence: quarterly
 
 ## Field practice candidate terms
 
-- `ChatGPT PM / Codex implementer` → `vcb.field.chatgpt_pm_codex_implementer` active candidate; companion: `tool.chatgpt`, `tool.codex`.
-- `fresh agent review` → `vcb.field.fresh_agent_review` active candidate.
+- `ChatGPT PM / Codex implementer` → `vcb.field.chatgpt_pm_codex_implementer` active needs_more_evidence; companion: `tool.chatgpt`, `tool.codex`.
+- `fresh agent review` → `vcb.field.fresh_agent_review` active reproduced.
 - `context reset` → `vcb.field.context_reset_between_tasks` active candidate; companion: `vcb.prompting.context_management`.
 - `AGENTS.md first` → `vcb.field.agents_md_first` active candidate; companion mechanics: `tool.codex_agents_md`.
 - `skeleton/TODO first` → `vcb.field.skeleton_todo_first` active candidate.
-- `strict typecheck/lint gates` → `vcb.field.strict_typecheck_lint_gates` active candidate; companions: `vcb.concepts.typecheck`, `vcb.concepts.lint`.
+- `strict typecheck/lint gates` → `vcb.field.strict_typecheck_lint_gates` active reproduced; companions: `vcb.concepts.typecheck`, `vcb.concepts.lint`.
 - `greenfield vs production rule` → `vcb.field.greenfield_vs_production_rule` active candidate; companion: `vcb.constraints.build_vs_maintenance`.
 - `lessons file loop` → `vcb.field.lessons_file_loop` active candidate.
-- `multi-agent review consensus` → `vcb.field.multi_agent_review_consensus` active candidate; risk companion: `vcb.shortcut.consensus_as_correctness`.
+- `multi-agent review consensus` → `vcb.field.multi_agent_review_consensus` active needs_more_evidence; risk companion: `vcb.shortcut.consensus_as_correctness`.
 
 ## Review, security, and shipping terms
 
