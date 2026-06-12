@@ -25,6 +25,20 @@ The durable thesis:
 
 > Vibe coding works when speed is wrapped in an engineering control loop: intent, context, plan, patch, verification, review, recovery, and durable learning.
 
+## Using VCB With An AI Or Codex
+
+If you want an AI to use VCB as a reference, start at `AI_START_HERE.md`. Do not ask the AI to read the whole repository.
+
+| Need | Start here |
+|---|---|
+| Universal AI entryway | `AI_START_HERE.md` |
+| Human setup and copy-paste prompts | `USE_VCB_WITH_AI.md` |
+| Codex skill | `.agents/skills/vcb-reference/SKILL.md` |
+| Human docs for any AI | `docs/use-with-ai.md` |
+| Human docs for Codex | `docs/use-with-codex.md` |
+
+Default contribution behavior is `suggest`: AIs may suggest sanitized usage insights, corrections, or field observations, but automatic public posting is not the default.
+
 ## Current Chunk
 
 **Chunk ID:** `chunk_44_final_release_packaging`  
@@ -44,6 +58,7 @@ The durable thesis:
 
 | Need | Start here |
 |---|---|
+| AI/LLM usage without whole-repo ingestion | `AI_START_HERE.md`, `USE_VCB_WITH_AI.md` |
 | Machine-readable source map | `manifest.json` |
 | Human overview | `README.md` |
 | LLM routing | `llms.txt` |
