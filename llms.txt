@@ -24,6 +24,13 @@ Canonical review package: one timestamped authoritative zip.
 - `indexes/INDEX_BY_CODEX_SURFACE.md` — route by Codex surface or feature.
 - `indexes/INDEX_FOR_AI_COACHES.md` — route by coaching intervention.
 
+## Public Repository Support Routing
+
+- User asks about licensing, attribution, or notices → retrieve `LICENSE.md`, `LICENSE-CODE.md`, or `NOTICE.md` as narrowly as possible.
+- User asks about contribution rules, security reporting, or contributor behavior → retrieve `CONTRIBUTING.md`, `SECURITY.md`, or `CODE_OF_CONDUCT.md`.
+- User asks about owner review, issue forms, PR template, or the public validation workflow → retrieve `CODEOWNERS`, `.github/PULL_REQUEST_TEMPLATE.md`, the matching `.github/ISSUE_TEMPLATE/*.yml` form, or `.github/workflows/validate.yml`.
+- Treat public-governance files as repository support artifacts, not primary VCB guidance. For substantive Codex or vibe-coding questions, keep topic-card-first retrieval and use the smallest active topic card, register, or index before support files.
+
 ## Current Active Content
 
 Final-release packaging from Chunk 44 is active.
