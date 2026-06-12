@@ -23,7 +23,8 @@ Snapshot file: `pricing-snapshots/2026-06-12-ai-coding-tools.md`
 - Included only active relevant tools already represented in the VCB tool layer.
 - Checked official vendor pricing pages or official vendor docs only.
 - Captured exact prices, credits, tokens, quotas, and plan packaging only in the dated pricing snapshot.
-- Left OpenAI/Codex exact pricing to `vcb.pricing_snapshot.openai_codex`.
+- Left Codex-specific OpenAI/Codex exact pricing to `vcb.pricing_snapshot.openai_codex`.
+- Marked ChatGPT plan pricing as uncaptured; it is not owned by either active snapshot.
 - Did not update stable cost-benefit prose with exact current prices.
 
 ## Tools Included
@@ -43,7 +44,8 @@ Snapshot file: `pricing-snapshots/2026-06-12-ai-coding-tools.md`
 
 | Tool/category | Reason |
 |---|---|
-| OpenAI/Codex / ChatGPT exact pricing | Already covered by `vcb.pricing_snapshot.openai_codex`. |
+| OpenAI/Codex exact pricing | Codex-specific pricing is already covered by `vcb.pricing_snapshot.openai_codex`. |
+| ChatGPT plan pricing | Not captured by either active snapshot; exact plan prices remain uncaptured until a scoped ChatGPT/OpenAI plan-pricing snapshot owns them. |
 | Gemini Code Assist | No active `tool.gemini_code_assist` card was present in `TOOL_REGISTER.md`. |
 | Hosting/deployment pricing | Deferred to `vcb.pricing_snapshot.hosting`. |
 | Database/backend pricing | Deferred to `vcb.pricing_snapshot.databases`. |
@@ -62,7 +64,7 @@ Snapshot file: `pricing-snapshots/2026-06-12-ai-coding-tools.md`
 | `github.copilot.billing_orgs` | https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises | Captured organization/enterprise AI Credit pooling and promotional allowance caveats. |
 | `windsurf.pricing` | https://devin.ai/pricing | Captured Devin Desktop / Windsurf plan prices, team packaging, and quota caveats. |
 | `replit.pricing` | https://replit.com/pricing | Captured Starter/Core/Pro/Enterprise prices and monthly credit amounts. |
-| `lovable.pricing` | https://lovable.dev/pricing | Captured Pro/Business/Enterprise platform-fee model and visible credits. |
+| `lovable.pricing` | https://lovable.dev/pricing | Captured Pro/Business annual-billing prices, Enterprise platform-fee model, and visible credits. |
 | `bolt.pricing` | https://bolt.new/pricing | Captured Free/Pro/Teams/Enterprise prices, token limits, and token-rollover caveats. |
 | `v0.pricing` | https://v0.app/pricing | Captured Free/Team/Business/Enterprise prices, included credits, daily login credits, and visible model token rates. |
 
@@ -78,6 +80,8 @@ Snapshot file: `pricing-snapshots/2026-06-12-ai-coding-tools.md`
 - Region-specific pricing, taxes, app-store billing, localized currencies, procurement terms, custom enterprise contracts, committed-spend discounts, full feature matrices, and exact values hidden behind account state or inaccessible UI tabs.
 - Cursor Pro+/Ultra exact prices were not captured because the static official page did not expose them unambiguously.
 - GitHub Copilot Business/Enterprise exact seat prices were not captured from the opened official sources; organization/enterprise AI Credit allowances were captured from official docs.
+- ChatGPT plan pricing remains uncaptured because `vcb.pricing_snapshot.openai_codex` is Codex-specific.
+- Lovable month-to-month prices were not captured; the official static text checked for Pro and Business was under the Annual billing selector.
 
 ## Files Changed
 

@@ -40,7 +40,7 @@ Final-release packaging from Chunk 44 is active.
 - Field-practice cards from Chunk 38 remain active retrieval targets; Issue #7 live source grades are 2 bounded reproduced, 5 candidate, and 2 needs_more_evidence.
 - Chunk 40 active/deferred ecosystem coverage, Chunk 41 finalization audit, Chunk 42 RC disposition cleanup, Chunk 43 approved RC packaging, and Chunk 44 final packaging remain active governance context.
 - Use `README.md` / `## Active Tool Cards` or `TOOL_REGISTER.md` for the canonical active tool-card inventory.
-- `pricing-snapshots/2026-06-09-openai-codex.md` and `pricing-snapshots/2026-06-12-ai-coding-tools.md` are the active exact pricing snapshots; hosting, database, and observability pricing snapshots remain deferred.
+- `pricing-snapshots/2026-06-09-openai-codex.md` and `pricing-snapshots/2026-06-12-ai-coding-tools.md` are the active exact pricing snapshots for Codex-specific OpenAI/Codex economics and non-OpenAI AI coding/app-builder tools; ChatGPT plan pricing plus hosting, database, and observability pricing remain uncaptured/deferred.
 
 ## Final Release Package Fast Routing
 
@@ -50,7 +50,7 @@ Final-release packaging from Chunk 44 is active.
 - User asks which limitations remain in the final release → retrieve `CHUNK_44_REPORT.md` / `## Documented Final-Release Limitations`; preserve the historical Final Release 1 limitations that exact non-OpenAI pricing was deferred in that package, tool coverage is curated, field practices were candidate-only in that package, and changelog ordering follows the documented convention; retrieve `PRICING_SNAPSHOT_REGISTER.md` for live post-release pricing routes and `FIELD_PRACTICES.md` for live post-release grades.
 - User asks whether tool coverage is complete → retrieve `TOOL_REGISTER.md` and `README.md` / `## Active Tool Cards`; treat the catalog as curated, not exhaustive, because 23 ecosystem IDs remain deferred/planned.
 - User asks whether field practices are official, reproduced, promoted, or safe to present as rules → retrieve `FIELD_PRACTICES.md`; no active field practice is official or promoted, and reproduced statuses are bounded to the audit notes.
-- User asks for exact prices, limits, quotas, or plan packaging → retrieve `PRICING_SNAPSHOT_REGISTER.md`; OpenAI/Codex and AI-coding-tools pricing snapshots are active, while hosting, database, and observability pricing categories remain deferred.
+- User asks for exact prices, limits, quotas, or plan packaging → retrieve `PRICING_SNAPSHOT_REGISTER.md`; Codex-specific OpenAI/Codex and non-OpenAI AI-coding-tools pricing snapshots are active, while ChatGPT plan pricing plus hosting, database, and observability pricing categories remain uncaptured/deferred.
 - User asks about changelog order or release-note chronology → retrieve `CHANGELOG.md` / `## Changelog Ordering Convention`; current/recent governance entries appear first while older historical entries may retain authoring/revision order.
 
 ## Field Practice Status Fast Routing
@@ -358,7 +358,7 @@ Final-release packaging from Chunk 44 is active.
 - User asks about vague prompts, skipped planning, one big prompt, accepting diffs without review, ignoring lint/typecheck, coding on main, manual-only testing, or debugging without reproduction → retrieve the matching active Issue #3 shortcut-audit card.
 - User asks about setup/config/process shortcuts, AGENTS.md misuse, unofficial tools, hook overreach, or trusting external tool output → retrieve the matching Chunk 22 `vcb.shortcut.*` card.
 - User asks about premature skills, too many skills, too many tools, whether MCP is needed, brittle hooks, adding tools instead of shipping, process overhead for tiny projects, team workflow without a team, or copied playbooks → retrieve the matching active Chunk 23 `vcb.shortcut.*` card before falling back to Chapter 38 or `SHORTCUT_REGISTER.md`.
-- User asks for exact current prices/limits → retrieve `vcb.pricing_snapshot.openai_codex` for OpenAI/Codex pricing or `vcb.pricing_snapshot.ai_coding_tools` for active non-OpenAI AI coding/app-builder tools, then verify current official vendor sources.
+- User asks for exact current prices/limits → retrieve `vcb.pricing_snapshot.openai_codex` for Codex-specific pricing or `vcb.pricing_snapshot.ai_coding_tools` for active non-OpenAI AI coding/app-builder tools, then verify current official vendor sources. If the user asks for ChatGPT plan prices, state that exact ChatGPT plan pricing is not captured in an active snapshot and check current official ChatGPT pricing directly.
 - User asks about setup, default Codex config, AGENTS.md, hooks, unofficial tools, or external tool output → retrieve the matching `vcb.shortcut.*` process/setup shortcut card from Chunk 22 before falling back to Chapter 18, Chapter 19, Chapter 21, Chapter 22, or `SHORTCUT_REGISTER.md`.
 
 - User asks about many AIs, multiple models, parallel agents, best-of-N answers, AI consensus, cherry-picking AI answers, trusting estimates before inspection, model biases, model routing guesswork, or subagent swarms → retrieve the matching active Chunk 24 `vcb.shortcut.*` card before falling back to Chapter 44, Chapter 46, or `SHORTCUT_REGISTER.md`.

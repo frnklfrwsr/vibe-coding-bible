@@ -41,7 +41,7 @@ Chunk 12 captured the first exact OpenAI/Codex pricing snapshot. Issue #4 adds a
 
 ## Issue #4 Post-Release Pricing Slice Note
 
-This live repository now has 2 active pricing snapshots: `vcb.pricing_snapshot.openai_codex` and `vcb.pricing_snapshot.ai_coding_tools`. This does not mutate the historical Final Release 1 package record, where non-OpenAI exact pricing was deferred.
+This live repository now has 2 active pricing snapshots: `vcb.pricing_snapshot.openai_codex` and `vcb.pricing_snapshot.ai_coding_tools`. This does not mutate the historical Final Release 1 package record, where non-OpenAI exact pricing was deferred. `vcb.pricing_snapshot.openai_codex` is Codex-specific and does not freeze exact ChatGPT plan pricing; ChatGPT plan prices remain uncaptured until a scoped snapshot owns them.
 
 ## Chunk 42 Release-Candidate Disposition Note
 

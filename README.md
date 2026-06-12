@@ -390,7 +390,7 @@ This repository is the living source package. Issue #4 added the first bounded n
 - `vcb.pricing_snapshot.openai_codex` - `pricing-snapshots/2026-06-09-openai-codex.md`
 - `vcb.pricing_snapshot.ai_coding_tools` - `pricing-snapshots/2026-06-12-ai-coding-tools.md`
 
-Hosting, database, and observability pricing snapshots remain deferred in `PRICING_SNAPSHOT_REGISTER.md`.
+ChatGPT plan pricing is not captured by either active snapshot; `vcb.pricing_snapshot.openai_codex` is Codex-specific. Hosting, database, and observability pricing snapshots remain deferred in `PRICING_SNAPSHOT_REGISTER.md`.
 
 ## Post-Release Shortcut Audit Routes
 

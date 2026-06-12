@@ -42,7 +42,7 @@ This snapshot records official pricing anchors checked on 2026-06-12 for active 
 - Bolt
 - v0
 
-OpenAI/Codex and ChatGPT exact pricing are excluded because `vcb.pricing_snapshot.openai_codex` already owns that scope. Gemini Code Assist is excluded because no active `tool.gemini_code_assist` card is present in `TOOL_REGISTER.md`.
+OpenAI/Codex exact pricing is excluded because `vcb.pricing_snapshot.openai_codex` owns the Codex-specific rate-card and usage scope. ChatGPT plan pricing is not captured by either active snapshot and remains uncaptured until a scoped ChatGPT/OpenAI plan-pricing snapshot is approved. Gemini Code Assist is excluded because no active `tool.gemini_code_assist` card is present in `TOOL_REGISTER.md`.
 
 Hosting, database, observability, auth, payments, email, design, and generic cloud pricing remain out of scope for this Part-of-Issue-#4 slice.
 
@@ -71,7 +71,7 @@ Hosting, database, observability, auth, payments, email, design, and generic clo
 | GitHub Copilot | `github.copilot.pricing`; `github.copilot.models_pricing`; `github.copilot.billing_individuals`; `github.copilot.billing_orgs` | Individual subscriptions plus AI Credits; organization/enterprise credits are pooled | Pro `$10 USD/user/month` with `$15` monthly total credits; Pro+ `$39 USD/user/month` with `$70` monthly total credits; Max `$100 USD/user/month` with `$200` monthly total credits; individual credit allowances: Pro `1,500`, Pro+ `7,000`, Max `20,000`; `1 AI credit = $0.01 USD`; org pooled monthly credits: Business `1,900` per user, Enterprise `3,900` per user; promotional org amounts through 2026-09-01: Business `3,000`, Enterprise `7,000` per user | Copilot Pro/Pro+/Max sign-ups were marked temporarily paused on the official page; Business/Enterprise exact seat prices were not captured from the opened sources; full model-token table not reproduced | 2026-06-12 | 2026-07-12 |
 | Windsurf / Devin Desktop | `windsurf.pricing` | Individual and team subscriptions with quotas; extra usage can be purchased at API pricing | Free `$0`; Pro `$20/month`; Max `$200/month`; Teams `$80/month` for team plan plus `$40/month` per full dev seat; Enterprise `Let's talk`; compare table shows Free/Pro/Max members `1`, Team unlimited flex seats plus paid full users, Enterprise unlimited | Exact quota sizes, API-pricing overage rates, region/tax effects, and enterprise terms not captured | 2026-06-12 | 2026-07-12 |
 | Replit | `replit.pricing` | Browser-dev/app-building subscriptions with monthly credits | Starter Free; Replit Core `$25/month` or `$20/month` billed annually with `$25` monthly credits; Replit Pro `$100/month` or `$95/month` billed annually with `$100` monthly credits; Enterprise Custom | Exact pay-as-you-go effort pricing, tax, enterprise seat terms, and full hosting/runtime add-on cost details not captured | 2026-06-12 | 2026-07-12 |
-| Lovable | `lovable.pricing` | App-builder subscription shared across unlimited users plus credits | Pro `$25/month`, `100 credits/month`, plus `5 daily credits` up to `150/month`; Business `$50/month`, `100 credits/month`; Enterprise platform fee based on company size with volume-based credit pricing | Free-plan exact limits, Cloud + AI usage-based rates, student discount terms, enterprise price, taxes, and custom add-ons not captured | 2026-06-12 | 2026-07-12 |
+| Lovable | `lovable.pricing` | App-builder subscription shared across unlimited users plus credits | Pro `$25/month` with the official page set to Annual billing, `100 credits/month`, plus `5 daily credits` up to `150/month`; Business `$50/month` with the official page set to Annual billing, `100 credits/month`; Enterprise platform fee based on company size with volume-based credit pricing | Month-to-month Lovable prices were not captured; Free-plan exact limits, Cloud + AI usage-based rates, student discount terms, enterprise price, taxes, and custom add-ons not captured | 2026-06-12 | 2026-07-12 |
 | Bolt | `bolt.pricing` | Browser app-builder subscriptions with tokens, hosting, and database packaging | Free `$0`, `300K` token daily limit, `1M` tokens/month; Pro `$25/month` billed monthly, starts at `10M` tokens/month and no daily token limit; Teams `$30/month/member` billed monthly; Enterprise Custom | Annual discount exact values, token top-up prices, enterprise terms, hosting/database add-on limits, and promotional domain details not captured | 2026-06-12 | 2026-07-12 |
 | v0 | `v0.pricing` | UI/app generation plans with included credits plus per-model token rates | Free `$0/month`, `$5` included monthly credits, `7` messages/day; Team `$30/user/month`, `$30` included monthly credits per user plus `$2` free daily credits on login per user; Business `$100/user/month`, `$30` included monthly credits per user plus `$2` daily login credits; Enterprise Custom Pricing; model rates captured: v0 Mini input/cache-write/cache-read/output `$1/$1.25/$0.10/$5` per 1M tokens; v0 Pro `$3/$3.75/$0.30/$15`; v0 Max `$5/$6.25/$0.50/$25`; v0 Max Fast `$10/$12.50/$1/$50` | On-demand credit purchase details, expiration behavior, taxes, Vercel account coupling, enterprise terms, and future model changes not captured | 2026-06-12 | 2026-07-12 |
 
@@ -89,6 +89,8 @@ Hosting, database, observability, auth, payments, email, design, and generic clo
 - Complete feature matrices for every plan.
 - Complete model-rate tables except the v0 rates explicitly listed above and GitHub credit mechanics summarized above.
 - Usage amounts hidden behind account state, UI tabs that did not render unambiguously in static text, or vendor pages that require account-specific configuration.
+- ChatGPT plan pricing. `vcb.pricing_snapshot.openai_codex` is Codex-specific and does not freeze exact ChatGPT plan prices.
+- Lovable month-to-month prices; the official static text checked for Pro and Business was under the Annual billing selector.
 - Hosting, database, observability, auth, payment, email, design, or cloud-platform pricing outside this snapshot's AI-coding/app-builder scope.
 
 ## Plan, Credit, and Quota Caveats
@@ -100,7 +102,7 @@ Hosting, database, observability, auth, payments, email, design, and generic clo
 
 ## Stable Routing Policy
 
-Stable topic cards should route exact AI-coding-tool prices, credits, quotas, and plan packaging to this dated snapshot. They should not duplicate exact current values in durable prose.
+Stable topic cards should route exact non-OpenAI AI-coding-tool prices, credits, quotas, and plan packaging to this dated snapshot. They should not duplicate exact current values in durable prose. ChatGPT plan pricing is not covered by this snapshot and should stay uncaptured until a scoped snapshot owns it.
 
 ## Obsolescence Watch
 
