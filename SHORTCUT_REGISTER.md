@@ -33,23 +33,23 @@ review_cadence: monthly
 | Shortcut ID | Planned file | Best-practice alternative | Prototype risk | Production risk | Recoverability | Minimum guardrail | Status |
 |---|---|---|---|---|---|---|---|
 | `vcb.shortcut.skipping_tests` | `topics/shortcuts/skipping-tests.md` | run relevant tests | low | high | medium | manual exact-flow test + typecheck/build | active |
-| `vcb.shortcut.skipping_plan` | `topics/shortcuts/skipping-plan.md` | plan first for broad/risky work | low | medium/high | high if small | ask for likely files, checks, and rollback | planned |
-| `vcb.shortcut.one_big_prompt` | `topics/shortcuts/one-big-prompt.md` | slice into milestones | medium | high | medium | branch + treat output as prototype | planned |
+| `vcb.shortcut.skipping_plan` | `topics/shortcuts/skipping-plan.md` | plan first for broad/risky work | low | medium/high | high if small | ask for likely files, checks, and rollback | active |
+| `vcb.shortcut.one_big_prompt` | `topics/shortcuts/one-big-prompt.md` | slice into milestones | medium | high | medium | branch + treat output as prototype | active |
 | `vcb.shortcut.context_dumping` | `topics/shortcuts/context-dumping.md` | curated context packet | medium | high | medium | one task packet + assumption list + reset stale thread | active |
-| `vcb.shortcut.vague_prompt` | `topics/shortcuts/vague-prompt.md` | four-part prompt | low | medium/high | medium | add goal + done-when + forbidden areas | planned |
+| `vcb.shortcut.vague_prompt` | `topics/shortcuts/vague-prompt.md` | four-part prompt | low | medium/high | medium | add goal + done-when + forbidden areas | active |
 | `vcb.shortcut.broad_agent_permissions` | `topics/shortcuts/broad-agent-permissions.md` | sandbox + approvals | medium in isolation | severe | low if secrets exposed | disposable VM/container + fake credentials | active |
-| `vcb.shortcut.accepting_diff_without_review` | `topics/shortcuts/accepting-diff-without-review.md` | review diff | medium | high | medium | inspect changed files and risky areas | planned |
+| `vcb.shortcut.accepting_diff_without_review` | `topics/shortcuts/accepting-diff-without-review.md` | review diff | medium | high | medium | inspect changed files and risky areas | active |
 | `vcb.shortcut.accepting_looks_done` | `topics/shortcuts/accepting-looks-done.md` | acceptance criteria + evidence review | medium | high | medium | require changed files, one relevant check, and known gaps | active |
 | `vcb.shortcut.adding_dependencies_fast` | `topics/shortcuts/adding-dependencies-fast.md` | dependency review | low | high | medium | no-new-deps first + inspect package | active |
-| `vcb.shortcut.ignoring_lint_typecheck` | `topics/shortcuts/ignoring-lint-typecheck.md` | fix changed-file errors | medium | high | high if early | separate old failures from new failures | planned |
-| `vcb.shortcut.coding_on_main` | `topics/shortcuts/coding-on-main.md` | branch/worktree | low solo | high shared/prod | medium | commit first + no auto-deploy | planned |
-| `vcb.shortcut.manual_testing_only` | `topics/shortcuts/manual-testing-only.md` | automated checks | low | high | medium | feature flag + rollback | planned |
+| `vcb.shortcut.ignoring_lint_typecheck` | `topics/shortcuts/ignoring-lint-typecheck.md` | fix changed-file errors | medium | high | high if early | separate old failures from new failures | active |
+| `vcb.shortcut.coding_on_main` | `topics/shortcuts/coding-on-main.md` | branch/worktree | low solo | high shared/prod | medium | commit first + no auto-deploy | active |
+| `vcb.shortcut.manual_testing_only` | `topics/shortcuts/manual-testing-only.md` | automated checks | low | high | medium | feature flag + rollback | active |
 | `vcb.shortcut.unofficial_tools` | `topics/shortcuts/unofficial-tools.md` | official surfaces | medium | severe | low if credential leak | disposable environment + revocable tokens | active |
 | `vcb.shortcut.unattended_long_runs` | `topics/shortcuts/unattended-long-runs.md` | bounded milestones | medium | high | medium | isolated worktree + no secrets + final report | active |
 | `vcb.shortcut.skipping_setup` | `topics/shortcuts/skipping-setup.md` | setup inspection + durable project guidance | low | high | medium | inspect setup + one verification command | active |
 | `vcb.shortcut.using_existing_local_setup` | `topics/shortcuts/using-existing-local-setup.md` | setup inspection + reproducible environment notes | low | medium/high | medium | inspect setup, capture commands, and run one verification command | planned |
 | `vcb.shortcut.editing_before_understanding` | `topics/shortcuts/editing-before-understanding.md` | read-only codebase map first | low if tiny/local | high in unknown production repos | medium if committed | read-only map + file citations + smallest first edit | planned |
-| `vcb.shortcut.debugging_without_repro` | `topics/shortcuts/debugging-without-repro.md` | reproduce/trace root cause first | low for obvious stack traces | high for intermittent/stateful bugs | medium | preserve evidence + root-cause explanation + rerun nearest check | planned |
+| `vcb.shortcut.debugging_without_repro` | `topics/shortcuts/debugging-without-repro.md` | reproduce/trace root cause first | low for obvious stack traces | high for intermittent/stateful bugs | medium | preserve evidence + root-cause explanation + rerun nearest check | active |
 | `vcb.shortcut.eyeballing_ui` | `topics/shortcuts/eyeballing-ui.md` | visual acceptance criteria + browser checks | low | high | medium | screenshot/reference + desktop/mobile check + state list | planned |
 | `vcb.shortcut.broad_refactor` | `topics/shortcuts/broad-refactor.md` | small behavior-preserving refactor passes | medium | high | medium if committed | branch + one pass + tests/checks + diff review | active |
 | `vcb.shortcut.framework_churn` | `topics/shortcuts/framework-churn.md` | stay on current stack or run isolated decision spike | medium | severe | low/medium | separate spike + decision memo + rollback plan | planned |
@@ -124,6 +124,14 @@ review_cadence: monthly
 ## Active Shortcut Cards
 
 - `vcb.shortcut.skipping_tests` → active: `topics/shortcuts/skipping-tests.md` — risk-managed shortcut card for accepting changes without the smallest relevant verification
+- `vcb.shortcut.skipping_plan` → active: `topics/shortcuts/skipping-plan.md` — risk-managed shortcut card for skipping a plan before broad or risky work
+- `vcb.shortcut.one_big_prompt` → active: `topics/shortcuts/one-big-prompt.md` — risk-managed shortcut card for oversized prompts and unsliced work
+- `vcb.shortcut.vague_prompt` → active: `topics/shortcuts/vague-prompt.md` — risk-managed shortcut card for underspecified work orders
+- `vcb.shortcut.accepting_diff_without_review` → active: `topics/shortcuts/accepting-diff-without-review.md` — risk-managed shortcut card for accepting changes without changed-file review
+- `vcb.shortcut.ignoring_lint_typecheck` → active: `topics/shortcuts/ignoring-lint-typecheck.md` — risk-managed shortcut card for ignoring static-check failures or missing checks
+- `vcb.shortcut.coding_on_main` → active: `topics/shortcuts/coding-on-main.md` — risk-managed shortcut card for mutating the canonical branch directly
+- `vcb.shortcut.manual_testing_only` → active: `topics/shortcuts/manual-testing-only.md` — risk-managed shortcut card for relying only on one-time manual verification
+- `vcb.shortcut.debugging_without_repro` → active: `topics/shortcuts/debugging-without-repro.md` — risk-managed shortcut card for patching bugs before reproduction evidence exists
 - `vcb.shortcut.accepting_looks_done` → active: `topics/shortcuts/accepting-looks-done.md` — risk-managed shortcut card for accepting polished output without completion evidence
 - `vcb.shortcut.broad_agent_permissions` → active: `topics/shortcuts/broad-agent-permissions.md` — risk-managed shortcut card for broad filesystem/network/tool/account access
 - `vcb.shortcut.unattended_long_runs` → active: `topics/shortcuts/unattended-long-runs.md` — risk-managed shortcut card for long-running work without checkpoints

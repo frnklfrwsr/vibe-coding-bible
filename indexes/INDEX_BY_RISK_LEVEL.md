@@ -36,7 +36,7 @@ review_cadence: quarterly
 - `tool.bolt` → active only when generated code, dependencies, tokens, and publish target are inspected before handoff
 - `vcb.chapter.codex_playbooks` → active fallback
 - `vcb.chapter.first_serious_app` → active fallback
-- `vcb.shortcut.one_big_prompt` → planned
+- `vcb.shortcut.one_big_prompt` → active: acceptable only when output is disposable or sliced before review
 - `vcb.shortcut.eyeballing_ui` → planned
 
 ## Moderate-risk work requiring guardrails
@@ -44,7 +44,7 @@ review_cadence: quarterly
 - `vcb.chapter.debugging_with_reproduction` → active
 - `vcb.chapter.writing_updating_tests` → active
 - `vcb.chapter.reviewing_codex_output` → active
-- `vcb.shortcut.skipping_plan` → planned
+- `vcb.shortcut.skipping_plan` → active: risky work needs files, checks, and rollback before mutation
 - `vcb.shortcut.skipping_setup` → active: local setup shortcuts need setup inspection and one verification command
 - `vcb.shortcut.skipping_agents_md` → active: durable guidance shortcuts need minimal AGENTS.md rules after repeated mistakes
 - `vcb.shortcut.overstuffing_agents_md` → active: over-broad AGENTS.md creates context and instruction risk
@@ -239,6 +239,14 @@ review_cadence: quarterly
 ## High-Risk Shortcut Harm-Reduction Cards
 
 - `vcb.shortcut.skipping_tests` → active: skip-test shortcut; route to smallest relevant verification guardrail
+- `vcb.shortcut.skipping_plan` → active: risky work needs a short plan before mutation
+- `vcb.shortcut.one_big_prompt` → active: broad prompts need slicing before production use
+- `vcb.shortcut.vague_prompt` → active: ambiguous prompts need goal/context/constraints/done-when guardrails
+- `vcb.shortcut.accepting_diff_without_review` → active: generated diffs need changed-file review
+- `vcb.shortcut.ignoring_lint_typecheck` → active: static-check failures need old/new failure classification
+- `vcb.shortcut.coding_on_main` → active: shared or production main branches need isolation and review
+- `vcb.shortcut.manual_testing_only` → active: durable behavior needs repeatable checks where feasible
+- `vcb.shortcut.debugging_without_repro` → active: bug patches need expected/actual reproduction evidence
 - `vcb.shortcut.accepting_looks_done` → active: looks-done shortcut; route to completion-evidence gate
 - `vcb.shortcut.broad_agent_permissions` → active: broad-permission shortcut; route to sandbox/approval and blast-radius controls
 - `vcb.shortcut.unattended_long_runs` → active: unattended-run shortcut; route to milestones, isolation, and evidence reports
