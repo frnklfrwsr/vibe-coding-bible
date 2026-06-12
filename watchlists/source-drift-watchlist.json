@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "description": "Curated official-source watchlist for read-only VCB source drift reporting.",
+  "sources": [
+    {
+      "source_id": "openai.codex.overview",
+      "url": "https://developers.openai.com/codex",
+      "category": "openai_codex_docs",
+      "evidence_level": "E0_OFFICIAL_DOCS",
+      "volatility": "high",
+      "owner_area": "codex_overview",
+      "notes": "Primary Codex product documentation entrypoint; changes may affect surface descriptions and routing assumptions."
+    },
+    {
+      "source_id": "openai.codex.changelog",
+      "url": "https://developers.openai.com/codex/changelog",
+      "category": "openai_codex_docs",
+      "evidence_level": "E0_OFFICIAL_DOCS",
+      "volatility": "high",
+      "owner_area": "codex_change_monitoring",
+      "notes": "Official Codex changelog; changes may indicate new or retired features that need human review."
+    },
+    {
+      "source_id": "openai.codex.feature_maturity",
+      "url": "https://developers.openai.com/codex/feature-maturity",
+      "category": "openai_codex_docs",
+      "evidence_level": "E0_OFFICIAL_DOCS",
+      "volatility": "high",
+      "owner_area": "codex_governance",
+      "notes": "Feature maturity guidance informs volatile-surface and obsolescence-watch language."
+    },
+    {
+      "source_id": "openai.codex.pricing",
+      "url": "https://developers.openai.com/codex/pricing",
+      "category": "openai_codex_docs",
+      "evidence_level": "E0_OFFICIAL_DOCS",
+      "volatility": "high",
+      "owner_area": "pricing_snapshot_watch",
+      "notes": "Official Codex pricing source; Phase 1 reports drift only and does not update pricing snapshots."
+    },
+    {
+      "source_id": "openai.codex.best_practices",
+      "url": "https://developers.openai.com/codex/learn/best-practices",
+      "category": "openai_codex_docs",
+      "evidence_level": "E0_OFFICIAL_DOCS",
+      "volatility": "moderate",
+      "owner_area": "codex_workflows",
+      "notes": "Official best-practice guidance may affect workflow cards after human review."
+    },
+    {
+      "source_id": "openai.codex.noninteractive",
+      "url": "https://developers.openai.com/codex/noninteractive",
+      "category": "openai_codex_docs",
+      "evidence_level": "E0_OFFICIAL_DOCS",
+      "volatility": "high",
+      "owner_area": "ci_noninteractive",
+      "notes": "Non-interactive Codex guidance anchors CI and automation guardrails."
+    },
+    {
+      "source_id": "openai.codex.github_action",
+      "url": "https://developers.openai.com/codex/github-action",
+      "category": "openai_codex_docs",
+      "evidence_level": "E0_OFFICIAL_DOCS",
+      "volatility": "high",
+      "owner_area": "github_action_codex",
+      "notes": "Official Codex GitHub Action guidance may affect CI/action documentation after review."
+    },
+    {
+      "source_id": "openai.codex.agents_md",
+      "url": "https://developers.openai.com/codex/guides/agents-md",
+      "category": "openai_codex_docs",
+      "evidence_level": "E0_OFFICIAL_DOCS",
+      "volatility": "moderate",
+      "owner_area": "agents_md",
+      "notes": "Official AGENTS.md guidance anchors repository-instruction advice."
+    },
+    {
+      "source_id": "openai.codex.skills",
+      "url": "https://developers.openai.com/codex/skills",
+      "category": "openai_codex_docs",
+      "evidence_level": "E0_OFFICIAL_DOCS",
+      "volatility": "high",
+      "owner_area": "codex_skills",
+      "notes": "Official skills documentation anchors reusable-workflow and customization guidance."
+    },
+    {
+      "source_id": "openai.codex.mcp",
+      "url": "https://developers.openai.com/codex/mcp",
+      "category": "openai_codex_docs",
+      "evidence_level": "E0_OFFICIAL_DOCS",
+      "volatility": "high",
+      "owner_area": "codex_mcp",
+      "notes": "Official MCP documentation anchors external-tool trust-boundary guidance."
+    },
+    {
+      "source_id": "github.actions.events",
+      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+      "category": "github_actions_docs",
+      "evidence_level": "E0_OFFICIAL_DOCS",
+      "volatility": "moderate",
+      "owner_area": "github_actions_events",
+      "notes": "Official workflow trigger reference; changes may affect scheduled/manual workflow examples."
+    },
+    {
+      "source_id": "github.actions.github_token",
+      "url": "https://docs.github.com/en/actions/tutorials/authenticate-with-github_token",
+      "category": "github_actions_docs",
+      "evidence_level": "E0_OFFICIAL_DOCS",
+      "volatility": "moderate",
+      "owner_area": "github_actions_auth",
+      "notes": "Official GITHUB_TOKEN authentication guidance anchors least-permission workflow behavior."
+    },
+    {
+      "source_id": "github.actions.workflow_syntax",
+      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax",
+      "category": "github_actions_docs",
+      "evidence_level": "E0_OFFICIAL_DOCS",
+      "volatility": "moderate",
+      "owner_area": "github_actions_permissions",
+      "notes": "Official workflow syntax reference; changes may affect permissions and scheduled workflow syntax."
+    }
+  ]
+}
