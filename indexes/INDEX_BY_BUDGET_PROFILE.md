@@ -99,7 +99,7 @@ review_cadence: quarterly
 
 - `vcb.field.context_reset_between_tasks` → active candidate: cheap context-hygiene trial before spending more turns on stale context
 - `vcb.field.skeleton_todo_first` → active candidate: cheapest way to constrain generated implementation shape
-- `vcb.field.strict_typecheck_lint_gates` → active candidate: use existing checks before adding new process
+- `vcb.field.strict_typecheck_lint_gates` → active reproduced: use existing checks before adding new process
 - `vcb.field.greenfield_vs_production_rule` → active candidate: avoid overbuilding or under-reviewing by stating phase
 - `vcb.chapter.field_notes_unofficial_practices` → active fallback
 - `vcb.chapter.risk_managed_shortcuts` → active fallback
@@ -107,9 +107,9 @@ review_cadence: quarterly
 
 ## High-throughput users evaluating field practices
 
-- `vcb.field.chatgpt_pm_codex_implementer` → active candidate: split planning and implementation only when review owner can reconcile outputs
-- `vcb.field.fresh_agent_review` → active candidate: independent review signal before commit or merge
-- `vcb.field.multi_agent_review_consensus` → active candidate: compare evidence and disagreement; do not treat agreement as proof
+- `vcb.field.chatgpt_pm_codex_implementer` → active needs_more_evidence: split planning and implementation only when review owner can reconcile outputs
+- `vcb.field.fresh_agent_review` → active reproduced: independent review signal before commit or merge
+- `vcb.field.multi_agent_review_consensus` → active needs_more_evidence: compare evidence and disagreement; do not treat agreement as proof
 - `vcb.field.lessons_file_loop` → active candidate: convert repeated corrections into durable guidance only after review
 - `vcb.chapter.field_notes_unofficial_practices` → active fallback
 - `vcb.chapter.risk_managed_shortcuts` → active fallback

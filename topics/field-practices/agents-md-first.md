@@ -1,8 +1,8 @@
-<!-- VCB:BEGIN_TOPIC id=vcb.field.agents_md_first version=0.39.0-draft.chunk38 -->
+<!-- VCB:BEGIN_TOPIC id=vcb.field.agents_md_first version=1.0.1-post-release.issue7 -->
 ---
-version: 0.39.0-draft.chunk38
-last_verified: '2026-06-11'
-last_reviewed: '2026-06-11'
+version: 1.0.1-post-release.issue7
+last_verified: '2026-06-12'
+last_reviewed: '2026-06-12'
 audiences:
 - human
 - ai_coach
@@ -46,7 +46,7 @@ status: active
 field_practice_status: candidate
 officially_endorsed: 'false'
 review_cadence: monthly
-next_review_due: '2026-07-11'
+next_review_due: '2026-07-12'
 applies_to:
 - Codex field practice
 - AI-assisted software development
@@ -280,7 +280,7 @@ Source anchors and principle support:
 Notes:
 
 - Official sources support product behavior or related engineering principles, not automatic promotion of the field ritual.
-- No local reproduction claim is made in this card.
+- Issue #7 audit: Reviewed on 2026-06-12; status remains `candidate` and no local reproduction claim is made.
 - Promotion requires the local evidence rule stated in the field-practice register.
 
 ## Related Topics

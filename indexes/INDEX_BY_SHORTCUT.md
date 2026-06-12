@@ -152,15 +152,15 @@ review_cadence: quarterly
 
 ## Field-practice shortcuts
 
-- `vcb.field.chatgpt_pm_codex_implementer` → active candidate: can become model-routing guesswork if planner output is not reconciled with repo facts
-- `vcb.field.fresh_agent_review` → active candidate: can become review theater if the fresh agent is treated as approval
+- `vcb.field.chatgpt_pm_codex_implementer` → active needs_more_evidence: can become model-routing guesswork if planner output is not reconciled with repo facts
+- `vcb.field.fresh_agent_review` → active reproduced: can become review theater if the fresh agent is treated as approval
 - `vcb.field.context_reset_between_tasks` → active candidate: can become context loss if no handoff packet exists
 - `vcb.field.agents_md_first` → active candidate: can become AGENTS.md overstuffing or stale guidance
 - `vcb.field.skeleton_todo_first` → active candidate: can become fake completeness if TODOs are not verified
-- `vcb.field.strict_typecheck_lint_gates` → active candidate: can become check theater if gates are noisy or scoped wrong
+- `vcb.field.strict_typecheck_lint_gates` → active reproduced: can become check theater if gates are noisy or scoped wrong
 - `vcb.field.greenfield_vs_production_rule` → active candidate: can become wrong-phase shortcut if phase is asserted without evidence
 - `vcb.field.lessons_file_loop` → active candidate: can become permanent stale process if not pruned
-- `vcb.field.multi_agent_review_consensus` → active candidate: can become consensus-as-correctness
+- `vcb.field.multi_agent_review_consensus` → active needs_more_evidence: can become consensus-as-correctness
 - `vcb.chapter.field_notes_unofficial_practices` → active fallback
 - `vcb.shortcut.unofficial_tools` → active companion: unofficial tool adoption requires disposable evaluation and trust-boundary review
 - `vcb.shortcut.trusting_external_tool_output` → active companion: external output requires provenance and verification

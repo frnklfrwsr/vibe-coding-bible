@@ -150,6 +150,7 @@ maintenance-reports/fix-pr17-shortcut-routing-metadata.md
 maintenance-reports/issue-3-shortcut-id-audit.md
 maintenance-reports/issue-5-docs-site-design.md
 maintenance-reports/issue-6-fresh-llm-retrieval-smoke-test.md
+maintenance-reports/issue-7-field-practice-grading.md
 maintenance-reports/source-drift-watcher-phase-1.md
 manifest.json
 mkdocs.yml

@@ -1,8 +1,8 @@
-<!-- VCB:BEGIN_TOPIC id=vcb.field.chatgpt_pm_codex_implementer version=0.39.0-draft.chunk38 -->
+<!-- VCB:BEGIN_TOPIC id=vcb.field.chatgpt_pm_codex_implementer version=1.0.1-post-release.issue7 -->
 ---
-version: 0.39.0-draft.chunk38
-last_verified: '2026-06-11'
-last_reviewed: '2026-06-11'
+version: 1.0.1-post-release.issue7
+last_verified: '2026-06-12'
+last_reviewed: '2026-06-12'
 audiences:
 - human
 - ai_coach
@@ -43,10 +43,11 @@ id: vcb.field.chatgpt_pm_codex_implementer
 title: ChatGPT PM, Codex Implementer
 type: field_practice
 status: active
-field_practice_status: candidate
+field_practice_status: needs_more_evidence
+status_reason: 'Issue #7 audit found the exact ritual too broad or consensus-sensitive for bounded local reproduction.'
 officially_endorsed: 'false'
 review_cadence: monthly
-next_review_due: '2026-07-11'
+next_review_due: '2026-07-12'
 applies_to:
 - Codex field practice
 - AI-assisted software development
@@ -82,7 +83,7 @@ related_topics:
 # ChatGPT PM, Codex Implementer
 
 > Summary:
-> Candidate field practice: Use ChatGPT for product framing, decomposition, edge-case exploration, and written plans, then use Codex for repo-aware implementation and verification. This card labels the practice, gives safe trial conditions, and prevents the tactic from being treated as official best practice before evidence supports promotion.
+> Needs-more-evidence field practice: Use ChatGPT for product framing, decomposition, edge-case exploration, and written plans, then use Codex for repo-aware implementation and verification. This card labels the practice, gives safe trial conditions, and prevents the tactic from being treated as official best practice before evidence supports promotion.
 
 ## Quick Navigation
 
@@ -105,7 +106,7 @@ Use ChatGPT for product framing, decomposition, edge-case exploration, and writt
 
 ### Evidence status
 
-This is an authored candidate field-practice card. It is useful enough to evaluate, but it is not official guidance and it has not been promoted. The evidence label is `E4_COMMUNITY_FIELD_REPORT` for the practice ritual itself. Official documentation may support nearby product behavior or engineering principles, but that does not prove this ritual works in your repo.
+This field practice remains useful enough to evaluate, but Issue #7 marks it `needs_more_evidence` because the exact ritual is too broad or consensus-sensitive for a bounded local reproduction claim. It is not official guidance and it has not been promoted. The evidence label remains `E4_COMMUNITY_FIELD_REPORT` for the practice ritual itself.
 
 ### Why people try it
 
@@ -268,7 +269,7 @@ Review this card monthly. Retire, narrow, or rewrite it when:
 
 ## Evidence and Sources
 
-Evidence level for the practice ritual: `E4_COMMUNITY_FIELD_REPORT`. It remains a candidate field practice; do not present it as official best practice.
+Evidence level for the practice ritual: `E4_COMMUNITY_FIELD_REPORT`. Issue #7 status: `needs_more_evidence`; do not present it as official best practice or locally reproduced.
 
 Source anchors and principle support:
 
@@ -279,7 +280,7 @@ Source anchors and principle support:
 Notes:
 
 - Official sources support product behavior or related engineering principles, not automatic promotion of the field ritual.
-- No local reproduction claim is made in this card.
+- Issue #7 audit: No local reproduction claim is made; stronger evidence would require controlled reproduction or multiple independent reports for the exact ritual.
 - Promotion requires the local evidence rule stated in the field-practice register.
 
 ## Related Topics
