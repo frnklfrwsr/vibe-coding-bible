@@ -33,7 +33,7 @@ review_cadence: quarterly
 - `vcb.concepts.diff` → active
 - `vcb.chapter.reviewing_codex_output` → active
 - `vcb.chapter.failure_modes_codex_work` → active
-- `vcb.shortcut.accepting_diff_without_review` → planned
+- `vcb.shortcut.accepting_diff_without_review` → active: require changed-file review before accepting Codex output
 - `vcb.failure.hallucinated_apis` → active: require contract evidence for plausible claims
 - `vcb.failure.done_claim_without_evidence` → active: require artifact-backed completion evidence
 - `vcb.failure.ci_false_confidence` → active: treat green checks as limited evidence
@@ -68,10 +68,10 @@ review_cadence: quarterly
 - `vcb.workflow.testing` → active: nearest check and no weakened tests
 - `vcb.chapter.reviewing_codex_output` → active
 - `vcb.chapter.security_for_vibe_coders` → active
-- `vcb.shortcut.skipping_plan` → planned
+- `vcb.shortcut.skipping_plan` → active: require a short plan before risky mutation
 - `vcb.shortcut.skipping_tests` → active: shortcut risk: skipped verification and hidden regressions
-- `vcb.shortcut.skipping_pr_review` → planned
-- `vcb.shortcut.skipping_security_review` → planned
+- `vcb.shortcut.skipping_pr_review` → planned future companion; use `vcb.shortcut.accepting_diff_without_review` and `vcb.workflow.github_pr_review` now
+- `vcb.shortcut.skipping_security_review` → planned future companion; use `tool.codex_security`, `vcb.safety.security_review`, and `vcb.safety.production_red_lines` now
 - `vcb.failure.weakened_tests` → active: reject making tests easier to pass
 - `vcb.failure.ci_false_confidence` → active: reject check summaries that do not map to real coverage
 

@@ -58,6 +58,9 @@ review_cadence: quarterly
 - `vcb.prompting.acceptance_criteria` → active: done-when evidence boundary
 - `vcb.failure.context_pollution` → active: stale, irrelevant, or contradictory context control
 - `vcb.failure.done_claim_without_evidence` → active: done claim without artifact evidence
+- `vcb.shortcut.vague_prompt` → active: convert underspecified requests into goal/context/constraints/done-when work orders
+- `vcb.shortcut.skipping_plan` → active: require files, checks, risks, and rollback before risky mutation
+- `vcb.shortcut.one_big_prompt` → active: slice oversized prompts into reviewable milestones
 - `vcb.shortcut.context_dumping` → active: shortcut risk: stale, excessive, or contradictory context
 - `vcb.shortcut.accepting_looks_done` → active: shortcut risk: polished done claims without evidence
 
@@ -103,6 +106,7 @@ review_cadence: quarterly
 - `vcb.workflow.bug_repro` → active: reproduce-root-cause-patch-rerun loop
 - `vcb.workflow.testing` → active: regression and nearest-check guidance
 - `vcb.prompting.acceptance_criteria` → active: expected/actual done boundary
+- `vcb.shortcut.debugging_without_repro` → active: preserve expected/actual evidence before patching
 - `vcb.failure.hallucinated_apis` → active: fake API and invented contract diagnosis
 - `vcb.failure.weakened_tests` → active: test weakening and false fix diagnosis
 - `vcb.failure.done_claim_without_evidence` → active: summary needs task-specific evidence
@@ -119,6 +123,8 @@ review_cadence: quarterly
 - `vcb.failure.weakened_tests` → active: preserve or strengthen test meaning
 - `vcb.failure.ci_false_confidence` → active: green checks are only conditional evidence
 - `vcb.shortcut.skipping_tests` → active: shortcut risk: skipped verification and hidden regressions
+- `vcb.shortcut.manual_testing_only` → active: convert repeated manual checks into repeatable verification where feasible
+- `vcb.shortcut.ignoring_lint_typecheck` → active: separate old static-check failures from failures introduced by changed files
 
 ## Improve frontend UI
 
@@ -172,6 +178,7 @@ review_cadence: quarterly
 
 - `tool.codex_github_review` → active: GitHub PR review tool card; review signal, not merge authority
 - `vcb.shortcut.accepting_looks_done` → active: completion evidence before acceptance
+- `vcb.shortcut.accepting_diff_without_review` → active: changed-file review before accepting generated patches
 - `vcb.shortcut.reviewing_cloud_summary_only` → active: inspect diff/check artifacts, not only summaries
 - `vcb.chapter.reviewing_codex_output` → active
 - `vcb.chapter.github_pr_review_with_codex` → active
@@ -179,6 +186,7 @@ review_cadence: quarterly
 - `vcb.workflow.codex_output_review` → active
 - `vcb.workflow.reviewing_diffs` → active
 - `vcb.workflow.github_pr_review` → active
+- `vcb.shortcut.coding_on_main` → active: branch/worktree isolation before mutating shared or deploying code
 - `vcb.failure.hallucinated_apis` → active: fake API contracts hidden in plausible code
 - `vcb.failure.weakened_tests` → active: tests weakened in the patch
 - `vcb.failure.broad_refactor_drift` → active: broad cleanup drift in review
@@ -889,4 +897,3 @@ review_cadence: quarterly
 
 <!-- VCB:STOP_RETRIEVAL reason="by_task_complete" -->
 <!-- VCB:END_INDEX id=vcb.index.by_task -->
-

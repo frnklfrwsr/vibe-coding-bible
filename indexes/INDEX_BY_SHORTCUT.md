@@ -27,8 +27,8 @@ review_cadence: quarterly
 - `vcb.workflow.testing` → active: control for skipping-tests and manual-testing-only shortcuts
 
 ## Prompting and planning shortcuts
-- `vcb.shortcut.vague_prompt` → planned
-- `vcb.shortcut.skipping_plan` → planned
+- `vcb.shortcut.vague_prompt` → active: shortcut risk: underspecified work orders that make Codex guess goal, context, constraints, or done evidence
+- `vcb.shortcut.skipping_plan` → active: shortcut risk: broad or risky work started before files, checks, and rollback are named
 - `vcb.shortcut.context_dumping` → active: shortcut risk: stale, excessive, or contradictory context
 - `vcb.shortcut.accepting_looks_done` → active: shortcut risk: polished done claims without evidence
 - `vcb.chapter.four_part_prompt` → active
@@ -39,14 +39,14 @@ review_cadence: quarterly
 - `vcb.shortcut.skipping_tests` → active: shortcut risk: skipped verification and hidden regressions
 - `vcb.shortcut.browser_clicking_without_repro` → active: browser/GUI verification requires exact repro steps, expected/actual behavior, and evidence before relying on screenshots
 - `vcb.shortcut.screenshot_only_verification` → planned future companion; active browser/GUI repro route is listed immediately above
-- `vcb.shortcut.manual_testing_only` → planned
-- `vcb.shortcut.accepting_diff_without_review` → planned
+- `vcb.shortcut.manual_testing_only` → active: shortcut risk: one-time manual checks without repeatable verification
+- `vcb.shortcut.accepting_diff_without_review` → active: shortcut risk: accepting changed files without scope, risk, and evidence review
 - `vcb.chapter.writing_updating_tests` → active
 - `vcb.chapter.reviewing_codex_output` → active
 
 ## Git and review shortcuts
-- `vcb.shortcut.coding_on_main` → planned
-- `vcb.shortcut.skipping_pr_review` → planned
+- `vcb.shortcut.coding_on_main` → active: shortcut risk: mutating the canonical branch without branch/worktree isolation
+- `vcb.shortcut.skipping_pr_review` → planned future companion; active review routes are `vcb.shortcut.accepting_diff_without_review` and `vcb.workflow.github_pr_review`
 - `vcb.shortcut.accepting_codex_review_as_approval` → planned
 - `vcb.chapter.git_discipline` → active
 - `vcb.chapter.github_pr_review_with_codex` → active
@@ -74,9 +74,9 @@ review_cadence: quarterly
 - `vcb.shortcut.hook_overreach` → active: keep hooks narrow, objective, and reviewable
 
 ## Feature, debugging, refactor, and dependency shortcuts
-- `vcb.shortcut.one_big_prompt` → planned
-- `vcb.shortcut.editing_before_understanding` → planned
-- `vcb.shortcut.debugging_without_repro` → planned
+- `vcb.shortcut.one_big_prompt` → active: shortcut risk: oversized prompts that produce broad unreviewable diffs
+- `vcb.shortcut.editing_before_understanding` → planned future companion; active first routes are `vcb.workflow.unknown_codebase` and `vcb.shortcut.skipping_setup`
+- `vcb.shortcut.debugging_without_repro` → active: shortcut risk: patching before expected/actual evidence or a failing command/path exists
 - `vcb.shortcut.broad_refactor` → active: shortcut risk: cleanup drifting into behavior change
 - `vcb.shortcut.adding_dependencies_fast` → active: shortcut risk: package bloat and supply-chain drag
 - `vcb.shortcut.framework_churn` → planned
@@ -181,10 +181,10 @@ review_cadence: quarterly
 - `vcb.shortcut.buying_tools_as_progress` → planned
 
 ## Shortcut routes clarified by foundational concept cards
-- `vcb.shortcut.vague_prompt` → planned; related active concept cards: `vcb.concepts.api_basics`, `vcb.concepts.frontend_backend`
+- `vcb.shortcut.vague_prompt` → active: underspecified work-order guardrails; related active concept cards: `vcb.concepts.api_basics`, `vcb.concepts.frontend_backend`
 - `vcb.shortcut.adding_dependencies_fast` → active: shortcut risk: package bloat and supply-chain drag
 - `vcb.shortcut.skipping_tests` → active: shortcut risk: skipped verification and hidden regressions
-- `vcb.shortcut.ignoring_lint_typecheck` → planned; related active concept cards: `vcb.concepts.typecheck`, `vcb.concepts.lint`
+- `vcb.shortcut.ignoring_lint_typecheck` → active: static-check guardrails; related active concept cards: `vcb.concepts.typecheck`, `vcb.concepts.lint`
 - `vcb.shortcut.real_secrets_in_prototype` → active: keep real credentials out of prototypes; related active concept cards: `vcb.concepts.environment_variable`, `vcb.concepts.authentication`
 - `vcb.shortcut.overbroad_ci_permissions` → active: narrow CI permissions; related active concept card: `vcb.concepts.ci`
 

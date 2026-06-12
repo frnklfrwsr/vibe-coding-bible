@@ -33,7 +33,7 @@ review_cadence: quarterly
 - `vcb.concepts.git_branch` → active
 - `vcb.concepts.rollback` → active
 - `vcb.chapter.git_discipline` → active
-- `vcb.shortcut.one_big_prompt` → planned
+- `vcb.shortcut.one_big_prompt` → active: recoverable only when sliced, checkpointed, and reviewed before expansion
 
 ## Medium recoverability
 
@@ -183,6 +183,14 @@ review_cadence: quarterly
 ## Shortcut Recoverability Routes
 
 - `vcb.shortcut.skipping_tests` → active: recoverable before merge when nearest checks are run
+- `vcb.shortcut.skipping_plan` → active: recover by stopping mutation and writing a files/checks/rollback plan
+- `vcb.shortcut.one_big_prompt` → active: recover by splitting the broad diff into staged slices
+- `vcb.shortcut.vague_prompt` → active: recover by rewriting the request as goal/context/constraints/done-when
+- `vcb.shortcut.accepting_diff_without_review` → active: recover by reviewing changed files before merge
+- `vcb.shortcut.ignoring_lint_typecheck` → active: recover by separating old failures from new changed-file failures
+- `vcb.shortcut.coding_on_main` → active: recover by moving work to a branch or worktree before more mutation
+- `vcb.shortcut.manual_testing_only` → active: recover by recording manual evidence and adding one repeatable check when feasible
+- `vcb.shortcut.debugging_without_repro` → active: recover by reconstructing the failure evidence before patching further
 - `vcb.shortcut.accepting_looks_done` → active: recoverable before merge when evidence is reconstructed
 - `vcb.shortcut.broad_agent_permissions` → active: low recoverability if secrets or external state are exposed
 - `vcb.shortcut.unattended_long_runs` → active: recoverable when branch/worktree isolation and checkpoints exist

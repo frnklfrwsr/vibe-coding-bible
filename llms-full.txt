@@ -303,6 +303,14 @@ Final-release packaging from Chunk 44 is active.
 ## Active Shortcut Harm-Reduction Cards
 
 - `vcb.shortcut.skipping_tests` — `topics/shortcuts/skipping-tests.md` — risk-managed shortcut card for accepting changes without the smallest relevant verification.
+- `vcb.shortcut.skipping_plan` — `topics/shortcuts/skipping-plan.md` — plan-before-mutation guardrails.
+- `vcb.shortcut.one_big_prompt` — `topics/shortcuts/one-big-prompt.md` — oversized prompt and slicing guardrails.
+- `vcb.shortcut.vague_prompt` — `topics/shortcuts/vague-prompt.md` — goal/context/constraints/done-when guardrails.
+- `vcb.shortcut.accepting_diff_without_review` — `topics/shortcuts/accepting-diff-without-review.md` — changed-file review guardrails.
+- `vcb.shortcut.ignoring_lint_typecheck` — `topics/shortcuts/ignoring-lint-typecheck.md` — static-check failure triage.
+- `vcb.shortcut.coding_on_main` — `topics/shortcuts/coding-on-main.md` — branch/worktree isolation guardrails.
+- `vcb.shortcut.manual_testing_only` — `topics/shortcuts/manual-testing-only.md` — repeatable verification guardrails.
+- `vcb.shortcut.debugging_without_repro` — `topics/shortcuts/debugging-without-repro.md` — reproduction-before-patch guardrails.
 - `vcb.shortcut.accepting_looks_done` — `topics/shortcuts/accepting-looks-done.md` — risk-managed shortcut card for accepting polished output without completion evidence.
 - `vcb.shortcut.broad_agent_permissions` — `topics/shortcuts/broad-agent-permissions.md` — risk-managed shortcut card for broad filesystem/network/tool/account access.
 - `vcb.shortcut.unattended_long_runs` — `topics/shortcuts/unattended-long-runs.md` — risk-managed shortcut card for long-running work without checkpoints.
@@ -363,6 +371,7 @@ Final-release packaging from Chunk 44 is active.
 - Need frontend/refactor/dependency/docs workflow discipline → retrieve `vcb.workflow.frontend_work`, `vcb.workflow.visual_qa`, `vcb.workflow.accessibility_review`, `vcb.workflow.refactoring`, `vcb.workflow.dependency_decisions`, `vcb.workflow.dependency_update_review`, `vcb.workflow.release_notes`, or `vcb.workflow.documentation_updates`.
 - Need constraint/budget guidance → retrieve `vcb.constraints.operating_mode`, `vcb.constraints.attention_budget`, `vcb.constraints.usage_burn`, `vcb.constraints.recovery_budget`, `vcb.constraints.build_vs_maintenance`, `vcb.constraints.production_quality`, `vcb.constraints.scope_budget`, or `vcb.constraints.review_budget` before falling back to Chapters 39–43 or active pricing snapshots.
 - Need shortcut harm-reduction guidance for skipping tests, accepting looks-done claims, broad permissions, unattended long runs, broad refactors, context dumping, fast dependencies, or cloud-summary-only review → retrieve the matching `vcb.shortcut.*` card from Chunk 20.
+- Need Issue #3 shortcut-audit guidance for vague prompts, skipped planning, one big prompt, accepting diffs without review, ignoring lint/typecheck, coding on main, manual-only testing, or debugging without reproduction → retrieve the matching active `vcb.shortcut.*` card.
 - Need security/permission shortcut guidance for production GUI actions, broad CI permissions, long-lived CI secrets, real secrets in prototypes/cloud work, full-access automation, unattended mutation, or always-allowed sensitive apps → retrieve the matching `vcb.shortcut.*` card from Chunk 21.
 - User asks about premature skills, too many skills, too many tools, whether MCP is needed, brittle hooks, adding tools instead of shipping, process overhead for tiny projects, team workflow without a team, or copied playbooks → retrieve the matching active Chunk 23 `vcb.shortcut.*` card before falling back to Chapter 38 or `SHORTCUT_REGISTER.md`.
 - User asks about many AIs, multiple models, parallel agents, best-of-N answers, AI consensus, cherry-picking AI answers, trusting estimates before inspection, model biases, model routing guesswork, or subagent swarms → retrieve the matching active Chunk 24 `vcb.shortcut.*` card before falling back to Chapter 44, Chapter 46, or `SHORTCUT_REGISTER.md`.
@@ -395,6 +404,14 @@ Final-release packaging from Chunk 44 is active.
 ## Shortcut Harm-Reduction Card Fast Routing
 
 - `vcb.shortcut.skipping_tests` — `topics/shortcuts/skipping-tests.md` — skipped verification and hidden regressions.
+- `vcb.shortcut.skipping_plan` — `topics/shortcuts/skipping-plan.md` — plan-before-mutation guardrails.
+- `vcb.shortcut.one_big_prompt` — `topics/shortcuts/one-big-prompt.md` — oversized prompt and slicing guardrails.
+- `vcb.shortcut.vague_prompt` — `topics/shortcuts/vague-prompt.md` — goal/context/constraints/done-when guardrails.
+- `vcb.shortcut.accepting_diff_without_review` — `topics/shortcuts/accepting-diff-without-review.md` — changed-file review guardrails.
+- `vcb.shortcut.ignoring_lint_typecheck` — `topics/shortcuts/ignoring-lint-typecheck.md` — static-check failure triage.
+- `vcb.shortcut.coding_on_main` — `topics/shortcuts/coding-on-main.md` — branch/worktree isolation guardrails.
+- `vcb.shortcut.manual_testing_only` — `topics/shortcuts/manual-testing-only.md` — repeatable verification guardrails.
+- `vcb.shortcut.debugging_without_repro` — `topics/shortcuts/debugging-without-repro.md` — reproduction-before-patch guardrails.
 - `vcb.shortcut.accepting_looks_done` — `topics/shortcuts/accepting-looks-done.md` — polished done claims without evidence.
 - `vcb.shortcut.broad_agent_permissions` — `topics/shortcuts/broad-agent-permissions.md` — broad filesystem, command, network, or tool permissions.
 - `vcb.shortcut.unattended_long_runs` — `topics/shortcuts/unattended-long-runs.md` — long autonomous work without milestone checkpoints.
@@ -403,8 +420,9 @@ Final-release packaging from Chunk 44 is active.
 - `vcb.shortcut.adding_dependencies_fast` — `topics/shortcuts/adding-dependencies-fast.md` — package bloat and supply-chain drag.
 - `vcb.shortcut.reviewing_cloud_summary_only` — `topics/shortcuts/reviewing-cloud-summary-only.md` — summary accepted without diff/check evidence.
 
-- User asks to make a shortcut safer → retrieve the matching active `vcb.shortcut.*` card from the active shortcut-card slices, including Chunk 20 harm-reduction cards, Chunk 21 security/permission cards, Chunk 22 setup/process cards, Chunk 23 tool-sprawl/skill/reusable-workflow cards, and Chunk 24 multi-AI/model-bias cards, Chunk 25 parallel/cloud/automation cards, and Chunk 26 alias/deprecation routing cleanup, before falling back to Chapter 38 or `SHORTCUT_REGISTER.md`.
+- User asks to make a shortcut safer → retrieve the matching active `vcb.shortcut.*` card from the active shortcut-card slices, including Chunk 20 harm-reduction cards, Chunk 21 security/permission cards, Chunk 22 setup/process cards, Chunk 23 tool-sprawl/skill/reusable-workflow cards, Chunk 24 multi-AI/model-bias cards, Chunk 25 parallel/cloud/automation cards, Chunk 26 alias/deprecation routing cleanup, and Issue #3 post-release shortcut-audit cards, before falling back to Chapter 38 or `SHORTCUT_REGISTER.md`.
 - User asks about skipping tests, accepting looks done, broad permissions, unattended long runs, broad refactors, context dumping, fast dependencies, or cloud summaries → retrieve the matching active shortcut card.
+- User asks about vague prompts, skipped planning, one big prompt, accepting diffs without review, ignoring lint/typecheck, coding on main, manual-only testing, or debugging without reproduction → retrieve the matching active Issue #3 shortcut-audit card.
 - User asks about production GUI actions, broad CI permissions, long-lived CI secrets, real secrets, cloud secrets, full-access automation, unattended mutation, or always-allow app/site permissions → retrieve the matching active security/permission shortcut card.
 
 ## Active Pricing and Constraint Files

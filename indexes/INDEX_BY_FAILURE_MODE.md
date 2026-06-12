@@ -42,7 +42,7 @@ review_cadence: quarterly
 - `vcb.failure.done_claim_without_evidence` → active: bug-fix claims need repro/check output before acceptance
 - `vcb.chapter.debugging_with_reproduction` → active
 - `vcb.chapter.writing_updating_tests` → active
-- `vcb.shortcut.debugging_without_repro` → planned
+- `vcb.shortcut.debugging_without_repro` → active: reproduce or specify the failure before patching
 
 ## Codex weakens or deletes tests
 - `vcb.chapter.writing_updating_tests` → active
@@ -315,6 +315,14 @@ review_cadence: quarterly
 ## Shortcut Harm-Reduction Routes
 
 - `vcb.shortcut.skipping_tests` → active: prevents weakened tests, false confidence, and unsupported done claims
+- `vcb.shortcut.skipping_plan` → active: prevents broad mutation before scope, checks, and rollback are known
+- `vcb.shortcut.one_big_prompt` → active: prevents giant unreviewable diffs and fake completeness
+- `vcb.shortcut.vague_prompt` → active: prevents model guesswork from underspecified work orders
+- `vcb.shortcut.accepting_diff_without_review` → active: prevents unrelated changes, weakened tests, and hidden risk from entering unnoticed
+- `vcb.shortcut.ignoring_lint_typecheck` → active: prevents static-check regressions and noisy-check complacency
+- `vcb.shortcut.coding_on_main` → active: prevents shared-branch and deploy-path recovery failures
+- `vcb.shortcut.manual_testing_only` → active: prevents one-time manual checks from becoming permanent regression coverage
+- `vcb.shortcut.debugging_without_repro` → active: prevents symptom patches and false bug-fix claims
 - `vcb.shortcut.accepting_looks_done` → active: prevents unsupported completion claims
 - `vcb.shortcut.broad_agent_permissions` → active: prevents blast-radius and secret-exposure escalation
 - `vcb.shortcut.unattended_long_runs` → active: prevents low-attention drift, hidden assumptions, and large unreviewable diffs

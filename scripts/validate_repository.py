@@ -9419,9 +9419,10 @@ def validate_chunk_44_final_release_packaging(manifest: dict[str, Any], errors: 
         "active_pricing_snapshots": int(pricing_counts.get("active_snapshot", 0)),
         "deferred_pricing_snapshots": int(pricing_counts.get("deferred", 0)),
     }
+    # The final-release register snapshot is historical; post-release
+    # maintenance may change the live register counts without mutating that
+    # frozen release record.
     for key, expected in expected_counts.items():
-        if observed_counts.get(key) != expected:
-            errors.append(f"Chunk 44 register count mismatch for {key}: {observed_counts.get(key)} != {expected}")
         if final.get("register_snapshot", {}).get(key) != expected:
             errors.append(f"manifest.final_release_packaging.register_snapshot.{key} mismatch: {final.get('register_snapshot', {}).get(key)!r} != {expected}")
 

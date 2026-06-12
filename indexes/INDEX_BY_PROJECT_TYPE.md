@@ -37,7 +37,7 @@ review_cadence: quarterly
 - `vcb.concepts.recoverability` → active companion
 - `vcb.chapter.first_serious_app` → active fallback
 - `vcb.chapter.codex_playbooks` → active fallback
-- `vcb.shortcut.one_big_prompt` → planned
+- `vcb.shortcut.one_big_prompt` → active: keep prototype prompts sliced and disposable before treating generated output as foundation
 
 ## Learning project
 
@@ -223,6 +223,14 @@ review_cadence: quarterly
 ## Shortcut Harm-Reduction by Project Type
 
 - `vcb.shortcut.skipping_tests` → active: skip-test shortcut; route to smallest relevant verification guardrail
+- `vcb.shortcut.skipping_plan` → active: acceptable only when work is tiny, local, and recoverable
+- `vcb.shortcut.one_big_prompt` → active: keep broad prototype prompts disposable or sliced
+- `vcb.shortcut.vague_prompt` → active: require explicit goal/context/constraints/done-when for durable work
+- `vcb.shortcut.accepting_diff_without_review` → active: shared or production work needs changed-file review
+- `vcb.shortcut.ignoring_lint_typecheck` → active: shared or production work needs static-check triage
+- `vcb.shortcut.coding_on_main` → active: risky for shared, public, or auto-deploying repos
+- `vcb.shortcut.manual_testing_only` → active: prototype-tolerable but production work needs repeatable checks
+- `vcb.shortcut.debugging_without_repro` → active: acceptable only for obvious local errors; risky for user-facing bugs
 - `vcb.shortcut.accepting_looks_done` → active: looks-done shortcut; route to completion-evidence gate
 - `vcb.shortcut.broad_agent_permissions` → active: broad-permission shortcut; route to sandbox/approval and blast-radius controls
 - `vcb.shortcut.unattended_long_runs` → active: unattended-run shortcut; route to milestones, isolation, and evidence reports
