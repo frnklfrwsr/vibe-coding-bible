@@ -374,14 +374,23 @@ Chunk 44 packages **Final Release 1** as a packaging-only artifact from approved
 **Approved source baseline:** `vibe-coding-bible-release-candidate-1-revision-2-20260612T040000Z-authoritative.zip`  
 **Final release state:** final-release package produced from the approved RC gate; package acceptance remains subject to the active editor gate.
 
-The final release preserves the documented limitations approved through the RC gate:
+The historical Final Release 1 package preserves the documented limitations approved through the RC gate:
 
-- exact non-OpenAI pricing snapshots remain deferred;
+- exact non-OpenAI pricing snapshots were deferred in that package;
 - the tool catalog is curated, not exhaustive: **52 active tool cards; 23 deferred/planned ecosystem IDs**;
 - all nine field-practice retrieval cards remain candidate-only and are not promoted, reproduced, retired, or deprecated;
 - changelog ordering follows the documented review-trail convention rather than strict newest-first chronological normalization.
 
 Use `CHUNK_44_REPORT.md` for final-release packaging verification, package hygiene, and the final packaging result. Use `FINAL_RELEASE_1_INTEGRITY.md` for source-tree integrity verification. The final zip SHA-256 is external to the source tree by design; verify it against the author submission checksum or, when supplied, the external sidecar convention `vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip.sha256`. `CHUNK_43_REPORT.md` and `RELEASE_CANDIDATE_1_INTEGRITY.md` remain historical records for the approved RC baseline.
+
+## Post-Release Pricing Snapshot Routes
+
+This repository is the living source package. Issue #4 added the first bounded non-OpenAI pricing slice after the original Final Release 1 package. Exact prices, credits, quotas, token limits, and plan packaging must stay in dated snapshots.
+
+- `vcb.pricing_snapshot.openai_codex` - `pricing-snapshots/2026-06-09-openai-codex.md`
+- `vcb.pricing_snapshot.ai_coding_tools` - `pricing-snapshots/2026-06-12-ai-coding-tools.md`
+
+ChatGPT plan pricing is not captured by either active snapshot; `vcb.pricing_snapshot.openai_codex` is Codex-specific. Hosting, database, and observability pricing snapshots remain deferred in `PRICING_SNAPSHOT_REGISTER.md`.
 
 ## Post-Release Shortcut Audit Routes
 
