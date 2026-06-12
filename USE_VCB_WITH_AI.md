@@ -12,6 +12,14 @@ Use the Vibe Coding Bible as a reference: https://github.com/frnklfrwsr/vibe-cod
 
 Then describe your task in one or two paragraphs. Include whether you are new to coding, new to Codex, working in a new project, debugging an existing project, low on budget, or comparing tools.
 
+## Which VCB Source To Use
+
+The canonical VCB repository is `https://github.com/frnklfrwsr/vibe-coding-bible`.
+
+A fresh local clone is fine for fast retrieval when it is clearly the VCB repo and reasonably current. If the local clone is missing, stale, dirty in governance or contribution files, or uncertain, use the public GitHub repo instead.
+
+For public issues, comments, or PRs, always target the canonical GitHub repo. If local files disagree with GitHub, use GitHub for contribution templates, governance files, and the destination. If unsure, ask before posting.
+
 ## Fastest Way With Codex
 
 If the repository is available locally, tell Codex:

@@ -154,6 +154,7 @@ indexes/PROMPT_LIBRARY.md
 llms-full.txt
 llms.txt
 maintenance-reports/fix-pr17-shortcut-routing-metadata.md
+maintenance-reports/issue-23-vcb-skill-smoke-test.md
 maintenance-reports/issue-3-shortcut-id-audit.md
 maintenance-reports/issue-4-ai-coding-tools-pricing-snapshot.md
 maintenance-reports/issue-5-docs-site-design.md

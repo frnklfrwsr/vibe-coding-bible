@@ -10,6 +10,12 @@ Use the Vibe Coding Bible as a reference: https://github.com/frnklfrwsr/vibe-cod
 
 Then describe the task, project phase, skill level, budget constraint, and whether the work is private or public.
 
+## Source Selection
+
+Use the canonical VCB repository when an AI needs public contribution templates or a public destination: [frnklfrwsr/vibe-coding-bible](https://github.com/frnklfrwsr/vibe-coding-bible).
+
+A fresh local clone is fine for fast retrieval when it is clearly VCB and reasonably current. If local VCB is missing, stale, dirty in governance or contribution files, or uncertain, use GitHub. If local and public versions disagree for contribution rules or templates, prefer GitHub and ask before posting.
+
 ## What The AI Should Retrieve
 
 - [AI_START_HERE.md](https://github.com/frnklfrwsr/vibe-coding-bible/blob/main/AI_START_HERE.md)
