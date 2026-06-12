@@ -2,15 +2,15 @@
 id: vcb.register.sources
 title: SOURCE_REGISTER
 artifact_type: register
-version: 1.0.0-final.1.chunk44
-status: chunk_44_updated
+version: 1.0.1-postrelease.issue4
+status: issue_4_ai_coding_tools_pricing_sources
 created_on: '2026-06-08'
-last_verified: '2026-06-11'
-next_review_due: '2026-07-11'
+last_verified: '2026-06-12'
+next_review_due: '2026-07-12'
 review_cadence: monthly
 ---
 
-<!-- VCB:BEGIN_REGISTER id=vcb.register.sources version=1.0.0-final.1.chunk44 -->
+<!-- VCB:BEGIN_REGISTER id=vcb.register.sources version=1.0.1-postrelease.issue4 -->
 
 # SOURCE_REGISTER
 
@@ -199,6 +199,18 @@ These records are maintainer-authored synthesis aids. They are not evidence leve
 | `openai.chatgpt.pricing` | ChatGPT pricing page | https://chatgpt.com/pricing/ | E0_OFFICIAL_DOCS | anchor checked 2026-06-09 | plan packaging, high-level plan features, individual/business plan positioning | highly volatile |
 | `openai.codex.models` | Models — Codex | https://developers.openai.com/codex/models | E0_OFFICIAL_DOCS | anchor checked 2026-06-09 | current Codex model availability and configuration watchlist | volatile |
 | `vcb.pricing_snapshot.openai_codex` | OpenAI/Codex pricing snapshot 2026-06-09 | pricing-snapshots/2026-06-09-openai-codex.md | E2_REPRODUCED_LOCALLY | snapshot captured 2026-06-09 | dated snapshot of volatile OpenAI/Codex credits, limits, and plan availability notes | highly volatile |
+| `anthropic.pricing` | Claude pricing | https://claude.com/pricing | E0_OFFICIAL_DOCS | anchor checked 2026-06-12; exact values captured in `vcb.pricing_snapshot.ai_coding_tools` | Claude / Claude Code plan packaging, Team and Enterprise pricing caveats, and API-rate anchors | highly volatile |
+| `cursor.pricing` | Cursor pricing | https://cursor.com/pricing | E0_OFFICIAL_DOCS | anchor checked 2026-06-12; exact values captured in `vcb.pricing_snapshot.ai_coding_tools` | Cursor plan packaging, included usage caveats, and visible Individual/Teams pricing | highly volatile |
+| `github.copilot.pricing` | GitHub Copilot plans and pricing | https://github.com/features/copilot/plans | E0_OFFICIAL_DOCS | anchor checked 2026-06-12; exact values captured in `vcb.pricing_snapshot.ai_coding_tools` | Copilot Free/Pro/Pro+/Max plan packaging and current plan availability caveats | highly volatile |
+| `github.copilot.models_pricing` | Models and pricing for GitHub Copilot | https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing | E0_OFFICIAL_DOCS | anchor checked 2026-06-12; exact values captured in `vcb.pricing_snapshot.ai_coding_tools` | GitHub AI Credits conversion and per-model pricing mechanics | highly volatile |
+| `github.copilot.billing_individuals` | Usage-based billing for individuals - GitHub Copilot | https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals | E0_OFFICIAL_DOCS | anchor checked 2026-06-12; exact values captured in `vcb.pricing_snapshot.ai_coding_tools` | individual Copilot AI Credit allowances and overage mechanics | highly volatile |
+| `github.copilot.billing_orgs` | Usage-based billing for organizations and enterprises - GitHub Copilot | https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises | E0_OFFICIAL_DOCS | anchor checked 2026-06-12; exact values captured in `vcb.pricing_snapshot.ai_coding_tools` | organization and enterprise Copilot AI Credit pooling and allowances | highly volatile |
+| `windsurf.pricing` | Devin / Windsurf pricing | https://devin.ai/pricing | E0_OFFICIAL_DOCS | anchor checked 2026-06-12; exact values captured in `vcb.pricing_snapshot.ai_coding_tools` | Devin Desktop / Windsurf plan packaging, quotas, and extra-usage caveats | highly volatile |
+| `replit.pricing` | Replit pricing | https://replit.com/pricing | E0_OFFICIAL_DOCS | anchor checked 2026-06-12; exact values captured in `vcb.pricing_snapshot.ai_coding_tools` | Replit Starter/Core/Pro/Enterprise pricing, monthly credits, and Agent-cost caveats | highly volatile |
+| `lovable.pricing` | Lovable pricing | https://lovable.dev/pricing | E0_OFFICIAL_DOCS | anchor checked 2026-06-12; exact values captured in `vcb.pricing_snapshot.ai_coding_tools` | Lovable Pro/Business/Enterprise pricing, credits, and Cloud + AI caveats | highly volatile |
+| `bolt.pricing` | Bolt pricing | https://bolt.new/pricing | E0_OFFICIAL_DOCS | anchor checked 2026-06-12; exact values captured in `vcb.pricing_snapshot.ai_coding_tools` | Bolt Free/Pro/Teams/Enterprise pricing, token limits, hosting, and token-rollover caveats | highly volatile |
+| `v0.pricing` | v0 pricing | https://v0.app/pricing | E0_OFFICIAL_DOCS | anchor checked 2026-06-12; exact values captured in `vcb.pricing_snapshot.ai_coding_tools` | v0 plan pricing, included credits, daily login credits, and model token rates | highly volatile |
+| `vcb.pricing_snapshot.ai_coding_tools` | AI coding tools pricing snapshot 2026-06-12 | pricing-snapshots/2026-06-12-ai-coding-tools.md | E2_REPRODUCED_LOCALLY | snapshot captured 2026-06-12 from official vendor pricing pages/docs | dated snapshot of volatile non-OpenAI AI coding, AI IDE, browser-dev, app-builder, and UI-generation prices, credits, tokens, and caveats | highly volatile |
 | `vercel.docs.environments` | Vercel Environments | https://vercel.com/docs/deployments/environments | E0_OFFICIAL_DOCS | anchor checked 2026-06-09 | preview environments, production/pre-production deployment concepts | volatile |
 | `vercel.pricing` | Vercel Pricing | https://vercel.com/pricing | E0_OFFICIAL_DOCS | anchor checked 2026-06-09 | pricing and plan packaging anchor; exact values belong in snapshot | highly volatile |
 | `supabase.docs.database` | Supabase Database overview | https://supabase.com/docs/guides/database/overview | E0_OFFICIAL_DOCS | anchor checked 2026-06-09 | Supabase project as full Postgres database; database/backend category anchor | volatile |

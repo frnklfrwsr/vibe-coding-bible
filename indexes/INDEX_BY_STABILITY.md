@@ -111,6 +111,7 @@ review_cadence: quarterly
 - `vcb.chapter.budget_aware_codex_workflows` → active
 - `vcb.chapter.tool_stack_catalog` → active
 - `vcb.pricing_snapshot.openai_codex` → active_snapshot
+- `vcb.pricing_snapshot.ai_coding_tools` → active_snapshot
 - `vcb.chapter.cost_benefit_analysis` → active
 
 ## Stable limitation and bias concepts

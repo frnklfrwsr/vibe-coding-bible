@@ -148,6 +148,7 @@ llms-full.txt
 llms.txt
 maintenance-reports/fix-pr17-shortcut-routing-metadata.md
 maintenance-reports/issue-3-shortcut-id-audit.md
+maintenance-reports/issue-4-ai-coding-tools-pricing-snapshot.md
 maintenance-reports/issue-5-docs-site-design.md
 maintenance-reports/issue-6-fresh-llm-retrieval-smoke-test.md
 maintenance-reports/issue-7-field-practice-grading.md
@@ -156,6 +157,7 @@ manifest.json
 mkdocs.yml
 pricing-snapshots/.gitkeep
 pricing-snapshots/2026-06-09-openai-codex.md
+pricing-snapshots/2026-06-12-ai-coding-tools.md
 requirements-docs.txt
 schemas/chapter.schema.json
 schemas/field-practice.schema.json
