@@ -1,0 +1,456 @@
+---
+id: vcb.llms_full
+artifact_type: llm_full_source_map
+version: 1.0.0-final.1.chunk44
+status: chunk_44_updated
+last_verified: '2026-06-11'
+next_review_due: '2026-07-11'
+review_cadence: monthly
+---
+
+<!-- VCB:BEGIN_LLMS_FULL id=vcb.llms_full version=1.0.0-final.1.chunk44 -->
+
+# The Vibe Coding Bible — llms-full.txt
+
+This is a compact source map, not a full compiled book export yet. Use `manifest.json` as the authoritative source map.
+
+## Current Active Content
+
+Final-release packaging from Chunk 44 is active.
+
+- This package is **Final Release 1** produced from the approved RC gate using Release Candidate 1 revision 2.
+- Narrative chapters `chapters/00-*.md` through `chapters/46-*.md` are active.
+- Field-practice candidate cards from Chunk 38 remain active retrieval targets, but all nine remain candidate practices.
+- Chunk 40 active/deferred ecosystem coverage, Chunk 41 finalization audit, Chunk 42 RC disposition cleanup, Chunk 43 approved RC packaging, and Chunk 44 final packaging remain active governance context.
+- Use `README.md` / `## Active Tool Cards` or `TOOL_REGISTER.md` for the canonical active tool-card inventory.
+- `pricing-snapshots/2026-06-09-openai-codex.md` is the active exact OpenAI/Codex pricing snapshot; exact non-OpenAI pricing remains deferred.
+
+## Final Release Package Fast Routing
+
+- User asks whether a final release package exists or whether the current package is final → retrieve `CHUNK_44_REPORT.md`, `manifest.json`, and `README.md`; state that Final Release 1 has been packaged from the approved RC1 revision 2 baseline with no substantive content expansion.
+- User asks what was packaged or verified for the final release → retrieve `CHUNK_44_REPORT.md` / `## Final-Release Packaging Result`, `## Validation`, and `## Artifact Hygiene`; retrieve `FINAL_RELEASE_1_INTEGRITY.md` for source-tree integrity and sidecar checksum verification mechanics.
+- User asks how the final release relates to the RC → retrieve `CHUNK_43_REPORT.md`, `RELEASE_CANDIDATE_1_INTEGRITY.md`, and `CHUNK_44_REPORT.md`; state that RC1 revision 2 was approved for a packaging-only final-release step.
+- User asks which limitations remain in the final release → retrieve `CHUNK_44_REPORT.md` / `## Documented Final-Release Limitations`; preserve the limitations that exact non-OpenAI pricing is deferred, tool coverage is curated, field practices remain candidate-only, and changelog ordering follows the documented convention.
+- User asks whether tool coverage is complete → retrieve `TOOL_REGISTER.md` and `README.md` / `## Active Tool Cards`; treat the catalog as curated, not exhaustive, because 23 ecosystem IDs remain deferred/planned.
+- User asks whether field practices are official, reproduced, promoted, or safe to present as rules → retrieve `FIELD_PRACTICES.md`; all active field-practice retrieval cards remain candidate.
+- User asks for exact prices, limits, quotas, or plan packaging → retrieve `PRICING_SNAPSHOT_REGISTER.md`; only the OpenAI/Codex pricing snapshot is active and non-OpenAI pricing categories remain deferred.
+- User asks about changelog order or release-note chronology → retrieve `CHANGELOG.md` / `## Changelog Ordering Convention`; current/recent governance entries appear first while older historical entries may retain authoring/revision order.
+
+## Field Practice Candidate Fast Routing
+
+- User asks whether to adopt, test, promote, retire, or trust an unofficial Codex/vibe-coding practice → retrieve the smallest matching active candidate field-practice card before broad field-notes chapters; preserve candidate status and E4_COMMUNITY_FIELD_REPORT posture unless a later evidence review changes it: `vcb.field.chatgpt_pm_codex_implementer`, `vcb.field.fresh_agent_review`, `vcb.field.context_reset_between_tasks`, `vcb.field.agents_md_first`, `vcb.field.skeleton_todo_first`, `vcb.field.strict_typecheck_lint_gates`, `vcb.field.greenfield_vs_production_rule`, `vcb.field.lessons_file_loop`, `vcb.field.multi_agent_review_consensus`.
+- User asks for PM/planning model plus Codex implementation split → retrieve `vcb.field.chatgpt_pm_codex_implementer` first; use `tool.chatgpt`, `tool.codex`, and `vcb.chapter.when_to_use_other_ais` as companions.
+- User asks for independent or fresh review → retrieve `vcb.field.fresh_agent_review` first; use `vcb.field.multi_agent_review_consensus`, `tool.codex_github_review`, and `vcb.workflow.reviewing_diffs` as companions.
+- User asks about stale context, starting fresh, or context reset between tasks → retrieve `vcb.field.context_reset_between_tasks` first; use `vcb.prompting.context_management` and `vcb.failure.context_pollution` as companions.
+- User asks when to write AGENTS.md, a lessons file, or durable repo guidance → retrieve `vcb.field.agents_md_first` or `vcb.field.lessons_file_loop` first; use `tool.codex_agents_md` as the official mechanics companion.
+- User asks about skeleton/TODO-first, strict checks, or greenfield-versus-production prompting → retrieve `vcb.field.skeleton_todo_first`, `vcb.field.strict_typecheck_lint_gates`, or `vcb.field.greenfield_vs_production_rule` first.
+- User asks about multiple agents agreeing, fresh-agent consensus, or multi-agent review reliability → retrieve `vcb.field.multi_agent_review_consensus` first; use `vcb.shortcut.consensus_as_correctness` and `vcb.shortcut.best_of_n_without_review` as risk companions.
+
+## Active Chunk 38 Field Practice Candidate Cards
+
+- `vcb.field.chatgpt_pm_codex_implementer` — `topics/field-practices/chatgpt-pm-codex-implementer.md` — active candidate: ChatGPT PM / Codex implementer split.
+- `vcb.field.fresh_agent_review` — `topics/field-practices/fresh-agent-review.md` — active candidate: fresh independent agent/session diff review.
+- `vcb.field.context_reset_between_tasks` — `topics/field-practices/context-reset-between-tasks.md` — active candidate: reset or summarize context between unrelated tasks.
+- `vcb.field.agents_md_first` — `topics/field-practices/agents-md-first.md` — active candidate: minimal AGENTS.md early in durable repos.
+- `vcb.field.skeleton_todo_first` — `topics/field-practices/skeleton-todo-first.md` — active candidate: human skeleton/TODOs before agent implementation.
+- `vcb.field.strict_typecheck_lint_gates` — `topics/field-practices/strict-typecheck-lint-gates.md` — active candidate: typecheck/lint/test gates after agent changes.
+- `vcb.field.greenfield_vs_production_rule` — `topics/field-practices/greenfield-vs-production-rule.md` — active candidate: explicit project phase and compatibility posture.
+- `vcb.field.lessons_file_loop` — `topics/field-practices/lessons-file-loop.md` — active candidate: temporary lessons loop before durable guidance promotion.
+- `vcb.field.multi_agent_review_consensus` — `topics/field-practices/multi-agent-review-consensus.md` — active candidate: multi-agent review with evidence, not consensus-as-proof.
+
+
+## Tool-Catalog Coverage Gap Fast Routing
+
+- User asks whether the VCB tool catalog is complete, missing ecosystem tools, or why a tool has no card → retrieve `TOOL_REGISTER.md` / `## Chunk 40 Tool-Catalog Coverage-Gap Audit Note` first; do not imply the active cards are exhaustive.
+- User asks about Cloudflare, DNS/CDN/edge Workers/Pages, or edge security/routing → retrieve `tool.cloudflare` first; use `tool.vercel`, `tool.netlify`, and `vcb.constraints.production_quality` as companions.
+- User asks about Netlify, deploy previews, deploy contexts, or Netlify Functions → retrieve `tool.netlify` first; use `tool.github_actions`, `tool.cloudflare`, and `vcb.constraints.production_quality` as companions.
+- User asks about Neon, serverless Postgres, database branches, preview databases, or migration branch evidence → retrieve `tool.neon` first; use `tool.supabase`, `tool.github_actions`, and `vcb.concepts.database_schema` as companions.
+- User asks about Resend, transactional email, templates, sending domains, or notification delivery evidence → retrieve `tool.resend` first; use `tool.clerk`, `tool.auth0`, `tool.stripe`, and `vcb.safety.production_red_lines` as companions when auth/payment/user state is involved.
+- User asks about Vitest, Vite-native tests, unit/component test evidence, or JavaScript test-runner choice → retrieve `tool.vitest` first; use `tool.npm`, `tool.github_actions`, `tool.playwright`, and `vcb.workflow.testing` as companions.
+- User asks about Storybook, component states, UI workshop, component docs, interaction tests, or design-handoff evidence → retrieve `tool.storybook` first; use `tool.figma`, `tool.playwright`, `tool.vitest`, and `vcb.workflow.frontend_work` as companions.
+- User asks about deferred tools such as `tool.render`, `tool.railway`, `tool.fly_io`, `tool.firebase`, `tool.aws`, `tool.gcp`, `tool.azure`, `tool.digitalocean`, `tool.postmark`, `tool.sendgrid`, `tool.mailgun`, `tool.notion`, `tool.google_docs`, `tool.jira`, `tool.onepassword`, `tool.doppler`, `tool.infisical`, `tool.better_stack`, `tool.datadog`, `tool.paddle`, `tool.lemon_squeezy`, `tool.jest`, or `tool.cypress` → check `TOOL_REGISTER.md` deferred/planned rows, then route to the listed active companion card.
+
+## Tool-Catalog Cleanup Fast Routing
+
+- User asks for the canonical active tool-card inventory → use `README.md` / `## Active Tool Cards` or `TOOL_REGISTER.md`; do not rely on generation-specific LLM-map or index inventory blocks.
+- User asks which Codex execution surface to use → retrieve `tool.codex` first, then the smallest execution-surface card: `tool.codex_app`, `tool.codex_cli`, `tool.codex_ide_extension`, `tool.codex_cloud`, `tool.codex_github_review`, `tool.codex_exec`, `tool.codex_worktrees`, `tool.codex_subagents`, `tool.codex_automations`, `tool.codex_computer_use`, `tool.codex_browser`, or `tool.codex_chrome_extension`; use customization, security, or governance cards only when the intent is control/security/maintenance rather than execution surface.
+- User asks about prototype phase or disposable app-builder choice → use `vcb.constraints.build_vs_maintenance` for phase framing, then route to `tool.replit`, `tool.lovable`, `tool.bolt`, or `tool.v0` when the user needs browser-dev, app-builder, or UI-generation tool choice.
+- User asks about production readiness → use `vcb.constraints.production_quality` for the evidence gate, then route to relevant active platform tools: `tool.vercel`, `tool.cloudflare`, `tool.netlify`, `tool.supabase`, `tool.neon`, `tool.clerk`, `tool.auth0`, `tool.stripe`, `tool.resend`, `tool.sentry`, or `tool.posthog` when deployment, edge/DNS, data, auth, payment, email, observability, or analytics are involved.
+- User asks about a source URL that redirects → prefer the canonical official destination recorded in `SOURCE_REGISTER.md` and keep the old redirecting URL only as historical context.
+
+## Consolidated Tool-Card Inventory Policy
+
+- Canonical active tool-card inventory lives in `README.md` / `## Active Tool Cards` and `TOOL_REGISTER.md`.
+- LLM maps keep fast semantic routes by intent; they should not maintain generation-specific active tool-card list sections.
+- For tool choice, retrieve the smallest active tool card only after deciding whether the user needs execution-surface guidance, prototype/app-builder choice, production-readiness platform evidence, local container/design/project-management support, or AI coding/IDE comparison.
+
+## Local Dev, Design, and Project-Management Tool Card Fast Routing
+
+- User asks about Docker, containers, Dockerfiles, Compose, local services, reproducible dev environments, or containerized checks → route to `tool.docker` first; use `tool.github_actions`, `tool.npm`, and `vcb.workflow.testing` as companions when CI/package/test evidence matters.
+- User asks about Figma, design handoff, UI specs, prototypes, components, screenshots, Dev Mode, or design-to-code review → route to `tool.figma` first; use `tool.playwright`, `vcb.workflow.frontend_work`, `vcb.workflow.visual_qa`, and `vcb.workflow.accessibility_review` as implementation-evidence companions.
+- User asks about Linear, issues, projects, cycles, statuses, workflow planning, team execution hygiene, or ticket ownership → route to `tool.linear` first; use `tool.github`, `tool.github_actions`, and `vcb.chapter.prompt_library_to_team_workflow` as source-of-truth companions.
+- User asks which local dev, design, or project-management tool to add → retrieve the smallest active card among `tool.docker`, `tool.figma`, and `tool.linear`; use `vcb.shortcut.tool_sprawl` and `vcb.chapter.tool_stack_catalog` only as companions.
+
+## Browser-Dev, App-Builder, and UI-Generation Tool Card Fast Routing
+
+- User asks about Replit, browser-based dev, hosted prototype loops, learning apps, or quick publish/share demos → route to `tool.replit` first; use `tool.github`, `tool.npm`, and `tool.playwright` when repo, dependency, or browser evidence matters.
+- User asks about Lovable, natural-language full-stack app building, generated app publishing, or product/MVP sketching → route to `tool.lovable` first; use `tool.codex_security`, `tool.github`, and `tool.playwright` as hardening/review companions.
+- User asks about Bolt, browser-based website/app/mobile prototyping, token burn, generated full-stack sketches, or publishable app demos → route to `tool.bolt` first; use `tool.npm`, `tool.github`, and `tool.playwright` as review companions.
+- User asks about v0, AI UI generation, high-fidelity frontend screens, design-system prototypes, Figma/wireframe-to-code, or frontend sketches → route to `tool.v0` first; use `tool.playwright`, `vcb.workflow.frontend_work`, and `vcb.workflow.accessibility_review` as evidence companions.
+- User asks to compare app builders or use a browser-dev/UI-generation tool for an MVP → retrieve the smallest active card among `tool.replit`, `tool.lovable`, `tool.bolt`, and `tool.v0`; use `vcb.chapter.tool_stack_catalog` only as a fallback.
+
+
+## Hosting, Backend/Auth, Payment, Observability, and Product-Analytics Tool Card Fast Routing
+
+- User asks about hosting, preview deployments, production deployment, environment separation, or deployment evidence → retrieve `tool.vercel`, `tool.cloudflare`, or `tool.netlify` depending on whether the issue is hosting/previews, DNS/CDN/edge/domain routing, or Netlify deploy contexts/functions.
+- User asks about database, backend, RLS, storage, app data, migrations, Postgres branches, preview databases, or Postgres-backed MVP backend → retrieve `tool.supabase` when Supabase backend/auth/storage/RLS owns the surface, or `tool.neon` when serverless Postgres/branching/preview database behavior is the focus.
+- User asks about app authentication, user management, sessions, organizations, or auth UI → retrieve `tool.clerk` first; use `tool.auth0` when IAM/OIDC/OAuth/API/enterprise identity is the better fit.
+- User asks about transactional email, notifications, sending domains, templates, or delivery blast-radius → retrieve `tool.resend` first.
+- User asks about payments, checkout, subscriptions, billing, webhooks, customer portals, or entitlement state → retrieve `tool.stripe` first.
+- User asks about production errors, traces, performance, releases, session replay for debugging, or incident evidence → retrieve `tool.sentry` first.
+- User asks about product analytics, events, funnels, feature flags, experiments, session replay for product behavior, or adoption evidence → retrieve `tool.posthog` first.
+- User asks which production platform tools a serious app needs → retrieve the smallest relevant active card among `tool.docker`, `tool.figma`, `tool.linear`, `tool.vercel`, `tool.cloudflare`, `tool.netlify`, `tool.supabase`, `tool.neon`, `tool.clerk`, `tool.auth0`, `tool.stripe`, `tool.resend`, `tool.sentry`, `tool.posthog`, `tool.vitest`, and `tool.storybook`; use chapters/workflows only as companions.
+
+## AI Coding, AI IDE, and AI Planning Tool Card Fast Routing
+
+- User asks what non-Codex AI planning tool to use, or wants product thinking, explanation, research synthesis, data/document analysis, or prompt shaping → route to `tool.chatgpt` first; use Codex only when a bounded repository task is ready.
+- User asks for alternate AI review, independent architecture critique, long-form reasoning, or model-comparison sanity checks → route to `tool.claude` first; use `vcb.shortcut.consensus_as_correctness` and `vcb.shortcut.best_of_n_without_review` as risk companions.
+- User asks about Cursor, AI IDE work, local agentic editing, plan mode, or IDE diff review → route to `tool.cursor` first; use `tool.github` and `vcb.workflow.reviewing_diffs` as review companions.
+- User asks about GitHub Copilot, autocomplete, GitHub/IDE-native chat, Copilot branch/PR work, or repository-connected AI assistance → route to `tool.github_copilot` first; use `tool.github`, `tool.github_actions`, and `tool.codex_github_review` as companion routes.
+- User asks about Windsurf, Devin Desktop, Cascade, agentic IDE workflows, checkpoints, or Windsurf plugins → route to `tool.windsurf` first; use `tool.github` and `vcb.shortcut.parallel_agents_edit_same_files` as companion routes.
+- User asks to compare ChatGPT, Claude, Cursor, GitHub Copilot, Windsurf, and Codex → retrieve the smallest active tool cards for the named tools first; use `vcb.chapter.when_to_use_other_ais` and multi-AI shortcut cards only after the active tool cards.
+
+## Repository, CI, Dependency, and QA Tool Card Fast Routing
+
+- User asks about GitHub repositories, branches, PRs, issues, code review, branch rules, or repo collaboration → route to `tool.github` first; use `vcb.workflow.github_pr_review` and `tool.codex_github_review` as companion routes when Codex review is involved.
+- User asks about GitHub Actions, CI workflows, check runs, workflow secrets, token permissions, runners, or automation evidence → route to `tool.github_actions` first; use `tool.codex_exec`, `vcb.workflow.ci_noninteractive`, and `vcb.workflow.ci_triage` as companion routes.
+- User asks about Dependabot, dependency alerts, vulnerable dependency PRs, version-update PRs, or dependency-maintenance queues → route to `tool.github_dependabot` first; use `vcb.workflow.dependency_update_review` as the review workflow.
+- User asks about npm, package.json, package scripts, dependency manifests, lockfiles, install behavior, or npm audit output → route to `tool.npm` first; use `vcb.workflow.dependency_decisions` and `vcb.workflow.dependency_update_review` as companion routes.
+- User asks about Playwright, browser tests, end-to-end tests, screenshots, traces, or UI verification in CI → route to `tool.playwright` first; use `vcb.workflow.frontend_work`, `vcb.workflow.visual_qa`, and `tool.github_actions` as companion routes.
+- User asks about OpenSSF Scorecard, repository health, dependency health, supply-chain quality, or automated project-risk signals → route to `tool.openssf_scorecard` first; use `tool.github_actions`, `tool.github_dependabot`, and `tool.codex_security` as companion routes.
+
+## Primary Codex Tool Card Fast Routing
+
+- User asks what Codex tool or surface to use → route first to `tool.codex`, then to the smallest active surface card.
+- User asks about desktop/local Codex threads, worktrees, review panes, Git actions, or app orchestration → route to `tool.codex_app`.
+- User asks about terminal Codex, sandbox/approval posture, shell-backed local work, or CLI behavior → route to `tool.codex_cli`.
+- User asks about editor context, selected code, open files, @file references, or IDE cloud handoff → route to `tool.codex_ide_extension`.
+- User asks about background cloud tasks, cloud environments, cloud PRs, parallel cloud delegation, or review-later work → route to `tool.codex_cloud`.
+- User asks about `@codex review`, automatic PR reviews, GitHub code review, or review comments → route to `tool.codex_github_review`.
+- User asks about `codex exec`, non-interactive mode, scripts, CI-style runs, JSONL/schema output, or automation credentials → route to `tool.codex_exec`.
+
+## Adjunct Codex Tool Card Fast Routing
+
+- User asks about worktrees, local/app branch isolation, background worktree handoff, or parallel local tasks → route to `tool.codex_worktrees`.
+- User asks about subagents, custom agents, parallel specialist analysis, or agent swarms → route to `tool.codex_subagents`.
+- User asks about automations, recurring Codex tasks, scheduled checks, Triage output, or report-first recurring work → route to `tool.codex_automations`.
+- User asks about Computer Use, desktop app control, GUI operation, OS app permissions, or visible app state → route to `tool.codex_computer_use`.
+- User asks about in-app browser preview, browser comments, screenshots, local web verification, or rendered-page evidence → route to `tool.codex_browser`.
+- User asks about Chrome extension, signed-in browser state, website approvals, allow/block lists, or browser-history/account risk → route to `tool.codex_chrome_extension`.
+
+
+## Customization and Control Codex Tool Card Fast Routing
+
+- User asks about AGENTS.md, durable repo guidance, project instructions, or repeated repo rules → route to `tool.codex_agents_md`; use `vcb.codex.agents_md` only for companion mechanics.
+- User asks about Codex config, profiles, defaults, sandbox/approval defaults, or project-local settings → route to `tool.codex_config`; use `vcb.codex.config` only for companion mechanics.
+- User asks about Codex skills, reusable workflows, skill triggers, or packaged domain procedures → route to `tool.codex_skills`; use `vcb.codex.skills` only for companion mechanics.
+- User asks about MCP, external tools, context servers, tool auth, or server sprawl → route to `tool.codex_mcp`; use `vcb.codex.mcp` only for companion mechanics.
+- User asks about hooks, deterministic lifecycle guardrails, prompt/command checks, logging, or validation scripts → route to `tool.codex_hooks`; use `vcb.codex.hooks` only for companion mechanics.
+
+## Codex Security Tool Card Fast Routing
+
+- User asks about Codex Security, Codex Security plugin, Codex Security cloud, security review scans, security diff scans, vulnerability finding review, finding validation, threat-model tuning for Codex Security, or security fix preparation → retrieve `tool.codex_security` first; use `vcb.safety.security_review`, `tool.codex_cloud`, `tool.codex_github_review`, and related safety/workflow cards as companion routes.
+- User asks for a security guarantee, compliance certification, or whether a scan proves an app is secure → retrieve `tool.codex_security` first, then `vcb.safety.security_review`; emphasize evidence, validation limits, and human security ownership.
+
+## Codex Governance and Maintenance Tool Card Fast Routing
+
+- User asks whether a Codex feature is safe/current/stable enough to use, whether a feature is production-ready, or how to interpret maturity/support posture → retrieve `tool.codex_feature_maturity` first; use `vcb.codex.feature_maturity` only for companion mechanics.
+- User asks what changed in Codex, whether VCB guidance is stale, how to monitor official releases, how to update source dates/routes, or how to handle deprecations after a Codex update → retrieve `tool.codex_changelog_monitoring` first; use `vcb.codex.changelog_monitoring`, `SOURCE_REGISTER.md`, and `DEPRECATION_REGISTER.md` as companion maintenance routes.
+
+## Repository-Contract Cleanup Fast Routing
+
+- User asks about glossary terms for optimism bias, completion bias, plausibility bias, AI agreement, confident summaries, or answer-shopping → route through `indexes/GLOSSARY.md` to active atomic cards such as `vcb.shortcut.ignoring_model_biases`, `vcb.shortcut.trusting_estimates_before_inspection`, `vcb.shortcut.consensus_as_correctness`, `vcb.shortcut.best_of_n_without_review`, and `vcb.shortcut.cherry_picking_ai_answers`.
+- User asks about a planned shortcut alias that redirects to an active card → prefer the manifest canonical replacement, then check `DEPRECATION_REGISTER.md` and `SHORTCUT_REGISTER.md` for the alias policy. Do not route a redirected alias as the smallest active card.
+- Key hardened active routes include `vcb.shortcut.default_config_forever` for alias `vcb.shortcut.using_global_config_for_everything`, `vcb.shortcut.many_ais_same_files` for alias `vcb.shortcut.parallel_agents_same_files`, `vcb.shortcut.parallel_agents_edit_same_files` for alias `vcb.shortcut.parallel_tasks_same_files`, and `vcb.shortcut.browser_clicking_without_repro` for alias `vcb.shortcut.screenshot_only_verification`.
+
+## Active Chapters
+
+- `vcb.chapter.how_to_use_this_bible` — Chapter 0 — How to Use This Bible — `chapters/00-how-to-use-this-bible.md`
+- `vcb.chapter.codex_mental_model` — Chapter 1 — What Codex Actually Is — `chapters/01-codex-mental-model.md`
+- `vcb.chapter.vibe_coder_advantage_and_risk` — Chapter 2 — The Vibe Coder’s Advantage and Weakness — `chapters/02-vibe-coder-advantage-and-risk.md`
+- `vcb.chapter.codex_surfaces` — Chapter 3 — The Codex Surfaces: App, IDE, CLI, Cloud, GitHub, SDK — `chapters/03-codex-surfaces.md`
+- `vcb.chapter.installing_and_configuring_codex` — Chapter 4 — Installing and Configuring Codex Without Creating a Mess — `chapters/04-installing-and-configuring-codex.md`
+- `vcb.chapter.sandboxing_and_approvals` — Chapter 5 — Sandboxes, Approvals, and Why Full Access Is Usually a Bad Default — `chapters/05-sandboxing-and-approvals.md`
+- `vcb.chapter.git_discipline` — Chapter 6 — Git Discipline for Vibe Coders — `chapters/06-git-discipline.md`
+- `vcb.chapter.four_part_prompt` — Chapter 7 — The Four-Part Prompt: Goal, Context, Constraints, Done When — `chapters/07-four-part-prompt.md`
+- `vcb.chapter.plan_first_code_second` — Chapter 8 — Plan First, Code Second — `chapters/08-plan-first-code-second.md`
+- `vcb.chapter.context_management` — Chapter 9 — Context Management: Enough Context, Not Everything — `chapters/09-context-management.md`
+- `vcb.chapter.acceptance_criteria` — Chapter 10 — Acceptance Criteria: The Difference Between “Looks Done” and Done — `chapters/10-acceptance-criteria.md`
+- `vcb.chapter.understanding_unknown_codebase` — Chapter 11 — Understanding an Unknown Codebase — `chapters/11-understanding-an-unknown-codebase.md`
+- `vcb.chapter.feature_slicing` — Chapter 12 — Building a Feature in Small Slices — `chapters/12-building-feature-small-slices.md`
+- `vcb.chapter.debugging_with_reproduction` — Chapter 13 — Debugging with Reproduction, Not Guessing — `chapters/13-debugging-with-reproduction.md`
+- `vcb.chapter.writing_updating_tests` — Chapter 14 — Writing and Updating Tests with Codex — `chapters/14-writing-updating-tests.md`
+- `vcb.chapter.frontend_work` — Chapter 15 — Frontend Work: Screenshots, Browser Checks, and Taste — `chapters/15-frontend-work.md`
+- `vcb.chapter.refactoring_without_breaking_everything` — Chapter 16 — Refactoring Without Breaking Everything — `chapters/16-refactoring-without-breaking-everything.md`
+- `vcb.chapter.dependency_package_framework_decisions` — Chapter 17 — Dependency, Package, and Framework Decisions — `chapters/17-dependency-package-framework-decisions.md`
+- `vcb.chapter.agents_md_operating_manual` — Chapter 18 — AGENTS.md: Your Repo’s Operating Manual for Codex — `chapters/18-agents-md.md`
+- `vcb.chapter.codex_config_defaults` — Chapter 19 — Codex Config: Making Good Defaults Automatic — `chapters/19-codex-config.md`
+- `vcb.chapter.skills_reusable_workflows` — Chapter 20 — Skills: Reusable Workflows for Repeated Tasks — `chapters/20-skills-reusable-workflows.md`
+- `vcb.chapter.mcp_external_tools` — Chapter 21 — MCP: Giving Codex External Tools Without Creating Chaos — `chapters/21-mcp-external-tools.md`
+- `vcb.chapter.hooks_deterministic_guardrails` — Chapter 22 — Hooks and Deterministic Guardrails — `chapters/22-hooks-deterministic-guardrails.md`
+- `vcb.chapter.reviewing_codex_output` — Chapter 23 — Reviewing Codex Output Like a Senior Engineer — `chapters/23-reviewing-codex-output-like-senior-engineer.md`
+- `vcb.chapter.github_pr_review_with_codex` — Chapter 24 — GitHub PR Review with Codex — `chapters/24-github-pr-review-with-codex.md`
+- `vcb.chapter.security_for_vibe_coders` — Chapter 25 — Security for Vibe Coders — `chapters/25-security-for-vibe-coders.md`
+- `vcb.chapter.ci_noninteractive_github_actions` — Chapter 26 — CI, Non-Interactive Codex, and GitHub Actions — `chapters/26-ci-non-interactive-codex-github-actions.md`
+- `vcb.chapter.cloud_delegation_parallel_work` — Chapter 27 — Cloud Delegation and Parallel Work — `chapters/27-cloud-delegation-parallel-work.md`
+- `vcb.chapter.subagents_parallel_thinking` — Chapter 28 — Subagents: Parallel Thinking Without Parallel Chaos — `chapters/28-subagents-parallel-thinking.md`
+- `vcb.chapter.automations_recurring_work` — Chapter 29 — Automations: Recurring Work Without Recurring Prompts — `chapters/29-automations-recurring-work.md`
+- `vcb.chapter.computer_use_browser_gui_tasks` — Chapter 30 — Computer Use, Browser Work, and GUI Tasks — `chapters/30-computer-use-browser-gui-tasks.md`
+- `vcb.chapter.prompt_library_to_team_workflow` — Chapter 31 — From Prompt Library to Team Workflow — `chapters/31-from-prompt-library-to-team-workflow.md`
+- `vcb.chapter.failure_modes_codex_work` — Chapter 32 — Failure Modes: How Codex Work Goes Wrong — `chapters/32-failure-modes-codex-work-goes-wrong.md`
+- `vcb.chapter.codex_playbooks` — Chapter 33 — The Codex Playbooks — `chapters/33-codex-playbooks.md`
+- `vcb.chapter.first_serious_app` — Chapter 34 — Building Your First Serious App with Codex — `chapters/34-building-first-serious-app-with-codex.md`
+- `vcb.chapter.senior_engineer_checklist` — Chapter 35 — The Senior Engineer Checklist for Vibe Coders — `chapters/35-senior-engineer-checklist.md`
+- `vcb.chapter.field_notes_unofficial_practices` — Chapter 36 — Field Notes: Unofficial and User-Discovered Codex Practices — `chapters/36-field-notes-unofficial-practices.md`
+- `vcb.chapter.maintaining_updating_bible` — Chapter 37 — Maintaining and Updating the Bible — `chapters/37-maintaining-and-updating-the-bible.md`
+- `vcb.chapter.risk_managed_shortcuts` — Chapter 38 — Risk-Managed Shortcuts: When Users Ignore Best Practices — `chapters/38-risk-managed-shortcuts.md`
+- `vcb.chapter.choosing_codex_operating_mode` — Chapter 39 — Choosing Your Codex Operating Mode — `chapters/39-choosing-codex-operating-mode.md`
+- `vcb.chapter.budget_aware_codex_workflows` — Chapter 40 — Plus vs Pro vs API vs Team: Budget-Aware Codex Workflows — `chapters/40-budget-aware-codex-workflows.md`
+- `vcb.chapter.build_phase_vs_maintenance_phase` — Chapter 41 — Build Phase vs Maintenance Phase — `chapters/41-build-phase-vs-maintenance-phase.md`
+- `vcb.chapter.tool_stack_catalog` — Chapter 42 — The Tool Stack Catalog — `chapters/42-tool-stack-catalog.md`
+- `vcb.chapter.cost_benefit_analysis` — Chapter 43 — Cost-Benefit Analysis for Vibe Coders — `chapters/43-cost-benefit-analysis-for-vibe-coders.md`
+- `vcb.chapter.when_to_use_other_ais` — Chapter 44 — When to Use Other AIs With Codex — `chapters/44-when-to-use-other-ais-with-codex.md`
+- `vcb.chapter.what_codex_is_bad_at` — Chapter 45 — What Codex Is Bad At — `chapters/45-what-codex-is-bad-at.md`
+- `vcb.chapter.model_biases_failure_biases_bad_estimates` — Chapter 46 — Model Biases, Failure Biases, and Bad Estimates — `chapters/46-model-biases-failure-biases-bad-estimates.md`
+
+## Active Concept Cards
+
+- `vcb.concepts.api_basics` — API Basics — `topics/concepts/api-basics.md`
+- `vcb.concepts.async` — Async and Timing — `topics/concepts/async.md`
+- `vcb.concepts.authentication` — Authentication — `topics/concepts/authentication.md`
+- `vcb.concepts.authorization` — Authorization — `topics/concepts/authorization.md`
+- `vcb.concepts.blast_radius` — Blast Radius — `topics/concepts/blast-radius.md`
+- `vcb.concepts.build_step` — Build Step — `topics/concepts/build-step.md`
+- `vcb.concepts.ci` — CI — `topics/concepts/ci.md`
+- `vcb.concepts.database_schema` — Database Schema — `topics/concepts/database-schema.md`
+- `vcb.concepts.dependency` — Dependency — `topics/concepts/dependency.md`
+- `vcb.concepts.diff` — Diff — `topics/concepts/diff.md`
+- `vcb.concepts.environment_variable` — Environment Variable — `topics/concepts/environment-variable.md`
+- `vcb.concepts.feature_flag` — Feature Flag — `topics/concepts/feature-flag.md`
+- `vcb.concepts.frontend_backend` — Frontend vs Backend — `topics/concepts/frontend-backend.md`
+- `vcb.concepts.git_branch` — Git Branch — `topics/concepts/git-branch.md`
+- `vcb.concepts.lint` — Lint — `topics/concepts/lint.md`
+- `vcb.concepts.migration` — Migration — `topics/concepts/migration.md`
+- `vcb.concepts.observability` — Observability — `topics/concepts/observability.md`
+- `vcb.concepts.pull_request` — Pull Request — `topics/concepts/pull-request.md`
+- `vcb.concepts.recoverability` — Recoverability — `topics/concepts/recoverability.md`
+- `vcb.concepts.rollback` — Rollback — `topics/concepts/rollback.md`
+- `vcb.concepts.state` — State — `topics/concepts/state.md`
+- `vcb.concepts.test` — Test — `topics/concepts/test.md`
+- `vcb.concepts.typecheck` — Typecheck — `topics/concepts/typecheck.md`
+
+## Active Workflow and Prompting Cards
+
+- `vcb.prompting.four_part_prompt` — Four-Part Prompt — `topics/prompting/four-part-prompt.md`
+- `vcb.prompting.acceptance_criteria` — Acceptance Criteria Prompting — `topics/prompting/acceptance-criteria.md`
+- `vcb.prompting.plan_first` — Plan-First Prompting — `topics/prompting/plan-first.md`
+- `vcb.prompting.context_management` — Context Management Prompting — `topics/prompting/context-management.md`
+- `vcb.workflow.unknown_codebase` — Unknown Codebase Workflow — `topics/workflows/unknown-codebase.md`
+- `vcb.workflow.feature_slicing` — Feature Slicing Workflow — `topics/workflows/feature-slicing.md`
+- `vcb.workflow.bug_repro` — Bug Reproduction Workflow — `topics/workflows/bug-repro.md`
+- `vcb.workflow.testing` — Testing Workflow — `topics/workflows/testing.md`
+
+## Active Review, Safety, and Verification Workflow Cards
+
+- `vcb.workflow.codex_output_review` — Review Codex output by diff, evidence, and risk — `topics/workflows/codex-output-review.md`
+- `vcb.workflow.reviewing_diffs` — Read diffs by scope, risk, and evidence — `topics/workflows/reviewing-diffs.md`
+- `vcb.workflow.github_pr_review` — Use Codex as a PR review signal, not approval — `topics/workflows/github-pr-review.md`
+- `vcb.safety.security_review` — Review trust boundaries, auth, data, and exploitability — `topics/safety/security-review.md`
+- `vcb.safety.secrets` — Keep credentials out of prompts, logs, diffs, and broad agent access — `topics/safety/secrets.md`
+- `vcb.workflow.ci_triage` — Triage failed checks and logs before patching — `topics/workflows/ci-triage.md`
+- `vcb.workflow.ci_noninteractive` — Run Codex in CI with least privilege and auditable output — `topics/workflows/ci-noninteractive.md`
+- `vcb.safety.production_red_lines` — Hard-stop gates for production-risk work — `topics/safety/production-red-lines.md`
+
+## Active Frontend, Refactor, Dependency, and Documentation Workflow Cards
+
+- `vcb.workflow.frontend_work` — Frontend Verification Workflow — `topics/workflows/frontend-work.md`
+- `vcb.workflow.visual_qa` — Visual QA and Screenshot Review Workflow — `topics/workflows/visual-qa.md`
+- `vcb.workflow.accessibility_review` — Accessibility Review Workflow — `topics/workflows/accessibility-review.md`
+- `vcb.workflow.refactoring` — Safe Refactoring Workflow — `topics/workflows/refactoring.md`
+- `vcb.workflow.dependency_decisions` — Dependency Decision Workflow — `topics/workflows/dependency-decisions.md`
+- `vcb.workflow.dependency_update_review` — Dependency Update Review Workflow — `topics/workflows/dependency-update-review.md`
+- `vcb.workflow.release_notes` — Release Notes Workflow — `topics/workflows/release-notes.md`
+- `vcb.workflow.documentation_updates` — Documentation Update Workflow — `topics/workflows/documentation-updates.md`
+
+## Active Failure-Mode Cards
+
+- `vcb.failure.hallucinated_apis` — hallucinated APIs and fake interface contracts — `topics/failure-modes/hallucinated-apis.md`
+- `vcb.failure.context_pollution` — stale, noisy, excessive, or contradictory context — `topics/failure-modes/context-pollution.md`
+- `vcb.failure.weakened_tests` — tests changed to pass without proving behavior — `topics/failure-modes/weakened-tests.md`
+- `vcb.failure.broad_refactor_drift` — refactor work drifting into behavior change or rewrite — `topics/failure-modes/broad-refactor-drift.md`
+- `vcb.failure.dependency_bloat` — unnecessary dependencies and supply-chain drag — `topics/failure-modes/dependency-bloat.md`
+- `vcb.failure.ui_taste_gap` — frontend work that renders but lacks state, responsive, accessibility, or polish evidence — `topics/failure-modes/ui-taste-gap.md`
+- `vcb.failure.ci_false_confidence` — green CI mistaken for complete verification — `topics/failure-modes/ci-false-confidence.md`
+- `vcb.failure.done_claim_without_evidence` — done claim without artifact evidence — `topics/failure-modes/done-claim-without-evidence.md`
+
+## Active Shortcut Harm-Reduction Cards
+
+- `vcb.shortcut.skipping_tests` — `topics/shortcuts/skipping-tests.md` — risk-managed shortcut card for accepting changes without the smallest relevant verification.
+- `vcb.shortcut.accepting_looks_done` — `topics/shortcuts/accepting-looks-done.md` — risk-managed shortcut card for accepting polished output without completion evidence.
+- `vcb.shortcut.broad_agent_permissions` — `topics/shortcuts/broad-agent-permissions.md` — risk-managed shortcut card for broad filesystem/network/tool/account access.
+- `vcb.shortcut.unattended_long_runs` — `topics/shortcuts/unattended-long-runs.md` — risk-managed shortcut card for long-running work without checkpoints.
+- `vcb.shortcut.broad_refactor` — `topics/shortcuts/broad-refactor.md` — risk-managed shortcut card for broad cleanup or refactor prompts.
+- `vcb.shortcut.context_dumping` — `topics/shortcuts/context-dumping.md` — risk-managed shortcut card for noisy/stale prompt context.
+- `vcb.shortcut.adding_dependencies_fast` — `topics/shortcuts/adding-dependencies-fast.md` — risk-managed shortcut card for fast dependency additions.
+- `vcb.shortcut.reviewing_cloud_summary_only` — `topics/shortcuts/reviewing-cloud-summary-only.md` — risk-managed shortcut card for cloud/background work reviewed only by summary.
+
+## Active Security and Permission Shortcut Cards
+
+- `vcb.shortcut.production_console_computer_use` — `topics/shortcuts/production-console-computer-use.md` — production/admin console GUI actions with Computer Use or browser control.
+- `vcb.shortcut.overbroad_ci_permissions` — `topics/shortcuts/overbroad-ci-permissions.md` — CI jobs with broader repository/deploy/cloud permissions than the task needs.
+- `vcb.shortcut.long_lived_ci_secrets` — `topics/shortcuts/long-lived-ci-secrets.md` — persistent CI credentials instead of short-lived or scoped alternatives.
+- `vcb.shortcut.real_secrets_in_prototype` — `topics/shortcuts/real-secrets-in-prototype.md` — real credentials or production data inside disposable prototypes.
+- `vcb.shortcut.cloud_work_with_real_secrets` — `topics/shortcuts/cloud-work-with-real-secrets.md` — delegated cloud tasks with production or real service secrets.
+- `vcb.shortcut.full_access_automation` — `topics/shortcuts/full-access-automation.md` — automated agents with full filesystem, network, command, or credential access.
+- `vcb.shortcut.unattended_mutation` — `topics/shortcuts/unattended-mutation.md` — write-capable agent work without human checkpointing.
+- `vcb.shortcut.always_allow_sensitive_apps` — `topics/shortcuts/always-allow-sensitive-apps.md` — persistent app/site approvals for sensitive GUI or browser surfaces.
+
+## Tool-Sprawl, Skill, and Reusable-Process Shortcut Fast Routing
+
+- User asks about premature skills, skill sprawl, tool sprawl, MCP sprawl, brittle hooks, tiny-project process overhead, fake team workflow, or copied playbooks → retrieve the matching active Chunk 23 `vcb.shortcut.*` card.
+- `vcb.shortcut.skill_overkill` — `topics/shortcuts/skill-overkill.md` — avoid premature skills for one-off prompts.
+- `vcb.shortcut.skill_sprawl` — `topics/shortcuts/skill-sprawl.md` — audit overlapping or stale skills.
+- `vcb.shortcut.tool_sprawl` — `topics/shortcuts/tool-sprawl.md` — control minimum viable tool stack decisions.
+- `vcb.shortcut.tool_sprawl_mcp` — `topics/shortcuts/tool-sprawl-mcp.md` — scope MCP servers, tools, credentials, and approvals.
+- `vcb.shortcut.brittle_hooks` — `topics/shortcuts/brittle-hooks.md` — keep hooks deterministic, fast, and reviewable.
+- `vcb.shortcut.process_overhead_for_tiny_project` — `topics/shortcuts/process-overhead-for-tiny-project.md` — right-size process for tiny projects.
+- `vcb.shortcut.team_workflow_without_team` — `topics/shortcuts/team-workflow-without-team.md` — avoid fake team ceremony in solo work.
+- `vcb.shortcut.copy_pasting_playbook_blindly` — `topics/shortcuts/copy-pasting-playbook-blindly.md` — tailor playbooks before execution.
+
+## Active Codex Feature Cards
+
+- `vcb.codex.app` — Codex App — `topics/codex/app.md`
+- `vcb.codex.cli` — Codex CLI — `topics/codex/cli.md`
+- `vcb.codex.ide_extension` — Codex IDE Extension — `topics/codex/ide-extension.md`
+- `vcb.codex.cloud` — Codex Cloud / Web — `topics/codex/cloud.md`
+- `vcb.codex.github_review` — Codex GitHub PR Review — `topics/codex/github-review.md`
+- `vcb.codex.config` — Codex Config — `topics/codex/config.md`
+- `vcb.codex.agents_md` — AGENTS.md — `topics/codex/agents-md.md`
+- `vcb.codex.skills` — Codex Skills — `topics/codex/skills.md`
+- `vcb.codex.mcp` — MCP for Codex — `topics/codex/mcp.md`
+- `vcb.codex.hooks` — Codex Hooks — `topics/codex/hooks.md`
+- `vcb.codex.automations` — Codex Automations — `topics/codex/automations.md`
+- `vcb.codex.subagents` — Codex Subagents — `topics/codex/subagents.md`
+- `vcb.codex.computer_use` — Codex Computer Use — `topics/codex/computer-use.md`
+- `vcb.codex.feature_maturity` — Codex Feature Maturity — `topics/codex/feature-maturity.md`
+- `vcb.codex.changelog_monitoring` — Codex Changelog Monitoring — `topics/codex/changelog-monitoring.md`
+
+## Fast Routing
+
+- Need hosting/backend/auth/payment/observability/product-analytics tool guidance → retrieve the smallest active platform/tool card first: `tool.vercel`, `tool.cloudflare`, or `tool.netlify` for hosting/deployment/DNS/edge/site contexts; `tool.supabase` or `tool.neon` for backend/database/Postgres contexts; `tool.clerk` or `tool.auth0` for auth/IAM contexts; `tool.stripe` for payments; `tool.resend` for email/notifications; `tool.sentry` for error/performance evidence; and `tool.posthog` for analytics/replay/feature flags. Use chapters/workflows only as companion guidance.
+- Need a plain software concept → retrieve the matching `vcb.concepts.*` card.
+- Need current Codex product behavior → retrieve the matching `vcb.codex.*` card and check official OpenAI source rows.
+- Need prompt/workflow discipline → retrieve the matching `vcb.prompting.*` or `vcb.workflow.*` card, including Chunk 17 frontend/refactor/dependency/docs workflow cards.
+- Need Codex Security tooling or review/safety/verification workflow discipline → retrieve `tool.codex_security` first for Codex Security scans/findings/fix preparation, then `vcb.workflow.codex_output_review`, `vcb.workflow.reviewing_diffs`, `vcb.workflow.github_pr_review`, `vcb.safety.security_review`, `vcb.safety.secrets`, `vcb.workflow.ci_triage`, `vcb.workflow.ci_noninteractive`, or `vcb.safety.production_red_lines`.
+- Need failure-mode diagnosis → retrieve `vcb.failure.hallucinated_apis`, `vcb.failure.context_pollution`, `vcb.failure.weakened_tests`, `vcb.failure.broad_refactor_drift`, `vcb.failure.dependency_bloat`, `vcb.failure.ui_taste_gap`, `vcb.failure.ci_false_confidence`, or `vcb.failure.done_claim_without_evidence`.
+- Need frontend/refactor/dependency/docs workflow discipline → retrieve `vcb.workflow.frontend_work`, `vcb.workflow.visual_qa`, `vcb.workflow.accessibility_review`, `vcb.workflow.refactoring`, `vcb.workflow.dependency_decisions`, `vcb.workflow.dependency_update_review`, `vcb.workflow.release_notes`, or `vcb.workflow.documentation_updates`.
+- Need constraint/budget guidance → retrieve `vcb.constraints.operating_mode`, `vcb.constraints.attention_budget`, `vcb.constraints.usage_burn`, `vcb.constraints.recovery_budget`, `vcb.constraints.build_vs_maintenance`, `vcb.constraints.production_quality`, `vcb.constraints.scope_budget`, or `vcb.constraints.review_budget` before falling back to Chapters 39–43 or active pricing snapshots.
+- Need shortcut harm-reduction guidance for skipping tests, accepting looks-done claims, broad permissions, unattended long runs, broad refactors, context dumping, fast dependencies, or cloud-summary-only review → retrieve the matching `vcb.shortcut.*` card from Chunk 20.
+- Need security/permission shortcut guidance for production GUI actions, broad CI permissions, long-lived CI secrets, real secrets in prototypes/cloud work, full-access automation, unattended mutation, or always-allowed sensitive apps → retrieve the matching `vcb.shortcut.*` card from Chunk 21.
+- User asks about premature skills, too many skills, too many tools, whether MCP is needed, brittle hooks, adding tools instead of shipping, process overhead for tiny projects, team workflow without a team, or copied playbooks → retrieve the matching active Chunk 23 `vcb.shortcut.*` card before falling back to Chapter 38 or `SHORTCUT_REGISTER.md`.
+- User asks about many AIs, multiple models, parallel agents, best-of-N answers, AI consensus, cherry-picking AI answers, trusting estimates before inspection, model biases, model routing guesswork, or subagent swarms → retrieve the matching active Chunk 24 `vcb.shortcut.*` card before falling back to Chapter 44, Chapter 46, or `SHORTCUT_REGISTER.md`.
+- Need risk or shortcut guidance beyond authored shortcut cards → retrieve Chapter 38 plus relevant shortcut register entries.
+- Need current/deprecation review, feature maturity review, changelog monitoring, deprecation watch, or Codex guidance freshness checks → retrieve `tool.codex_changelog_monitoring` and `tool.codex_feature_maturity` first, then `vcb.codex.changelog_monitoring`, `vcb.codex.feature_maturity`, `SOURCE_REGISTER.md`, and `DEPRECATION_REGISTER.md`.
+- Need first-party Codex tool-card guidance → retrieve `tool.codex` first, then the smallest active primary, adjunct, customization/control, security, or governance/maintenance card: `tool.codex_app`, `tool.codex_cli`, `tool.codex_ide_extension`, `tool.codex_cloud`, `tool.codex_github_review`, `tool.codex_exec`, `tool.codex_worktrees`, `tool.codex_subagents`, `tool.codex_automations`, `tool.codex_computer_use`, `tool.codex_browser`, `tool.codex_chrome_extension`, `tool.codex_agents_md`, `tool.codex_config`, `tool.codex_skills`, `tool.codex_mcp`, `tool.codex_hooks`, `tool.codex_security`, `tool.codex_feature_maturity`, or `tool.codex_changelog_monitoring`.
+- Need prompt/workflow coaching → retrieve the matching `vcb.prompting.*` or `vcb.workflow.*` card before falling back to chapter wrappers.
+
+## Parallel Cloud and Automation Shortcut Fast Routing
+
+- User asks about unattended cloud/background delegation, cloud tasks running while away, or async task handoff → route first to `vcb.shortcut.unattended_cloud_delegation`, then `vcb.shortcut.reviewing_cloud_summary_only`, then `vcb.codex.cloud`.
+- User asks about vague cloud tasks, missing context, or cloud work guessing project state → route to `vcb.shortcut.ambiguous_cloud_task` and `vcb.shortcut.cloud_task_without_context`.
+- User asks about many cloud tasks, parallel background branches, or integration conflict → route to `vcb.shortcut.parallel_cloud_sprawl`, `vcb.shortcut.conflicting_parallel_agents`, and `vcb.shortcut.parallel_agents_edit_same_files`.
+- User asks about recurring automation noise, scheduled AI spam, or automation output no one reads → route to `vcb.shortcut.automation_spam`.
+- User asks about noninteractive or scheduled AI changing files/settings without review → route to `vcb.shortcut.automation_mutation_without_review`, then `vcb.shortcut.unattended_mutation`.
+- User asks about browser/GUI work, clicking around, signed-in browser pages, or secrets visible in Chrome/admin consoles → route to `vcb.shortcut.browser_clicking_without_repro` and `vcb.shortcut.logged_in_browser_secrets`.
+
+## Active Chunk 25 Parallel Cloud and Automation Shortcut Cards
+
+- `vcb.shortcut.unattended_cloud_delegation` — `topics/shortcuts/unattended-cloud-delegation.md` — unattended cloud/background delegation guardrails.
+- `vcb.shortcut.ambiguous_cloud_task` — `topics/shortcuts/ambiguous-cloud-task.md` — plan-first guardrails for vague cloud work.
+- `vcb.shortcut.cloud_task_without_context` — `topics/shortcuts/cloud-task-without-context.md` — cloud task context/delegation packet guardrails.
+- `vcb.shortcut.parallel_cloud_sprawl` — `topics/shortcuts/parallel-cloud-sprawl.md` — parallel cloud task sprawl guardrails.
+- `vcb.shortcut.conflicting_parallel_agents` — `topics/shortcuts/conflicting-parallel-agents.md` — conflicting write agents and integration guardrails.
+- `vcb.shortcut.automation_spam` — `topics/shortcuts/automation-spam.md` — recurring automation noise guardrails.
+- `vcb.shortcut.automation_mutation_without_review` — `topics/shortcuts/automation-mutation-without-review.md` — scheduled/noninteractive mutation review gates.
+- `vcb.shortcut.browser_clicking_without_repro` — `topics/shortcuts/browser-clicking-without-repro.md` — GUI/browser repro guardrails.
+- `vcb.shortcut.logged_in_browser_secrets` — `topics/shortcuts/logged-in-browser-secrets.md` — signed-in browser secrets/account-authority guardrails.
+
+## Shortcut Harm-Reduction Card Fast Routing
+
+- `vcb.shortcut.skipping_tests` — `topics/shortcuts/skipping-tests.md` — skipped verification and hidden regressions.
+- `vcb.shortcut.accepting_looks_done` — `topics/shortcuts/accepting-looks-done.md` — polished done claims without evidence.
+- `vcb.shortcut.broad_agent_permissions` — `topics/shortcuts/broad-agent-permissions.md` — broad filesystem, command, network, or tool permissions.
+- `vcb.shortcut.unattended_long_runs` — `topics/shortcuts/unattended-long-runs.md` — long autonomous work without milestone checkpoints.
+- `vcb.shortcut.broad_refactor` — `topics/shortcuts/broad-refactor.md` — cleanup drifting into behavior change.
+- `vcb.shortcut.context_dumping` — `topics/shortcuts/context-dumping.md` — stale, excessive, or contradictory context.
+- `vcb.shortcut.adding_dependencies_fast` — `topics/shortcuts/adding-dependencies-fast.md` — package bloat and supply-chain drag.
+- `vcb.shortcut.reviewing_cloud_summary_only` — `topics/shortcuts/reviewing-cloud-summary-only.md` — summary accepted without diff/check evidence.
+
+- User asks to make a shortcut safer → retrieve the matching active `vcb.shortcut.*` card from the active shortcut-card slices, including Chunk 20 harm-reduction cards, Chunk 21 security/permission cards, Chunk 22 setup/process cards, Chunk 23 tool-sprawl/skill/reusable-workflow cards, and Chunk 24 multi-AI/model-bias cards, Chunk 25 parallel/cloud/automation cards, and Chunk 26 alias/deprecation routing cleanup, before falling back to Chapter 38 or `SHORTCUT_REGISTER.md`.
+- User asks about skipping tests, accepting looks done, broad permissions, unattended long runs, broad refactors, context dumping, fast dependencies, or cloud summaries → retrieve the matching active shortcut card.
+- User asks about production GUI actions, broad CI permissions, long-lived CI secrets, real secrets, cloud secrets, full-access automation, unattended mutation, or always-allow app/site permissions → retrieve the matching active security/permission shortcut card.
+
+## Active Pricing and Constraint Files
+
+- `vcb.pricing_snapshot.openai_codex` — `pricing-snapshots/2026-06-09-openai-codex.md`
+- `vcb.chapter.choosing_codex_operating_mode` — `chapters/39-choosing-codex-operating-mode.md`
+- `vcb.chapter.budget_aware_codex_workflows` — `chapters/40-budget-aware-codex-workflows.md`
+- `vcb.chapter.tool_stack_catalog` — `chapters/42-tool-stack-catalog.md`
+
+## Setup, Configuration, and Process Shortcut Fast Routing
+
+- `vcb.shortcut.skipping_setup` — `topics/shortcuts/skipping-setup.md` — inspect setup before edits and run one smallest verification.
+- `vcb.shortcut.default_config_forever` — `topics/shortcuts/default-config-forever.md` — review Codex config defaults and risky profiles by project phase.
+- `vcb.shortcut.skipping_agents_md` — `topics/shortcuts/skipping-agents-md.md` — promote repeated project guidance into durable repo instructions.
+- `vcb.shortcut.overstuffing_agents_md` — `topics/shortcuts/overstuffing-agents-md.md` — prune AGENTS.md so durable guidance does not become context pollution.
+- `vcb.shortcut.stale_agents_md` — `topics/shortcuts/stale-agents-md.md` — verify old repo guidance before future agents follow it.
+- `vcb.shortcut.unofficial_tools` — `topics/shortcuts/unofficial-tools.md` — vet plugins, MCP servers, wrappers, extensions, and scripts before enabling.
+- `vcb.shortcut.hook_overreach` — `topics/shortcuts/hook-overreach.md` — keep hooks objective and narrow instead of treating them as complete policy.
+- `vcb.shortcut.trusting_external_tool_output` — `topics/shortcuts/trusting-external-tool-output.md` — verify MCP/plugin/web/tool output with source evidence before mutation.
+
+## Active Constraint and Budget Cards
+
+- `vcb.constraints.operating_mode` — `Operating Mode` — `topics/constraints/operating-mode.md`
+- `vcb.constraints.attention_budget` — `Attention Budget` — `topics/constraints/attention-budget.md`
+- `vcb.constraints.usage_burn` — `Usage Burn` — `topics/constraints/usage-burn.md`
+- `vcb.constraints.recovery_budget` — `Recovery Budget` — `topics/constraints/recovery-budget.md`
+- `vcb.constraints.build_vs_maintenance` — `Build Vs Maintenance` — `topics/constraints/build-vs-maintenance.md`
+- `vcb.constraints.production_quality` — `Production Quality Constraints` — `topics/constraints/production-quality-constraints.md`
+- `vcb.constraints.scope_budget` — `Scope Budget` — `topics/constraints/scope-budget.md`
+- `vcb.constraints.review_budget` — `Review Budget` — `topics/constraints/review-budget.md`
+
+## Constraint/Budget Fast Routing
+
+- Need to choose a Codex surface, autonomy level, or delegation mode → retrieve `tool.codex` first for surface choice and `vcb.constraints.operating_mode` as the operating-mode companion card.
+- Need to adapt work to available human focus → retrieve `vcb.constraints.attention_budget`.
+- Need to manage usage limits, credits, token burn, context, retries, or exact pricing-snapshot routing → retrieve `vcb.constraints.usage_burn`.
+- Need to decide whether a fast change is recoverable enough → retrieve `vcb.constraints.recovery_budget`.
+- Need to adapt behavior for prototype, MVP, production build, maintenance, refactor, or hotfix phase → retrieve `vcb.constraints.build_vs_maintenance`; when prototype also means app-builder/browser-dev tool choice, retrieve `tool.replit`, `tool.lovable`, `tool.bolt`, or `tool.v0` as the smallest active tool card.
+- Need to judge production readiness → retrieve `vcb.constraints.production_quality`; when deployment, data, auth, payment, observability, analytics, or feature-flag evidence is involved, retrieve the relevant active platform tool card: `tool.vercel`, `tool.cloudflare`, `tool.netlify`, `tool.supabase`, `tool.neon`, `tool.clerk`, `tool.auth0`, `tool.stripe`, `tool.resend`, `tool.sentry`, or `tool.posthog`.
+- Need to shrink a broad task into a reviewable slice → retrieve `vcb.constraints.scope_budget`.
+- Need to size a task to available diff/PR review capacity → retrieve `vcb.constraints.review_budget`.
+
+## Multi-AI and Model-Bias Shortcut Fast Routing
+
+- `vcb.shortcut.many_ais_same_files` — `topics/shortcuts/many-ais-same-files.md` — using multiple AI systems on the same files without one owner, one branch strategy, and one integration path.
+- `vcb.shortcut.parallel_agents_edit_same_files` — `topics/shortcuts/parallel-agents-edit-same-files.md` — letting multiple agents mutate overlapping files at the same time and hoping the merge will be obvious later.
+- `vcb.shortcut.best_of_n_without_review` — `topics/shortcuts/best-of-n-without-review.md` — asking several AIs for answers, then accepting the one that looks best without checking diffs, tests, source evidence, or risks.
+- `vcb.shortcut.cherry_picking_ai_answers` — `topics/shortcuts/cherry-picking-ai-answers.md` — choosing the answer that confirms your preferred plan instead of the answer with the best evidence.
+- `vcb.shortcut.consensus_as_correctness` — `topics/shortcuts/consensus-as-correctness.md` — treating agreement between multiple AIs as proof that a claim, estimate, fix, or design is correct.
+- `vcb.shortcut.trusting_estimates_before_inspection` — `topics/shortcuts/trusting-estimates-before-inspection.md` — believing an AI estimate before the model has inspected the actual code, dependencies, tests, constraints, and unknowns.
+- `vcb.shortcut.ignoring_model_biases` — `topics/shortcuts/ignoring-model-biases.md` — forgetting that models can be biased toward plausible answers, overconfident summaries, common patterns, pleasing the user, and underestimating hidden project constraints.
+- `vcb.shortcut.model_routing_guesswork` — `topics/shortcuts/model-routing-guesswork.md` — choosing a model, reasoning level, surface, or AI tool by brand feeling, stale advice, or price anxiety instead of current docs, task shape, risk, and evidence needs.
+- `vcb.shortcut.subagent_swarm` — `topics/shortcuts/subagent-swarm.md` — spawning many subagents or custom agents before each has a bounded question, role, context, output format, and integration plan.
+
+<!-- VCB:STOP_RETRIEVAL reason="llms_full_source_map_complete" -->
+<!-- VCB:END_LLMS_FULL id=vcb.llms_full -->

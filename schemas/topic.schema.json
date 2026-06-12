@@ -1,0 +1,323 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-coding-bible.local/schemas/topic.schema.json",
+  "title": "VCB Topic Frontmatter",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "id",
+    "title",
+    "type",
+    "version",
+    "last_verified",
+    "next_review_due",
+    "review_cadence",
+    "audiences",
+    "applies_to",
+    "source_status",
+    "evidence_level",
+    "stability",
+    "budget_profiles",
+    "project_phases",
+    "attention_modes",
+    "shortcut_profiles",
+    "durable_principles",
+    "likely_to_change",
+    "obsolete_when",
+    "related_topics"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(vcb\\.(concepts|codex|prompting|workflow|safety|shortcut|constraints|field|tool_catalog|failure|chapter)(\\.[a-z0-9_]+)+|tool\\.[a-z0-9_\\.]+)$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "concept",
+        "codex_feature",
+        "workflow",
+        "shortcut",
+        "field_practice",
+        "tool_card",
+        "failure_mode",
+        "chapter"
+      ]
+    },
+    "shortcut_type": {
+      "type": "string",
+      "const": "risk_managed_shortcut"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(-[A-Za-z0-9_.-]+)?$"
+    },
+    "last_verified": {
+      "type": "string",
+      "format": "date"
+    },
+    "next_review_due": {
+      "type": "string",
+      "format": "date"
+    },
+    "review_cadence": {
+      "type": "string",
+      "enum": [
+        "monthly",
+        "quarterly",
+        "semiannual",
+        "annual",
+        "event_driven"
+      ]
+    },
+    "audiences": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 2,
+      "items": {
+        "type": "string",
+        "enum": [
+          "human",
+          "ai_coach"
+        ]
+      },
+      "allOf": [
+        {
+          "contains": {
+            "const": "human"
+          }
+        },
+        {
+          "contains": {
+            "const": "ai_coach"
+          }
+        }
+      ]
+    },
+    "applies_to": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "source_status": {
+      "type": "object",
+      "required": [
+        "official_openai",
+        "official_vendor",
+        "community_field_practice",
+        "speculative"
+      ],
+      "properties": {
+        "official_openai": {
+          "type": "boolean"
+        },
+        "official_vendor": {
+          "type": "boolean"
+        },
+        "community_field_practice": {
+          "type": "boolean"
+        },
+        "speculative": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "evidence_level": {
+      "type": "string",
+      "enum": [
+        "E0_OFFICIAL_DOCS",
+        "E1_OFFICIAL_COOKBOOK",
+        "E2_REPRODUCED_LOCALLY",
+        "E3_EXPERT_REPORT",
+        "E4_COMMUNITY_FIELD_REPORT",
+        "E5_SPECULATIVE"
+      ]
+    },
+    "stability": {
+      "type": "object",
+      "required": [
+        "principle",
+        "surface",
+        "pricing"
+      ],
+      "properties": {
+        "principle": {
+          "type": "string",
+          "enum": [
+            "CORE_ENGINEERING",
+            "AGENTIC_PRINCIPLE",
+            "CODEX_FEATURE",
+            "CODEX_UI_OR_COMMAND",
+            "MODEL_SPECIFIC",
+            "COMMUNITY_HACK",
+            "SPECULATIVE"
+          ]
+        },
+        "surface": {
+          "type": "string",
+          "enum": [
+            "STABLE",
+            "MODERATE",
+            "VOLATILE"
+          ]
+        },
+        "pricing": {
+          "type": "string",
+          "enum": [
+            "STABLE",
+            "VOLATILE",
+            "HIGHLY_VOLATILE"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "budget_profiles": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "plus_constrained",
+          "pro_high_throughput",
+          "api_pay_as_you_go",
+          "team_shared_budget"
+        ]
+      }
+    },
+    "cost_postures": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "cheapest_reliable",
+          "balanced",
+          "fastest_possible",
+          "unattended_high_throughput",
+          "production_quality",
+          "disposable_prototype"
+        ]
+      }
+    },
+    "project_phases": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "prototype",
+          "mvp",
+          "production_build",
+          "maintenance",
+          "major_refactor",
+          "emergency_hotfix"
+        ]
+      }
+    },
+    "attention_modes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "continuous_supervision",
+          "periodic_check_in",
+          "low_attention_review_later",
+          "unattended_requires_isolation"
+        ]
+      },
+      "minItems": 1
+    },
+    "shortcut_profiles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^vcb\\.shortcut\\.[a-z0-9_\\.]+$"
+      }
+    },
+    "durable_principles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "likely_to_change": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "obsolete_when": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_topics": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(vcb\\.(concepts|codex|prompting|workflow|safety|shortcut|constraints|field|tool_catalog|failure|chapter|register|protocol|index|pricing_snapshot|chunk_report|repo)(\\.[a-z0-9_]+)+|tool\\.[a-z0-9_\\.]+|vcb\\.manifest|vcb\\.blueprint\\.[a-z0-9_\\.]+)$"
+      }
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_basis": {
+      "type": "string",
+      "enum": [
+        "VCB_SYNTHESIS_STABLE_ENGINEERING_PRACTICE"
+      ]
+    },
+    "source_kind": {
+      "type": "string",
+      "enum": [
+        "official_docs",
+        "official_docs_plus_maintainer_synthesis",
+        "maintainer_synthesis",
+        "community_field_report",
+        "expert_report",
+        "local_reproduction",
+        "speculative"
+      ]
+    },
+    "evidence_scope": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "shortcut"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "then": {
+        "required": [
+          "shortcut_type"
+        ],
+        "properties": {
+          "shortcut_type": {
+            "const": "risk_managed_shortcut"
+          }
+        }
+      }
+    }
+  ]
+}

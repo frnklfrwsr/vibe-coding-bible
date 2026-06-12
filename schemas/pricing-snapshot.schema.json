@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-coding-bible.local/schemas/pricing-snapshot.schema.json",
+  "title": "VCB Pricing Snapshot Frontmatter",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "id",
+    "title",
+    "snapshot_date",
+    "vendor",
+    "official_source_url",
+    "next_review_due",
+    "pricing_volatility"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "snapshot_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "vendor": {
+      "type": "string"
+    },
+    "official_source_url": {
+      "type": "string"
+    },
+    "next_review_due": {
+      "type": "string",
+      "format": "date"
+    },
+    "pricing_volatility": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "very_high"
+      ]
+    }
+  }
+}

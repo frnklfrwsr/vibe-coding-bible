@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-coding-bible.local/schemas/source.schema.json",
+  "title": "VCB Source Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "title",
+    "url_or_location",
+    "evidence_level",
+    "verification_status",
+    "use_for",
+    "volatility",
+    "retrieved_on"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "url_or_location": {
+      "type": "string"
+    },
+    "evidence_level": {
+      "type": "string",
+      "enum": [
+        "E0_OFFICIAL_DOCS",
+        "E1_OFFICIAL_COOKBOOK",
+        "E2_REPRODUCED_LOCALLY",
+        "E3_EXPERT_REPORT",
+        "E4_COMMUNITY_FIELD_REPORT",
+        "E5_SPECULATIVE",
+        "internal_governing_spec",
+        "internal_review"
+      ]
+    },
+    "verification_status": {
+      "type": "string"
+    },
+    "use_for": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "volatility": {
+      "type": "string",
+      "enum": [
+        "stable",
+        "moderate",
+        "volatile",
+        "highly_volatile"
+      ]
+    },
+    "retrieved_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "evidence_basis": {
+      "type": "string"
+    },
+    "source_kind": {
+      "type": "string"
+    }
+  }
+}

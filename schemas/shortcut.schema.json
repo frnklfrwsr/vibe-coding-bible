@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-coding-bible.local/schemas/shortcut.schema.json",
+  "title": "VCB Shortcut Card Frontmatter",
+  "description": "Shortcut-specific frontmatter. A full shortcut topic card must also satisfy topic.schema.json using type: shortcut and shortcut_type: risk_managed_shortcut.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "id",
+    "title",
+    "type",
+    "shortcut_type",
+    "status",
+    "last_reviewed",
+    "review_cadence",
+    "audiences",
+    "attention_modes",
+    "shortcut_category",
+    "risk_level",
+    "recoverability",
+    "minimum_guardrails",
+    "obsolete_when"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^vcb\\.shortcut\\.[a-z0-9_]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "const": "shortcut"
+    },
+    "shortcut_type": {
+      "type": "string",
+      "const": "risk_managed_shortcut"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "deprecated",
+        "draft",
+        "watch"
+      ]
+    },
+    "last_reviewed": {
+      "type": "string",
+      "format": "date"
+    },
+    "review_cadence": {
+      "type": "string",
+      "enum": [
+        "monthly",
+        "quarterly",
+        "semiannual",
+        "annual",
+        "event_driven"
+      ]
+    },
+    "audiences": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 2,
+      "items": {
+        "type": "string",
+        "enum": [
+          "human",
+          "ai_coach"
+        ]
+      },
+      "allOf": [
+        {
+          "contains": {
+            "const": "human"
+          }
+        },
+        {
+          "contains": {
+            "const": "ai_coach"
+          }
+        }
+      ]
+    },
+    "attention_modes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "continuous_supervision",
+          "periodic_check_in",
+          "low_attention_review_later",
+          "unattended_requires_isolation"
+        ]
+      },
+      "minItems": 1
+    },
+    "shortcut_category": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risk_level": {
+      "type": "object",
+      "required": [
+        "prototype",
+        "personal_tool",
+        "internal_tool",
+        "public_app",
+        "security_sensitive"
+      ],
+      "properties": {
+        "prototype": {
+          "type": "string",
+          "enum": [
+            "LOW_RISK_SHORTCUT",
+            "MODERATE_RISK_SHORTCUT",
+            "HIGH_RISK_SHORTCUT",
+            "DO_NOT_DO_IN_PRODUCTION",
+            "NEVER_WITH_REAL_SECRETS_OR_USER_DATA"
+          ]
+        },
+        "personal_tool": {
+          "type": "string",
+          "enum": [
+            "LOW_RISK_SHORTCUT",
+            "MODERATE_RISK_SHORTCUT",
+            "HIGH_RISK_SHORTCUT",
+            "DO_NOT_DO_IN_PRODUCTION",
+            "NEVER_WITH_REAL_SECRETS_OR_USER_DATA"
+          ]
+        },
+        "internal_tool": {
+          "type": "string",
+          "enum": [
+            "LOW_RISK_SHORTCUT",
+            "MODERATE_RISK_SHORTCUT",
+            "HIGH_RISK_SHORTCUT",
+            "DO_NOT_DO_IN_PRODUCTION",
+            "NEVER_WITH_REAL_SECRETS_OR_USER_DATA"
+          ]
+        },
+        "public_app": {
+          "type": "string",
+          "enum": [
+            "LOW_RISK_SHORTCUT",
+            "MODERATE_RISK_SHORTCUT",
+            "HIGH_RISK_SHORTCUT",
+            "DO_NOT_DO_IN_PRODUCTION",
+            "NEVER_WITH_REAL_SECRETS_OR_USER_DATA"
+          ]
+        },
+        "security_sensitive": {
+          "type": "string",
+          "enum": [
+            "LOW_RISK_SHORTCUT",
+            "MODERATE_RISK_SHORTCUT",
+            "HIGH_RISK_SHORTCUT",
+            "DO_NOT_DO_IN_PRODUCTION",
+            "NEVER_WITH_REAL_SECRETS_OR_USER_DATA"
+          ]
+        }
+      }
+    },
+    "recoverability": {
+      "type": "object",
+      "required": [
+        "easy_if_committed",
+        "easy_if_no_git_checkpoint",
+        "requires_expertise_if_data_migration"
+      ],
+      "properties": {
+        "easy_if_committed": {
+          "type": "boolean"
+        },
+        "easy_if_no_git_checkpoint": {
+          "type": "boolean"
+        },
+        "requires_expertise_if_data_migration": {
+          "type": "boolean"
+        }
+      }
+    },
+    "minimum_guardrails": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "obsolete_when": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_topics": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(vcb\\.(concepts|codex|prompting|workflow|safety|shortcut|constraints|field|tool_catalog|failure|chapter|register|protocol|index|pricing_snapshot|chunk_report|repo)(\\.[a-z0-9_]+)+|tool\\.[a-z0-9_\\.]+|vcb\\.manifest|vcb\\.blueprint\\.[a-z0-9_\\.]+)$"
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-coding-bible.local/schemas/field-practice.schema.json",
+  "title": "VCB Field Practice Frontmatter",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "id",
+    "title",
+    "type",
+    "evidence_level",
+    "officially_endorsed",
+    "last_verified",
+    "review_cadence",
+    "obsolete_when"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^vcb\\.field\\.[a-z0-9_]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "const": "field_practice"
+    },
+    "evidence_level": {
+      "type": "string",
+      "enum": [
+        "E2_REPRODUCED_LOCALLY",
+        "E3_EXPERT_REPORT",
+        "E4_COMMUNITY_FIELD_REPORT",
+        "E5_SPECULATIVE"
+      ]
+    },
+    "officially_endorsed": {
+      "type": "string",
+      "enum": [
+        "false",
+        "partially",
+        "true"
+      ]
+    },
+    "last_verified": {
+      "type": "string",
+      "format": "date"
+    },
+    "review_cadence": {
+      "type": "string",
+      "enum": [
+        "monthly",
+        "quarterly",
+        "semiannual",
+        "annual",
+        "event_driven"
+      ]
+    },
+    "obsolete_when": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

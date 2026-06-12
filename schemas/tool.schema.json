@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-coding-bible.local/schemas/tool.schema.json",
+  "title": "VCB Tool Card Frontmatter",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "id",
+    "name",
+    "category",
+    "last_pricing_reviewed",
+    "pricing_volatility",
+    "setup_effort",
+    "maintenance_effort",
+    "debugging_effort",
+    "lock_in_risk",
+    "hidden_cost_risk",
+    "codex_integration_value",
+    "best_for",
+    "not_for",
+    "integrates_with_codex",
+    "hidden_costs"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^tool\\.[a-z0-9_\\.]+$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "last_pricing_reviewed": {
+      "type": "string",
+      "format": "date"
+    },
+    "pricing_volatility": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "very_high"
+      ]
+    },
+    "setup_effort": {
+      "type": "string"
+    },
+    "maintenance_effort": {
+      "type": "string"
+    },
+    "debugging_effort": {
+      "type": "string"
+    },
+    "lock_in_risk": {
+      "type": "string"
+    },
+    "hidden_cost_risk": {
+      "type": "string"
+    },
+    "codex_integration_value": {
+      "type": "string"
+    },
+    "best_for": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "not_for": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "integrates_with_codex": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hidden_costs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pricing_snapshot_required": {
+      "type": "boolean"
+    }
+  }
+}
