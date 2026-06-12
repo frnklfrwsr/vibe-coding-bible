@@ -383,6 +383,19 @@ The final release preserves the documented limitations approved through the RC g
 
 Use `CHUNK_44_REPORT.md` for final-release packaging verification, package hygiene, and the final packaging result. Use `FINAL_RELEASE_1_INTEGRITY.md` for source-tree integrity verification. The final zip SHA-256 is external to the source tree by design; verify it against the author submission checksum or, when supplied, the external sidecar convention `vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip.sha256`. `CHUNK_43_REPORT.md` and `RELEASE_CANDIDATE_1_INTEGRITY.md` remain historical records for the approved RC baseline.
 
+## Post-Release Shortcut Audit Routes
+
+This repository is the living source package. Issue #3 promoted eight high-priority shortcut cards after the original Final Release 1 package, so use the live source inventory for post-release routes while preserving `FINAL_RELEASE_1_INTEGRITY.md` as the historical package record.
+
+- `vcb.shortcut.skipping_plan` - `topics/shortcuts/skipping-plan.md`
+- `vcb.shortcut.one_big_prompt` - `topics/shortcuts/one-big-prompt.md`
+- `vcb.shortcut.vague_prompt` - `topics/shortcuts/vague-prompt.md`
+- `vcb.shortcut.accepting_diff_without_review` - `topics/shortcuts/accepting-diff-without-review.md`
+- `vcb.shortcut.ignoring_lint_typecheck` - `topics/shortcuts/ignoring-lint-typecheck.md`
+- `vcb.shortcut.coding_on_main` - `topics/shortcuts/coding-on-main.md`
+- `vcb.shortcut.manual_testing_only` - `topics/shortcuts/manual-testing-only.md`
+- `vcb.shortcut.debugging_without_repro` - `topics/shortcuts/debugging-without-repro.md`
+
 ## Active Field Practice Candidate Cards
 
 These cards are active retrieval targets, but their practice status remains candidate. Do not present them as official best practice or as locally reproduced unless a later evidence review changes the status.

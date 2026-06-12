@@ -28,6 +28,8 @@ review_cadence: quarterly
 - `vcb.failure.context_pollution` → active: rushing often feeds stale or excessive context
 - `vcb.shortcut.skipping_setup` → active: slow down enough to inspect setup before edits
 - `vcb.shortcut.default_config_forever` → active: check whether defaults fit the current risk
+- `vcb.shortcut.one_big_prompt` → active: split giant asks into small reviewable slices
+- `vcb.shortcut.vague_prompt` → active: require concrete target, constraints, files, and done evidence
 
 ## Human is over-trusting Codex
 - `vcb.concepts.diff` → active
@@ -70,6 +72,10 @@ review_cadence: quarterly
 - `vcb.chapter.security_for_vibe_coders` → active
 - `vcb.shortcut.skipping_plan` → active: require a short plan before risky mutation
 - `vcb.shortcut.skipping_tests` → active: shortcut risk: skipped verification and hidden regressions
+- `vcb.shortcut.coding_on_main` → active: require a branch or isolated worktree before mutation
+- `vcb.shortcut.ignoring_lint_typecheck` → active: run the nearest lint/typecheck gate before acceptance
+- `vcb.shortcut.manual_testing_only` → active: pair manual QA with automated checks where feasible
+- `vcb.shortcut.debugging_without_repro` → active: require a reproducible failing case before patching
 - `vcb.shortcut.skipping_pr_review` → planned future companion; use `vcb.shortcut.accepting_diff_without_review` and `vcb.workflow.github_pr_review` now
 - `vcb.shortcut.skipping_security_review` → planned future companion; use `tool.codex_security`, `vcb.safety.security_review`, and `vcb.safety.production_red_lines` now
 - `vcb.failure.weakened_tests` → active: reject making tests easier to pass
