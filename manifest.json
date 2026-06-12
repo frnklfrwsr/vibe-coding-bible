@@ -366,7 +366,7 @@
     ]
   },
   "source_artifacts": {
-    "total_files": 348,
+    "total_files": 353,
     "required_chunk_0_files": 19,
     "report_files": [
       "CHUNK_0_REPORT.md",
@@ -723,6 +723,7 @@
       ".github/ISSUE_TEMPLATE/shortcut-card-update.yml",
       ".github/ISSUE_TEMPLATE/tool-card-update.yml",
       ".github/PULL_REQUEST_TEMPLATE.md",
+      ".github/workflows/source-drift-watch.yml",
       ".github/workflows/validate.yml",
       "AUTHORING_PROTOCOL.md",
       "CHANGELOG.md",
@@ -855,6 +856,7 @@
       "llms-full.txt",
       "llms.txt",
       "maintenance-reports/issue-6-fresh-llm-retrieval-smoke-test.md",
+      "maintenance-reports/source-drift-watcher-phase-1.md",
       "manifest.json",
       "pricing-snapshots/.gitkeep",
       "pricing-snapshots/2026-06-09-openai-codex.md",
@@ -865,6 +867,7 @@
       "schemas/source.schema.json",
       "schemas/tool.schema.json",
       "schemas/topic.schema.json",
+      "scripts/source_drift_watch.py",
       "scripts/validate_repository.py",
       "topics/codex/.gitkeep",
       "topics/codex/agents-md.md",
@@ -1064,7 +1067,9 @@
       "topics/workflows/reviewing-diffs.md",
       "topics/workflows/testing.md",
       "topics/workflows/unknown-codebase.md",
-      "topics/workflows/visual-qa.md"
+      "topics/workflows/visual-qa.md",
+      "watchlists/source-drift-baseline.json",
+      "watchlists/source-drift-watchlist.json"
     ],
     "pricing_snapshot_files": [
       "pricing-snapshots/2026-06-09-openai-codex.md"
@@ -1141,6 +1146,7 @@
       "manifest.json"
     ],
     "script_files": [
+      "scripts/source_drift_watch.py",
       "scripts/validate_repository.py"
     ],
     "source_files_match_manifest": true,
@@ -1151,6 +1157,7 @@
       ".github/ISSUE_TEMPLATE/shortcut-card-update.yml",
       ".github/ISSUE_TEMPLATE/tool-card-update.yml",
       ".github/PULL_REQUEST_TEMPLATE.md",
+      ".github/workflows/source-drift-watch.yml",
       ".github/workflows/validate.yml",
       "AUTHORING_PROTOCOL.md",
       "CHANGELOG.md",
@@ -1283,6 +1290,7 @@
       "llms-full.txt",
       "llms.txt",
       "maintenance-reports/issue-6-fresh-llm-retrieval-smoke-test.md",
+      "maintenance-reports/source-drift-watcher-phase-1.md",
       "manifest.json",
       "pricing-snapshots/.gitkeep",
       "pricing-snapshots/2026-06-09-openai-codex.md",
@@ -1293,6 +1301,7 @@
       "schemas/source.schema.json",
       "schemas/tool.schema.json",
       "schemas/topic.schema.json",
+      "scripts/source_drift_watch.py",
       "scripts/validate_repository.py",
       "topics/codex/.gitkeep",
       "topics/codex/agents-md.md",
@@ -1492,7 +1501,9 @@
       "topics/workflows/reviewing-diffs.md",
       "topics/workflows/testing.md",
       "topics/workflows/unknown-codebase.md",
-      "topics/workflows/visual-qa.md"
+      "topics/workflows/visual-qa.md",
+      "watchlists/source-drift-baseline.json",
+      "watchlists/source-drift-watchlist.json"
     ],
     "root_files": [
       "AUTHORING_PROTOCOL.md",
@@ -1565,13 +1576,13 @@
       "llms.txt",
       "manifest.json"
     ],
-    "actual_package_inventory_count": 348,
-    "source_file_count": 348,
-    "source_files_count": 348,
-    "all_tracked_files_count": 348,
-    "manifest_source_file_count": 348,
-    "all_tracked_file_count": 348,
-    "file_count": 348,
+    "actual_package_inventory_count": 353,
+    "source_file_count": 353,
+    "source_files_count": 353,
+    "all_tracked_files_count": 353,
+    "manifest_source_file_count": 353,
+    "all_tracked_file_count": 353,
+    "file_count": 353,
     "chapter_files_count": 47,
     "topic_files_count": 189,
     "tool_catalog_files": [
@@ -1640,7 +1651,7 @@
     "source_files_match_package": false,
     "root_files_count": 69,
     "root_artifacts_count": 69,
-    "script_files_count": 1,
+    "script_files_count": 2,
     "pricing_snapshot_files_count": 1,
     "validation_scripts_count": 1,
     "generated_non_canonical_files_count": 1,
@@ -1652,6 +1663,7 @@
       ".github/ISSUE_TEMPLATE/shortcut-card-update.yml",
       ".github/ISSUE_TEMPLATE/tool-card-update.yml",
       ".github/PULL_REQUEST_TEMPLATE.md",
+      ".github/workflows/source-drift-watch.yml",
       ".github/workflows/validate.yml",
       "CODEOWNERS",
       "CODE_OF_CONDUCT.md",
@@ -1661,7 +1673,7 @@
       "NOTICE.md",
       "SECURITY.md"
     ],
-    "public_governance_files_count": 14
+    "public_governance_files_count": 15
   },
   "source_files": [
     ".github/ISSUE_TEMPLATE/bug-or-correction.yml",
@@ -1670,6 +1682,7 @@
     ".github/ISSUE_TEMPLATE/shortcut-card-update.yml",
     ".github/ISSUE_TEMPLATE/tool-card-update.yml",
     ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/workflows/source-drift-watch.yml",
     ".github/workflows/validate.yml",
     "AUTHORING_PROTOCOL.md",
     "CHANGELOG.md",
@@ -1802,6 +1815,7 @@
     "llms-full.txt",
     "llms.txt",
     "maintenance-reports/issue-6-fresh-llm-retrieval-smoke-test.md",
+    "maintenance-reports/source-drift-watcher-phase-1.md",
     "manifest.json",
     "pricing-snapshots/.gitkeep",
     "pricing-snapshots/2026-06-09-openai-codex.md",
@@ -1812,6 +1826,7 @@
     "schemas/source.schema.json",
     "schemas/tool.schema.json",
     "schemas/topic.schema.json",
+    "scripts/source_drift_watch.py",
     "scripts/validate_repository.py",
     "topics/codex/.gitkeep",
     "topics/codex/agents-md.md",
@@ -2011,7 +2026,9 @@
     "topics/workflows/reviewing-diffs.md",
     "topics/workflows/testing.md",
     "topics/workflows/unknown-codebase.md",
-    "topics/workflows/visual-qa.md"
+    "topics/workflows/visual-qa.md",
+    "watchlists/source-drift-baseline.json",
+    "watchlists/source-drift-watchlist.json"
   ],
   "planned_topic_roots": {
     "chapters": "vcb.chapter.*",
@@ -2054,9 +2071,9 @@
     "generated_non_canonical_files": [
       "TREE.txt"
     ],
-    "source_file_count": 348,
-    "source_files_count": 348,
-    "actual_package_inventory_count": 348,
+    "source_file_count": 353,
+    "source_files_count": 353,
+    "actual_package_inventory_count": 353,
     "duplicate_zip_entries": 0,
     "pycache_entries": 0,
     "total_files": 333,
@@ -2306,11 +2323,11 @@
   "package": {
     "canonical_review_package": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip",
     "policy": "one timestamped authoritative final-release zip only",
-    "total_files": 348,
-    "file_count": 348,
-    "source_file_count": 348,
-    "source_files_count": 348,
-    "actual_package_inventory_count": 348,
+    "total_files": 353,
+    "file_count": 353,
+    "source_file_count": 353,
+    "source_files_count": 353,
+    "actual_package_inventory_count": 353,
     "all_tracked_file_count": 333,
     "manifest_source_file_count": 333
   },
@@ -2797,7 +2814,7 @@
     "vcb.shortcut.unattended_mutation",
     "vcb.shortcut.always_allow_sensitive_apps"
   ],
-  "source_file_count": 348,
+  "source_file_count": 353,
   "process_setup_shortcut_cards": {
     "vcb.shortcut.skipping_setup": "topics/shortcuts/skipping-setup.md",
     "vcb.shortcut.default_config_forever": "topics/shortcuts/default-config-forever.md",
@@ -2818,7 +2835,7 @@
     "vcb.shortcut.hook_overreach",
     "vcb.shortcut.trusting_external_tool_output"
   ],
-  "source_files_count": 348,
+  "source_files_count": 353,
   "tool_sprawl_skill_shortcut_cards": {
     "vcb.shortcut.skill_overkill": "topics/shortcuts/skill-overkill.md",
     "vcb.shortcut.skill_sprawl": "topics/shortcuts/skill-sprawl.md",
@@ -3075,7 +3092,7 @@
     "topics/tool-catalog/github-copilot.md",
     "topics/tool-catalog/windsurf.md"
   ],
-  "actual_package_inventory_count": 348,
+  "actual_package_inventory_count": 353,
   "browser_app_builder_ui_prototyping_tool_cards": {
     "tool.replit": "topics/tool-catalog/replit.md",
     "tool.lovable": "topics/tool-catalog/lovable.md",
@@ -3439,6 +3456,7 @@
       ".github/ISSUE_TEMPLATE/shortcut-card-update.yml",
       ".github/ISSUE_TEMPLATE/tool-card-update.yml",
       ".github/PULL_REQUEST_TEMPLATE.md",
+      ".github/workflows/source-drift-watch.yml",
       ".github/workflows/validate.yml",
       "CODEOWNERS",
       "CODE_OF_CONDUCT.md",

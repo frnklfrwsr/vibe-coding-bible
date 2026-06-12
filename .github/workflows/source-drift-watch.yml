@@ -1,0 +1,42 @@
+name: Source Drift Watch
+
+on:
+  schedule:
+    - cron: "17 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  source-drift-watch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run source drift watcher
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python scripts/source_drift_watch.py \
+            --check \
+            --watchlist watchlists/source-drift-watchlist.json \
+            --baseline watchlists/source-drift-baseline.json \
+            --report-output "$RUNNER_TEMP/source-drift-report.md"
+
+      - name: Write step summary
+        if: always()
+        run: |
+          if [ -f "$RUNNER_TEMP/source-drift-report.md" ]; then
+            cat "$RUNNER_TEMP/source-drift-report.md" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Source drift watcher did not produce a report." >> "$GITHUB_STEP_SUMMARY"
+          fi
