@@ -1,0 +1,104 @@
+name: Usage insight
+description: Submit a sanitized observation from using VCB with an AI or Codex.
+title: "[Usage insight]: "
+labels:
+  - usage-insight
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: What were you trying to do?
+      description: Describe the task without private project details.
+    validations:
+      required: true
+  - type: input
+    id: route
+    attributes:
+      label: Which VCB route or topic did you use?
+      description: Include topic IDs, register files, indexes, or paths if known.
+    validations:
+      required: true
+  - type: dropdown
+    id: route_worked
+    attributes:
+      label: Did the route work?
+      options:
+        - "yes"
+        - "partially"
+        - "no"
+        - "not sure"
+    validations:
+      required: true
+  - type: textarea
+    id: retrieved
+    attributes:
+      label: What did the AI retrieve?
+      description: List the smallest files or routes the AI used.
+  - type: dropdown
+    id: stop_retrieval
+    attributes:
+      label: Did the AI stop at STOP_RETRIEVAL?
+      options:
+        - "yes"
+        - "no"
+        - "not applicable"
+        - "not sure"
+    validations:
+      required: true
+  - type: textarea
+    id: lesson
+    attributes:
+      label: What reusable lesson did you learn?
+      description: Keep this generalized and safe for public discussion.
+    validations:
+      required: true
+  - type: dropdown
+    id: project_basis
+    attributes:
+      label: Is this based on a private project?
+      options:
+        - "yes, and all details are sanitized"
+        - "no, this is based only on public or open-source work"
+        - "not sure"
+    validations:
+      required: true
+  - type: checkboxes
+    id: public_safety_confirmation
+    attributes:
+      label: Required public-safety confirmation
+      options:
+        - label: I confirm this public issue does not include private names, secrets, logs, private URLs, proprietary code, customer details, or other sensitive project information.
+          required: true
+  - type: dropdown
+    id: evidence_level
+    attributes:
+      label: Suggested evidence level
+      options:
+        - E0_OFFICIAL_DOCS
+        - E1_OFFICIAL_COOKBOOK
+        - E2_REPRODUCED_LOCALLY
+        - E3_EXPERT_REPORT
+        - E4_COMMUNITY_FIELD_REPORT
+        - E5_SPECULATIVE
+        - not sure
+    validations:
+      required: true
+  - type: input
+    id: affected_ids
+    attributes:
+      label: Suggested affected topic IDs
+      description: Add VCB IDs or file paths if known.
+  - type: dropdown
+    id: category
+    attributes:
+      label: What kind of update might this support?
+      options:
+        - field-practice candidate
+        - shortcut update
+        - routing fix
+        - tool or pricing update
+        - docs/onboarding improvement
+        - correction
+        - not sure
+    validations:
+      required: true

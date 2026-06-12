@@ -14,6 +14,13 @@ review_cadence: monthly
 
 This is a compact source map, not a full compiled book export yet. Use `manifest.json` as the authoritative source map.
 
+## AI Reference Fast Route
+
+- If an AI is asked to use VCB as a reference, start at `AI_START_HERE.md`; do not read the whole repo.
+- If using Codex and skills are available, use `$vcb-reference` from `.agents/skills/vcb-reference/SKILL.md`.
+- Classify the user's situation, retrieve the smallest route, prefer atomic cards over chapters, and stop at `VCB:STOP_RETRIEVAL`.
+- Suggest sanitized contribution opportunities according to `CONTRIBUTION_MODES.md`; automatic public contribution is not the default.
+
 ## Current Active Content
 
 Final-release packaging from Chunk 44 is active.

@@ -14,6 +14,8 @@ theme:
 nav:
   - Home: index.md
   - Start here: start-here.md
+  - Use with AI: use-with-ai.md
+  - Use with Codex: use-with-codex.md
   - LLM usage guide: for-ai-coaches.md
   - Navigation:
       - Task index: navigation/task-index.md

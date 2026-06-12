@@ -1,12 +1,15 @@
+.agents/skills/vcb-reference/SKILL.md
 .github/ISSUE_TEMPLATE/bug-or-correction.yml
 .github/ISSUE_TEMPLATE/field-practice-proposal.yml
 .github/ISSUE_TEMPLATE/outdated-source.yml
 .github/ISSUE_TEMPLATE/shortcut-card-update.yml
 .github/ISSUE_TEMPLATE/tool-card-update.yml
+.github/ISSUE_TEMPLATE/usage-insight.yml
 .github/PULL_REQUEST_TEMPLATE.md
 .github/workflows/docs-site.yml
 .github/workflows/source-drift-watch.yml
 .github/workflows/validate.yml
+AI_START_HERE.md
 AUTHORING_PROTOCOL.md
 CHANGELOG.md
 CHUNK_0_REPORT.md
@@ -57,6 +60,7 @@ CHUNK_9_REPORT.md
 CODEOWNERS
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
+CONTRIBUTION_MODES.md
 DEPRECATION_REGISTER.md
 EDITORIAL_PROTOCOL.md
 FIELD_PRACTICES.md
@@ -73,6 +77,7 @@ SOURCE_REGISTER.md
 TOOL_REGISTER.md
 TREE.txt
 UPDATE_PROTOCOL.md
+USE_VCB_WITH_AI.md
 chapters/.gitkeep
 chapters/00-how-to-use-this-bible.md
 chapters/01-codex-mental-model.md
@@ -130,6 +135,8 @@ docs/navigation/shortcut-index.md
 docs/navigation/task-index.md
 docs/navigation/tool-index.md
 docs/start-here.md
+docs/use-with-ai.md
+docs/use-with-codex.md
 indexes/GLOSSARY.md
 indexes/INDEX_BY_BUDGET_PROFILE.md
 indexes/INDEX_BY_CODEX_SURFACE.md
