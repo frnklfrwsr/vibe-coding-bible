@@ -2372,8 +2372,8 @@
     "source_file_count": 366,
     "source_files_count": 366,
     "actual_package_inventory_count": 366,
-    "all_tracked_file_count": 333,
-    "manifest_source_file_count": 333
+    "all_tracked_file_count": 366,
+    "manifest_source_file_count": 366
   },
   "validation_expectations": {
     "manifest_inventory_matches_actual_files": true,

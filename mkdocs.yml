@@ -3,7 +3,7 @@ site_description: Human-readable navigation for the Vibe Coding Bible Markdown s
 site_url: https://frnklfrwsr.github.io/vibe-coding-bible/
 repo_url: https://github.com/frnklfrwsr/vibe-coding-bible
 repo_name: frnklfrwsr/vibe-coding-bible
-edit_uri: edit/main/
+edit_uri: edit/main/docs/
 docs_dir: docs
 site_dir: site
 

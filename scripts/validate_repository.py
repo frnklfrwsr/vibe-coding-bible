@@ -302,9 +302,23 @@ def validate_manifest_package_counts(manifest: dict[str, Any], actual: list[str]
     """Reject stale package-count metadata after a chunk adds files."""
     expected = len(actual)
     package = manifest.get("package", {}) if isinstance(manifest.get("package"), dict) else {}
-    for key in ("total_files", "file_count", "source_file_count"):
+    package_count_keys = (
+        "total_files",
+        "file_count",
+        "source_file_count",
+        "source_files_count",
+        "actual_package_inventory_count",
+        "all_tracked_file_count",
+        "manifest_source_file_count",
+    )
+    for key in package_count_keys:
         if key in package and int(package.get(key, -1)) != expected:
             errors.append(f"manifest.package.{key} does not match actual package inventory: {package.get(key)!r} != {expected}")
+        if key in package and int(package.get(key, -1)) != len(listed):
+            errors.append(
+                f"manifest.package.{key} does not match manifest.source_files length: "
+                f"{package.get(key)!r} != {len(listed)}"
+            )
 
     for key in ("source_file_count", "source_files_count", "actual_package_inventory_count"):
         if key in manifest and int(manifest.get(key, -1)) != expected:
