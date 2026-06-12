@@ -1,0 +1,31 @@
+site_name: The Vibe Coding Bible
+site_description: Human-readable navigation for the Vibe Coding Bible Markdown source.
+site_url: https://frnklfrwsr.github.io/vibe-coding-bible/
+repo_url: https://github.com/frnklfrwsr/vibe-coding-bible
+repo_name: frnklfrwsr/vibe-coding-bible
+edit_uri: edit/main/
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: mkdocs
+  highlightjs: true
+
+nav:
+  - Home: index.md
+  - Start here: start-here.md
+  - LLM usage guide: for-ai-coaches.md
+  - Navigation:
+      - Task index: navigation/task-index.md
+      - Concept index: navigation/concept-index.md
+      - Shortcut index: navigation/shortcut-index.md
+      - Tool index: navigation/tool-index.md
+      - Field practices: navigation/field-practices.md
+      - Downloads and releases: navigation/downloads-and-releases.md
+  - GitHub source: https://github.com/frnklfrwsr/vibe-coding-bible
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - fenced_code

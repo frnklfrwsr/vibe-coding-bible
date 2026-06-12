@@ -57,6 +57,12 @@ The durable thesis:
 
 Licensing and contribution rules are documented in `LICENSE.md`, `LICENSE-CODE.md`, `NOTICE.md`, `CONTRIBUTING.md`, and `SECURITY.md`.
 
+## Human-Readable Docs Site
+
+A minimal GitHub Pages site is configured at `mkdocs.yml` and `docs/` to provide reader-friendly navigation for humans.
+
+The GitHub Markdown repository remains the canonical source of truth. The docs site links back to canonical source files rather than duplicating the full VCB corpus.
+
 ## Active Chapters
 
 | Chapter | ID | File |
