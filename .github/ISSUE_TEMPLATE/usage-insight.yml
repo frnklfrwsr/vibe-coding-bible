@@ -52,13 +52,23 @@ body:
       description: Keep this generalized and safe for public discussion.
     validations:
       required: true
-  - type: checkboxes
-    id: privacy
+  - type: dropdown
+    id: project_basis
     attributes:
-      label: Privacy and sanitization
+      label: Is this based on a private project?
       options:
-        - label: This is based on a private project, and I have removed private names, secrets, logs, URLs, proprietary code, and customer details.
-        - label: This is based only on public or open-source work.
+        - "yes, and all details are sanitized"
+        - "no, this is based only on public or open-source work"
+        - "not sure"
+    validations:
+      required: true
+  - type: checkboxes
+    id: public_safety_confirmation
+    attributes:
+      label: Required public-safety confirmation
+      options:
+        - label: I confirm this public issue does not include private names, secrets, logs, private URLs, proprietary code, customer details, or other sensitive project information.
+          required: true
   - type: dropdown
     id: evidence_level
     attributes:
