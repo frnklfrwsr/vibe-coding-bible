@@ -44,6 +44,7 @@ This is not official guidance, not reproduced, and not promoted. It is a routeab
 ## Files Changed
 
 - `topics/field-practices/contract-first-segmented-handoffs.md`
+- `CHUNK_45_REPORT.md`
 - `FIELD_PRACTICES.md`
 - `README.md`
 - `llms.txt`
@@ -62,6 +63,10 @@ This is not official guidance, not reproduced, and not promoted. It is a routeab
 
 - Repository validator: passed on 2026-06-12 with 245 active chapter/topic files, 98 shortcut IDs, 75 tool IDs, and 2 active pricing snapshots.
 - Docs build: passed on 2026-06-12 with `mkdocs build --strict --site-dir "..\.test-tmp\vcb-docs-site"`.
+
+## Codex Review Follow-Up
+
+Codex Review flagged that the new live candidate card conflicted with stale Chunk 44 "no field-practice cards" scope metadata. The fix updates the active live metadata to `chunk_45_issue_23_usage_insight_triage` and adds `CHUNK_45_REPORT.md`, while preserving the historical Final Release 1 package record.
 
 ## Follow-Up Evidence Needed
 

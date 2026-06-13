@@ -2,14 +2,14 @@
 id: vcb.repo.root
 title: The Vibe Coding Bible
 artifact_type: repository_root
-version: 1.0.0-final.1.chunk44
-status: chunk_44_updated
+version: 1.0.1-post-release.issue23.chunk45
+status: chunk_45_updated
 last_verified: '2026-06-11'
 next_review_due: '2026-07-11'
 review_cadence: monthly
 ---
 
-<!-- VCB:BEGIN_REPOSITORY_ROOT id=vcb.repo.root version=1.0.0-final.1.chunk44 -->
+<!-- VCB:BEGIN_REPOSITORY_ROOT id=vcb.repo.root version=1.0.1-post-release.issue23.chunk45 -->
 
 # The Vibe Coding Bible
 
@@ -41,10 +41,10 @@ Default contribution behavior is `suggest`: AIs may suggest sanitized usage insi
 
 ## Current Chunk
 
-**Chunk ID:** `chunk_44_final_release_packaging`  
-**Scope:** packaging-only final-release artifact creation and verification from approved Release Candidate 1 revision 2.  
-**Final-release status:** this package is **Final Release 1** produced from the approved RC gate.  
-**Explicit non-scope:** no new tool cards, field-practice cards, shortcut cards, pricing snapshots, broad workflow expansion, broad security/secrets expansion, broad tool-catalog expansion, source-map migration, or narrative chapters.
+**Chunk ID:** `chunk_45_issue_23_usage_insight_triage`  
+**Scope:** scoped post-release triage of Issue #23 as one candidate field-practice/workflow-pattern card.  
+**Final-release status:** Final Release 1 remains a historical package record; this repository is now a living post-release source tree.  
+**Explicit non-scope:** no new tool cards, shortcut cards, pricing snapshots, field-practice promotions, reproduction claims, broad workflow expansion, broad security/secrets expansion, broad tool-catalog expansion, source-map migration, or narrative chapters.
 
 ## Retrieval Rules
 
@@ -443,7 +443,7 @@ The author must stop after each chunk and wait for editor review. If the editor 
 
 Recommended next chunk after approval: `post_release_maintenance_requires_editor_scope`.
 
-After Final Release 1, new work remains blocked until an editor provides a scoped post-release maintenance, errata, pricing-refresh, source-refresh, or content-expansion slice. Do not add cards, pricing snapshots, source-map migrations, broad workflow expansion, broad security/secrets expansion, broad tool-catalog expansion, or narrative chapters without explicit editor scope.
+After this scoped Issue #23 triage slice, new unrelated work remains blocked until an editor provides a scoped post-release maintenance, errata, pricing-refresh, source-refresh, or content-expansion slice. Do not add further cards, pricing snapshots, source-map migrations, broad workflow expansion, broad security/secrets expansion, broad tool-catalog expansion, or narrative chapters without explicit editor scope.
 
 <!-- VCB:STOP_RETRIEVAL reason="repository_root_complete" -->
 <!-- VCB:END_REPOSITORY_ROOT id=vcb.repo.root -->
