@@ -21,7 +21,7 @@ review_cadence: monthly
 - Kept the evidence level at `E4_COMMUNITY_FIELD_REPORT`; the card is not official guidance, not reproduced locally, and not promoted.
 - Updated live field-practice registers, LLM maps, semantic route indexes, source records, manifest inventory, `TREE.txt`, and docs navigation for the new candidate route.
 - Preserved historical Final Release 1 package metadata by treating the Chunk 45 review artifact as the live source tree and the Final Release 1 zip as historical reference only.
-- Preserved non-scope boundaries: no field-practice promotion, reproduction claim, new tool cards, shortcut cards, pricing snapshots, broad workflow expansion, broad security/secrets expansion, broad tool-catalog expansion, source-map migration, or narrative chapter rewrite.
+- Preserved non-scope boundaries: no field-practice promotion, reproduction claim, new tool cards, shortcut cards, pricing snapshots, broad workflow expansion, broad security/secrets expansion, broad tool-catalog expansion, source-map migration, or narrative chapter rewrite beyond the narrow Chapter 36 candidate-inventory row required for route consistency.
 
 ## Chunk 44 — Final Release 1 Packaging
 

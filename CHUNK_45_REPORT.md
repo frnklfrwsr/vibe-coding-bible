@@ -28,6 +28,7 @@ Allowed work:
 - create exactly one candidate field-practice/workflow-pattern card if the public issue is sufficiently sanitized;
 - keep the evidence level at `E4_COMMUNITY_FIELD_REPORT`;
 - update live routing, registers, LLM maps, manifest inventory, and `TREE.txt`;
+- update Chapter 36 only to sync its candidate field-practice inventory row for this new candidate;
 - preserve historical Final Release 1 package metadata.
 
 Explicit non-scope:
@@ -41,7 +42,8 @@ Explicit non-scope:
 - No broad security/secrets expansion.
 - No broad tool-catalog expansion.
 - No source-map migration.
-- No narrative chapters.
+- No narrative chapter rewrites.
+- The only chapter edit is the narrow Chapter 36 candidate-inventory row required for route consistency.
 
 ## Files Created
 

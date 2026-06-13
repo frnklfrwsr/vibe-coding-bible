@@ -2486,7 +2486,7 @@
       "no broad security/secrets expansion",
       "no broad tool-catalog expansion",
       "no source-map migration",
-      "no narrative chapters"
+      "no narrative chapter rewrites; Chapter 36 may receive only the narrow candidate-inventory row for the Issue #23 route"
     ]
   },
   "pricing_snapshot_ids": {
@@ -2594,7 +2594,7 @@
     "duplicate_failure_mode_full_list_sections_rejected": true,
     "chunk_18_task_index_atomic_routes": true,
     "active_validator": "scripts/validate_repository.py",
-    "current_chunk_checks": "Chunk 45 post-release Issue #23 usage-insight triage, candidate-only field-practice evidence labeling, live inventory/register consistency, validator output, docs build output, historical Final Release 1 package preservation, and no tool/shortcut/pricing/narrative expansion scope guardrails.",
+    "current_chunk_checks": "Chunk 45 post-release Issue #23 usage-insight triage, candidate-only field-practice evidence labeling, live inventory/register consistency, validator output, docs build output, historical Final Release 1 package preservation, narrow Chapter 36 candidate-inventory row allowance, and no tool/shortcut/pricing/narrative-rewrite scope guardrails.",
     "chunk_21_manifest_current_chunk_checks_mentions_active_chunk": true,
     "chunk_21_llm_generic_shortcut_route_covers_active_shortcut_slices": true,
     "chunk_21_semantic_risk_and_shortcut_sections_route_active_cards": true,
@@ -2676,7 +2676,7 @@
     "chunk_36_semantic_routes_prioritize_active_tool_cards": true,
     "chunk_36_scope_guardrails_enforced": true,
     "chunk_36_report_inventory_checked": true,
-    "current_chunk_scope_boundaries": "Chunk 45 boundary: scoped post-release Issue #23 usage-insight triage. Allows exactly one candidate field-practice/workflow-pattern card for Issue #23 with E4 evidence; No field-practice promotion or reproduction claim, No new tool cards, No shortcut cards, No pricing snapshots, No broad workflow expansion, No broad security/secrets expansion, No broad tool-catalog expansion, No source-map migration, and No narrative chapters.",
+    "current_chunk_scope_boundaries": "Chunk 45 boundary: scoped post-release Issue #23 usage-insight triage. Allows exactly one candidate field-practice/workflow-pattern card for Issue #23 with E4 evidence and one narrow Chapter 36 candidate-inventory row for route consistency; No field-practice promotion or reproduction claim, No new tool cards, No shortcut cards, No pricing snapshots, No broad workflow expansion, No broad security/secrets expansion, No broad tool-catalog expansion, No source-map migration, and No narrative chapter rewrites.",
     "tool_catalog_coverage_gap_audit": true,
     "deferred_planned_ecosystem_ids_required": true,
     "chunk_41_finalization_readiness_audit": true,

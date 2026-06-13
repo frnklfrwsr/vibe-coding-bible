@@ -44,7 +44,7 @@ Default contribution behavior is `suggest`: AIs may suggest sanitized usage insi
 **Chunk ID:** `chunk_45_issue_23_usage_insight_triage`  
 **Scope:** scoped post-release triage of Issue #23 as one candidate field-practice/workflow-pattern card.  
 **Final-release status:** Final Release 1 remains a historical package record; this repository is now a living post-release source tree.  
-**Explicit non-scope:** no new tool cards, shortcut cards, pricing snapshots, field-practice promotions, reproduction claims, broad workflow expansion, broad security/secrets expansion, broad tool-catalog expansion, source-map migration, or narrative chapters.
+**Explicit non-scope:** no new tool cards, shortcut cards, pricing snapshots, field-practice promotions, reproduction claims, broad workflow expansion, broad security/secrets expansion, broad tool-catalog expansion, source-map migration, or narrative chapter rewrites; the only chapter edit is the narrow Chapter 36 candidate-inventory row required for route consistency.
 
 ## Retrieval Rules
 

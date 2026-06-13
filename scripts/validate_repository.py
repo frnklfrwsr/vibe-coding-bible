@@ -81,7 +81,8 @@ Checks:
 - Chunk 41 finalization-readiness audit, register count agreement, finalization gap list, LLM route cleanup, and scope guardrails
 - Chunk 42 release-candidate scope/disposition cleanup, no-premature-RC claims, changelog convention, register count agreement, and scope guardrails
 - Chunk 43 release-candidate packaging, RC status, package aliases, documented limitations, register counts, integrity reporting, stale non-RC wording, and packaging-only scope guardrails
-- Chunk 44 final-release packaging, final-release status, package aliases, documented limitations, register counts, integrity reporting, and no-substantive-content scope guardrails"""
+- Chunk 44 final-release packaging, final-release status, package aliases, documented limitations, register counts, integrity reporting, and no-substantive-content scope guardrails
+- Chunk 45 Issue #23 usage-insight triage, candidate-only field-practice route coverage, evidence labeling, live inventory, and scope guardrails"""
 from __future__ import annotations
 
 import hashlib
@@ -9501,6 +9502,166 @@ def validate_chunk_44_final_release_packaging(manifest: dict[str, Any], errors: 
         errors.append("CHUNK_44_REPORT.md must end with AUTHOR_STATUS: WAITING_FOR_EDITOR_REVIEW")
 
 
+def validate_chunk_45_issue_23_usage_insight_triage(manifest: dict[str, Any], errors: list[str]) -> None:
+    if manifest.get("chunk_gate", {}).get("current_chunk") != "chunk_45":
+        return
+
+    card_id = "vcb.field.contract_first_segmented_handoffs"
+    source_id = "vcb.usage_insight.issue_23_contract_first_segmented_handoffs"
+    card_rel = "topics/field-practices/contract-first-segmented-handoffs.md"
+    report_rel = "CHUNK_45_REPORT.md"
+    maintenance_rel = "maintenance-reports/issue-23-contract-first-segmented-handoffs-triage.md"
+    expected_package = "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip"
+
+    def require_terms(rel: str, terms: list[str]) -> str:
+        path = ROOT / rel
+        if not path.exists():
+            errors.append(f"{rel} missing")
+            return ""
+        text = read(path)
+        for term in terms:
+            if term not in text:
+                errors.append(f"{rel} missing Chunk 45 term: {term}")
+        return text
+
+    active = manifest.get("active_chunk", {})
+    if active.get("id") != "chunk_45_issue_23_usage_insight_triage":
+        errors.append("manifest.active_chunk.id must be chunk_45_issue_23_usage_insight_triage")
+    if active.get("review_artifact") != "current_live_repository_source_tree":
+        errors.append("manifest.active_chunk.review_artifact must be current_live_repository_source_tree for Chunk 45")
+    if "canonical_review_package" in active:
+        errors.append("manifest.active_chunk must not use canonical_review_package for post-release Chunk 45 live review")
+    if active.get("historical_package_reference") != expected_package:
+        errors.append("manifest.active_chunk.historical_package_reference must preserve the Final Release 1 package reference")
+
+    scope_text = " ".join(map(str, active.get("scope", [])))
+    for term in [
+        "triage Issue #23",
+        "exactly one candidate field-practice/workflow-pattern card",
+        "preserve historical Final Release 1 package metadata",
+        "no field-practice promotions or reproduction claims",
+        "no new tool cards",
+        "no shortcut cards",
+        "no pricing snapshots",
+        "no broad workflow expansion",
+        "no source-map migration",
+        "no narrative chapter rewrites",
+        "Chapter 36",
+        "candidate-inventory row",
+    ]:
+        if term not in scope_text:
+            errors.append(f"manifest.active_chunk.scope missing Chunk 45 term: {term}")
+
+    current_checks = str(manifest.get("validation_expectations", {}).get("current_chunk_checks", ""))
+    for term in ["Chunk 45", "Issue #23", "candidate-only", "live inventory", "historical Final Release 1", "Chapter 36", "scope guardrails"]:
+        if term not in current_checks:
+            errors.append(f"manifest.validation_expectations.current_chunk_checks missing Chunk 45 term: {term}")
+
+    scope_boundary = str(manifest.get("validation_expectations", {}).get("current_chunk_scope_boundaries", ""))
+    for term in [
+        "Chunk 45",
+        "Issue #23",
+        "exactly one candidate",
+        "E4 evidence",
+        "No field-practice promotion or reproduction claim",
+        "No new tool cards",
+        "No shortcut cards",
+        "No pricing snapshots",
+        "No broad workflow expansion",
+        "No broad security/secrets expansion",
+        "No broad tool-catalog expansion",
+        "No source-map migration",
+        "No narrative chapter rewrites",
+        "Chapter 36 candidate-inventory row",
+    ]:
+        if term not in scope_boundary:
+            errors.append(f"manifest.validation_expectations.current_chunk_scope_boundaries missing Chunk 45 term: {term}")
+
+    source_files = set(manifest.get("source_files", []) or [])
+    for rel in [card_rel, report_rel, maintenance_rel, "chapters/36-field-notes-unofficial-practices.md"]:
+        if rel not in source_files:
+            errors.append(f"manifest.source_files missing Chunk 45 file: {rel}")
+
+    live_inventory = manifest.get("live_repository_inventory", {})
+    if live_inventory.get("active_field_practice_cards") != 10:
+        errors.append("manifest.live_repository_inventory.active_field_practice_cards must be 10 after Issue #23 triage")
+    if live_inventory.get("candidate_field_practices") != 6:
+        errors.append("manifest.live_repository_inventory.candidate_field_practices must be 6 after Issue #23 triage")
+    status_counts = live_inventory.get("field_practice_status_counts", {})
+    if status_counts.get("candidate") != 6 or status_counts.get("reproduced") != 2 or status_counts.get("needs_more_evidence") != 2:
+        errors.append("manifest.live_repository_inventory.field_practice_status_counts must be candidate=6, reproduced=2, needs_more_evidence=2")
+    if live_inventory.get("field_practice_status_audit") != "issue_23_contract_first_segmented_handoffs_triage":
+        errors.append("manifest.live_repository_inventory.field_practice_status_audit must point to the Issue #23 triage")
+
+    audit = manifest.get("field_practice_status_audit", {})
+    if audit.get("issue_23") != "https://github.com/frnklfrwsr/vibe-coding-bible/issues/23":
+        errors.append("manifest.field_practice_status_audit.issue_23 must point to Issue #23")
+    if audit.get("official_best_practice_promotions") != 0:
+        errors.append("manifest.field_practice_status_audit.official_best_practice_promotions must remain 0")
+    if card_id not in (audit.get("candidate", []) or []):
+        errors.append("manifest.field_practice_status_audit.candidate must include the Issue #23 candidate card")
+
+    candidate_cards = manifest.get("field_practice_candidate_cards", {})
+    if candidate_cards.get(card_id) != card_rel:
+        errors.append("manifest.field_practice_candidate_cards must map the Issue #23 candidate card")
+
+    card = require_terms(card_rel, [
+        "field_practice_status: candidate",
+        "evidence_level: E4_COMMUNITY_FIELD_REPORT",
+        "not official guidance",
+        "not reproduced",
+        "not promoted",
+        source_id,
+        "VCB:STOP_RETRIEVAL",
+    ])
+    if "status: active" not in card:
+        errors.append(f"{card_rel} must remain an active retrieval card while its field_practice_status is candidate")
+
+    for rel in [
+        "README.md",
+        "FIELD_PRACTICES.md",
+        "llms.txt",
+        "llms-full.txt",
+        "indexes/INDEX_FOR_AI_COACHES.md",
+        "indexes/INDEX_BY_TASK.md",
+        "indexes/INDEX_BY_FAILURE_MODE.md",
+        "indexes/INDEX_BY_SHORTCUT.md",
+        "indexes/INDEX_BY_STABILITY.md",
+        "indexes/GLOSSARY.md",
+        "indexes/PROMPT_LIBRARY.md",
+        "indexes/INDEX_BY_CONCEPT.md",
+        "indexes/INDEX_BY_CODEX_SURFACE.md",
+        "indexes/INDEX_BY_RISK_LEVEL.md",
+        "indexes/INDEX_BY_BUDGET_PROFILE.md",
+        "indexes/INDEX_BY_RECOVERABILITY.md",
+        "indexes/INDEX_BY_PROJECT_TYPE.md",
+        "indexes/INDEX_BY_TOOL_CATEGORY.md",
+        "docs/navigation/field-practices.md",
+    ]:
+        require_terms(rel, [card_id])
+
+    require_terms("chapters/36-field-notes-unofficial-practices.md", [
+        "Contract-first segmented handoffs",
+        "candidate / E4 community field report only; not reproduced or official",
+    ])
+    require_terms("SOURCE_REGISTER.md", [source_id, "E4_COMMUNITY_FIELD_REPORT", "not reproduction or official guidance"])
+    require_terms("CHANGELOG.md", ["Chunk 45", card_id, "narrow Chapter 36"])
+    require_terms("TREE.txt", [card_rel, report_rel, maintenance_rel])
+    require_terms(report_rel, [
+        "exactly one candidate field-practice/workflow-pattern card",
+        "E4_COMMUNITY_FIELD_REPORT",
+        "Chapter 36",
+        "candidate-inventory row",
+        "No narrative chapter rewrites",
+    ])
+    require_terms(maintenance_rel, [
+        "E4_COMMUNITY_FIELD_REPORT",
+        "not official guidance",
+        "not reproduced",
+        "Chapter 36",
+    ])
+
+
 def main() -> int:
     errors: list[str] = []
 
@@ -9663,6 +9824,7 @@ def main() -> int:
     validate_chunk_42_release_candidate_disposition_cleanup(manifest, errors)
     validate_chunk_43_release_candidate_packaging(manifest, errors)
     validate_chunk_44_final_release_packaging(manifest, errors)
+    validate_chunk_45_issue_23_usage_insight_triage(manifest, errors)
     validate_chunk_19_report_inventory(manifest, errors)
     validate_chunk_20_report_inventory(manifest, errors)
     validate_chunk_21_report_inventory(manifest, errors)

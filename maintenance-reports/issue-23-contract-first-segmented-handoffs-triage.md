@@ -24,6 +24,8 @@ Create one candidate field-practice/workflow-pattern card:
 
 This is not official guidance, not reproduced, and not promoted. It is a routeable candidate because the issue is sanitized enough for public VCB use and describes a distinct workflow pattern: giving Codex one reconciled segment contract instead of asking it to infer contracts from research notes or exploratory patches.
 
+No narrative chapters were rewritten. Chapter 36 received only the narrow candidate-inventory row required to keep its field-practice inventory synchronized with the new routeable candidate.
+
 ## Triage Answers
 
 | Question | Result |
