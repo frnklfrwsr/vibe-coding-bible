@@ -45,10 +45,12 @@ This is not official guidance, not reproduced, and not promoted. It is a routeab
 
 - `topics/field-practices/contract-first-segmented-handoffs.md`
 - `CHUNK_45_REPORT.md`
+- `CHANGELOG.md`
 - `FIELD_PRACTICES.md`
 - `README.md`
 - `llms.txt`
 - `llms-full.txt`
+- `chapters/36-field-notes-unofficial-practices.md`
 - `docs/navigation/field-practices.md`
 - `indexes/GLOSSARY.md`
 - `indexes/PROMPT_LIBRARY.md`
@@ -63,6 +65,7 @@ This is not official guidance, not reproduced, and not promoted. It is a routeab
 - `indexes/INDEX_BY_RISK_LEVEL.md`
 - `indexes/INDEX_BY_SHORTCUT.md`
 - `indexes/INDEX_BY_STABILITY.md`
+- `indexes/INDEX_BY_TOOL_CATEGORY.md`
 - `SOURCE_REGISTER.md`
 - `manifest.json`
 - `TREE.txt`
@@ -75,7 +78,7 @@ This is not official guidance, not reproduced, and not promoted. It is a routeab
 
 ## Codex Review Follow-Up
 
-Codex Review flagged that the new live candidate card conflicted with stale Chunk 44 "no field-practice cards" scope metadata. The fix updates the active live metadata to `chunk_45_issue_23_usage_insight_triage` and adds `CHUNK_45_REPORT.md`, while preserving the historical Final Release 1 package record. Follow-up review also required replacing stale `active_chunk.scope` packaging entries, refreshing LLM map current-content metadata, adding the Chunk 45 authorization source record, extending the remaining field-practice index routes, splitting Issue #7 from the current Issue #23 audit pointer, and making the active chunk use the live source tree instead of the historical Final Release 1 zip as its review artifact.
+Codex Review flagged that the new live candidate card conflicted with stale Chunk 44 "no field-practice cards" scope metadata. The fix updates the active live metadata to `chunk_45_issue_23_usage_insight_triage` and adds `CHUNK_45_REPORT.md`, while preserving the historical Final Release 1 package record. Follow-up review also required replacing stale `active_chunk.scope` packaging entries, refreshing LLM map current-content metadata, adding the Chunk 45 authorization source record, extending the remaining field-practice index routes, splitting Issue #7 from the current Issue #23 audit pointer, making the active chunk use the live source tree instead of the historical Final Release 1 zip as its review artifact, adding a Chunk 45 changelog entry, syncing the Chapter 36 candidate inventory, and routing the card from the tool-category index.
 
 ## Follow-Up Evidence Needed
 

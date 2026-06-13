@@ -72,6 +72,7 @@ review_cadence: quarterly
 - `vcb.field.chatgpt_pm_codex_implementer` → active needs_more_evidence when tool split between planning AI and Codex implementation is being evaluated
 - `vcb.field.fresh_agent_review` → active reproduced when tool use includes independent AI review before commit
 - `vcb.field.multi_agent_review_consensus` → active needs_more_evidence when multiple AI tools or agents are used for review
+- `vcb.field.contract_first_segmented_handoffs` → active candidate when multi-tool planning-to-Codex handoffs need one reviewed segment contract
 - `vcb.field.agents_md_first` and `vcb.field.lessons_file_loop` → active candidates when tool choice is becoming durable repo guidance
 - `vcb.chapter.field_notes_unofficial_practices` → active fallback
 - `vcb.chapter.risk_managed_shortcuts` → active companion

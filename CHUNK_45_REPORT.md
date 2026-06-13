@@ -55,6 +55,8 @@ Explicit non-scope:
 - `README.md`
 - `SOURCE_REGISTER.md`
 - `TREE.txt`
+- `CHANGELOG.md`
+- `chapters/36-field-notes-unofficial-practices.md`
 - `docs/navigation/field-practices.md`
 - `indexes/INDEX_BY_BUDGET_PROFILE.md`
 - `indexes/INDEX_BY_CODEX_SURFACE.md`
@@ -67,6 +69,7 @@ Explicit non-scope:
 - `indexes/INDEX_BY_SHORTCUT.md`
 - `indexes/INDEX_BY_STABILITY.md`
 - `indexes/INDEX_BY_TASK.md`
+- `indexes/INDEX_BY_TOOL_CATEGORY.md`
 - `indexes/INDEX_FOR_AI_COACHES.md`
 - `indexes/PROMPT_LIBRARY.md`
 - `llms-full.txt`
@@ -120,7 +123,7 @@ Documentation built successfully.
 
 ## Codex Review Follow-Up
 
-Codex Review flagged that adding a live field-practice card while the manifest still advertised Chunk 44 `No field-practice cards` scope created governance drift. This report and the manifest/README metadata update address that by making the PR an explicit Chunk 45 post-release triage slice. Follow-up review also required replacing stale active chunk scope packaging entries, refreshing LLM map current-content metadata, adding the Chunk 45 authorization source record, extending the remaining field-practice index routes, splitting Issue #7 from the current Issue #23 audit pointer, and making the active chunk use the live source tree instead of the historical Final Release 1 zip as its review artifact.
+Codex Review flagged that adding a live field-practice card while the manifest still advertised Chunk 44 `No field-practice cards` scope created governance drift. This report and the manifest/README metadata update address that by making the PR an explicit Chunk 45 post-release triage slice. Follow-up review also required replacing stale active chunk scope packaging entries, refreshing LLM map current-content metadata, adding the Chunk 45 authorization source record, extending the remaining field-practice index routes, splitting Issue #7 from the current Issue #23 audit pointer, making the active chunk use the live source tree instead of the historical Final Release 1 zip as its review artifact, adding a Chunk 45 changelog entry, syncing the Chapter 36 candidate inventory, and routing the card from the tool-category index.
 
 Recommended next chunk after approval: `post_release_maintenance_requires_editor_scope`.
 

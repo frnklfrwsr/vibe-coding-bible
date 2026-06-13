@@ -163,6 +163,7 @@ These are tracked as candidate practices, not official best practices:
 | Greenfield vs production compatibility rule | Tell Codex whether backward compatibility matters | stable project-context principle |
 | Lessons file / self-improvement loop | Repeated corrections should become durable guidance | partially overlaps with `AGENTS.md`, skills, and config |
 | Multi-agent review/consensus | Independent perspectives can find different failures | useful only when scoped; expensive and noisy if overused |
+| Contract-first segmented handoffs | Resolve implementation ambiguity before repository mutation | candidate / E4 community field report only; not reproduced or official |
 
 ### How to test a field practice safely
 
