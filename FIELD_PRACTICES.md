@@ -2,15 +2,15 @@
 id: vcb.register.field_practices
 title: FIELD_PRACTICES
 artifact_type: register
-version: 1.0.1-post-release.issue7
-status: issue_7_field_practice_grading
+version: 1.0.1-post-release.issue23
+status: issue_23_usage_insight_triage
 created_on: 2026-06-08
 last_verified: '2026-06-12'
 next_review_due: '2026-07-12'
 review_cadence: monthly
 ---
 
-<!-- VCB:BEGIN_REGISTER id=vcb.register.field_practices version=1.0.1-post-release.issue7 -->
+<!-- VCB:BEGIN_REGISTER id=vcb.register.field_practices version=1.0.1-post-release.issue23 -->
 
 # FIELD_PRACTICES
 
@@ -49,7 +49,7 @@ A field practice may move up the ladder only when one of these is true:
 
 ## Candidate Field Practice Routing Table
 
-This table preserves the original candidate-card set while recording the live Issue #7 status in `Current register status`.
+This table preserves the original candidate-card set while recording the live Issue #7 status in `Current register status`; post-release Issue #23 adds one additional live candidate route.
 
 | Field practice ID | Planned file | Claim | Durable principle | Evidence starting status | Current register status | Promotion path | Review trigger |
 |---|---|---|---|---|---|---|---|
@@ -62,11 +62,12 @@ This table preserves the original candidate-card set while recording the live Is
 | `vcb.field.greenfield_vs_production_rule` | `topics/field-practices/greenfield-vs-production-rule.md` | Tell Codex whether backward compatibility matters. | Project phase changes implementation choices. | E4_COMMUNITY_FIELD_REPORT; official docs support prompt constraints/principles only | candidate | promotable after local reproduction or named-practitioner support | Model reliably infers compatibility needs from repo context. |
 | `vcb.field.lessons_file_loop` | `topics/field-practices/lessons-file-loop.md` | Capture repeated corrections in a lessons file or durable guidance. | Repeated mistakes should become persistent instructions. | E4_COMMUNITY_FIELD_REPORT for the ritual; E0_OFFICIAL_DOCS supports durable-guidance mechanisms only | candidate | promotable after local fit check | Memories/AGENTS/skills make separate lessons files obsolete. |
 | `vcb.field.multi_agent_review_consensus` | `topics/field-practices/multi-agent-review-consensus.md` | Use multiple agents for independent review/analysis. | Independent perspectives can reduce blind spots. | E4_COMMUNITY_FIELD_REPORT for the ritual; official subagent/review docs support mechanics only, not consensus reliability | needs_more_evidence | requires controlled comparison against single-review baseline | Parallel-agent review becomes natively scored/deduplicated. |
+| `vcb.field.contract_first_segmented_handoffs` | `topics/field-practices/contract-first-segmented-handoffs.md` | Give Codex one reconciled segment contract instead of unreconciled research notes. | Resolve implementation ambiguity before repository mutation. | E4_COMMUNITY_FIELD_REPORT from one sanitized public usage insight; official docs support adjacent mechanics/principles only | candidate | requires bounded local reproduction or multiple independent reports | Codex reliably reconciles contracts, tests, and review threads without explicit segmented packages. |
 
 
-## Active Field Practice Cards After Issue #7
+## Active Field Practice Cards After Issue #7 and Issue #23
 
-Issue #7 reviewed the nine active field-practice retrieval cards. None are official best practice and none are promoted. Current live status: 2 reproduced with bounded local evidence, 5 candidate, 2 needs_more_evidence, 0 promoted, 0 deferred, 0 retired.
+Issue #7 reviewed the original nine active field-practice retrieval cards. Issue #23 adds one sanitized usage-insight candidate. None are official best practice and none are promoted. Current live status: 2 reproduced with bounded local evidence, 6 candidate, 2 needs_more_evidence, 0 promoted, 0 deferred, 0 retired.
 
 - `vcb.field.chatgpt_pm_codex_implementer` - `topics/field-practices/chatgpt-pm-codex-implementer.md` - active needs_more_evidence: ChatGPT PM / Codex implementer split remains too broad for bounded local reproduction.
 - `vcb.field.fresh_agent_review` - `topics/field-practices/fresh-agent-review.md` - active reproduced: bounded local reproduction through PR review gate; not promoted as universal proof.
@@ -77,6 +78,7 @@ Issue #7 reviewed the nine active field-practice retrieval cards. None are offic
 - `vcb.field.greenfield_vs_production_rule` - `topics/field-practices/greenfield-vs-production-rule.md` - active candidate: explicit project phase and compatibility posture.
 - `vcb.field.lessons_file_loop` - `topics/field-practices/lessons-file-loop.md` - active candidate: temporary lessons loop before durable guidance promotion.
 - `vcb.field.multi_agent_review_consensus` - `topics/field-practices/multi-agent-review-consensus.md` - active needs_more_evidence: multi-agent review must not treat agreement as proof.
+- `vcb.field.contract_first_segmented_handoffs` - `topics/field-practices/contract-first-segmented-handoffs.md` - active candidate: contract-first segmented Codex handoffs based on one sanitized usage insight.
 
 ## Issue #7 Status Audit Note
 

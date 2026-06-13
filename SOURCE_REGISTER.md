@@ -2,15 +2,15 @@
 id: vcb.register.sources
 title: SOURCE_REGISTER
 artifact_type: register
-version: 1.0.1-postrelease.issue4
-status: issue_4_ai_coding_tools_pricing_sources
+version: 1.0.1-post-release.issue23.chunk45
+status: chunk_45_updated
 created_on: '2026-06-08'
 last_verified: '2026-06-12'
 next_review_due: '2026-07-12'
 review_cadence: monthly
 ---
 
-<!-- VCB:BEGIN_REGISTER id=vcb.register.sources version=1.0.1-postrelease.issue4 -->
+<!-- VCB:BEGIN_REGISTER id=vcb.register.sources version=1.0.1-post-release.issue23.chunk45 -->
 
 # SOURCE_REGISTER
 
@@ -564,6 +564,20 @@ These records are maintainer-authored synthesis aids. They are not evidence leve
 | `vcb.register.editor_feedback_chunk_43` | Editor approval for Chunk 43 / Chunk 44 final-release packaging gate | conversation/editor feedback | internal review | applied | Chunk 44 packaging-only final-release scope and non-scope | stable for this revision |
 
 - Chunk 44 is packaging-only final-release artifact creation and verification from the approved RC1 revision 2 package. It adds no product/vendor facts, pricing claims, model-availability claims, cards, source-map migration, or narrative content.
+
+## Chunk 45 Source Records
+
+| Source ID | Title | URL / Location | Evidence | Verification status | Use for | Volatility |
+|---|---|---|---|---|---|---|
+| `vcb.register.editor_feedback_chunk_44` | Editor approval for Chunk 44 / Chunk 45 post-release triage gate | conversation/editor feedback | internal review | applied | Chunk 45 scoped Issue #23 usage-insight triage scope and non-scope | stable for this revision |
+
+- Chunk 45 is a scoped post-release usage-insight triage slice. It allows one candidate field-practice/workflow-pattern card for Issue #23 and does not promote or reproduce field practices.
+
+## Issue 23 Source Records
+
+| Source ID | Title | URL / Location | Evidence | Verification status | Use for | Volatility |
+|---|---|---|---|---|---|---|
+| `vcb.usage_insight.issue_23_contract_first_segmented_handoffs` | Issue #23 usage insight - Contract-first segmented Codex handoffs | https://github.com/frnklfrwsr/vibe-coding-bible/issues/23 | E4_COMMUNITY_FIELD_REPORT | sanitized public issue checked 2026-06-12 | candidate field-practice evidence for contract-first segmented handoffs; not reproduction or official guidance | stable report / practice unverified |
 
 ## Notes
 

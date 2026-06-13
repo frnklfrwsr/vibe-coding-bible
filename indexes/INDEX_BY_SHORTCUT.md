@@ -161,6 +161,7 @@ review_cadence: quarterly
 - `vcb.field.greenfield_vs_production_rule` → active candidate: can become wrong-phase shortcut if phase is asserted without evidence
 - `vcb.field.lessons_file_loop` → active candidate: can become permanent stale process if not pruned
 - `vcb.field.multi_agent_review_consensus` → active needs_more_evidence: can become consensus-as-correctness
+- `vcb.field.contract_first_segmented_handoffs` → active candidate: can become process theater if segment packages replace clear tests and review
 - `vcb.chapter.field_notes_unofficial_practices` → active fallback
 - `vcb.shortcut.unofficial_tools` → active companion: unofficial tool adoption requires disposable evaluation and trust-boundary review
 - `vcb.shortcut.trusting_external_tool_output` → active companion: external output requires provenance and verification

@@ -1,8 +1,8 @@
 {
   "id": "vcb.manifest",
   "title": "The Vibe Coding Bible Manifest",
-  "version": "1.0.0-final.1.chunk44",
-  "status": "chunk_44_updated",
+  "version": "1.0.1-post-release.issue23.chunk45",
+  "status": "chunk_45_updated",
   "created_on": "2026-06-08",
   "last_verified": "2026-06-12",
   "next_review_due": "2026-07-12",
@@ -13,13 +13,13 @@
     "role": "source_of_truth"
   },
   "editor_gate": {
-    "approval_applied": "Chunk 43 approved; Chunk 44 authored.",
+    "approval_applied": "Chunk 44 approved; Chunk 45 authored.",
     "current_author_status": "waiting_for_editor_review",
     "required_next_editor_status": "APPROVED_FOR_NEXT_CHUNK"
   },
   "chunk_gate": {
-    "approved_previous_chunk": "chunk_43",
-    "current_chunk": "chunk_44",
+    "approved_previous_chunk": "chunk_44",
+    "current_chunk": "chunk_45",
     "editor_status": "waiting_for_editor_review",
     "must_wait_for_editor_before_next_chunk": true
   },
@@ -367,7 +367,7 @@
     ]
   },
   "source_artifacts": {
-    "total_files": 387,
+    "total_files": 390,
     "required_chunk_0_files": 19,
     "report_files": [
       "CHUNK_0_REPORT.md",
@@ -409,6 +409,7 @@
       "CHUNK_42_REPORT.md",
       "CHUNK_43_REPORT.md",
       "CHUNK_44_REPORT.md",
+      "CHUNK_45_REPORT.md",
       "CHUNK_4_REPORT.md",
       "CHUNK_5_REPORT.md",
       "CHUNK_6_REPORT.md",
@@ -523,6 +524,7 @@
       "topics/field-practices/agents-md-first.md",
       "topics/field-practices/chatgpt-pm-codex-implementer.md",
       "topics/field-practices/context-reset-between-tasks.md",
+      "topics/field-practices/contract-first-segmented-handoffs.md",
       "topics/field-practices/fresh-agent-review.md",
       "topics/field-practices/greenfield-vs-production-rule.md",
       "topics/field-practices/lessons-file-loop.md",
@@ -779,6 +781,7 @@
       "CHUNK_42_REPORT.md",
       "CHUNK_43_REPORT.md",
       "CHUNK_44_REPORT.md",
+      "CHUNK_45_REPORT.md",
       "CHUNK_4_REPORT.md",
       "CHUNK_5_REPORT.md",
       "CHUNK_6_REPORT.md",
@@ -882,6 +885,7 @@
       "llms-full.txt",
       "llms.txt",
       "maintenance-reports/fix-pr17-shortcut-routing-metadata.md",
+      "maintenance-reports/issue-23-contract-first-segmented-handoffs-triage.md",
       "maintenance-reports/issue-23-vcb-skill-smoke-test.md",
       "maintenance-reports/issue-3-shortcut-id-audit.md",
       "maintenance-reports/issue-4-ai-coding-tools-pricing-snapshot.md",
@@ -966,6 +970,7 @@
       "topics/field-practices/agents-md-first.md",
       "topics/field-practices/chatgpt-pm-codex-implementer.md",
       "topics/field-practices/context-reset-between-tasks.md",
+      "topics/field-practices/contract-first-segmented-handoffs.md",
       "topics/field-practices/fresh-agent-review.md",
       "topics/field-practices/greenfield-vs-production-rule.md",
       "topics/field-practices/lessons-file-loop.md",
@@ -1161,6 +1166,7 @@
       "CHUNK_42_REPORT.md",
       "CHUNK_43_REPORT.md",
       "CHUNK_44_REPORT.md",
+      "CHUNK_45_REPORT.md",
       "CHUNK_4_REPORT.md",
       "CHUNK_5_REPORT.md",
       "CHUNK_6_REPORT.md",
@@ -1253,6 +1259,7 @@
       "CHUNK_42_REPORT.md",
       "CHUNK_43_REPORT.md",
       "CHUNK_44_REPORT.md",
+      "CHUNK_45_REPORT.md",
       "CHUNK_4_REPORT.md",
       "CHUNK_5_REPORT.md",
       "CHUNK_6_REPORT.md",
@@ -1356,6 +1363,7 @@
       "llms-full.txt",
       "llms.txt",
       "maintenance-reports/fix-pr17-shortcut-routing-metadata.md",
+      "maintenance-reports/issue-23-contract-first-segmented-handoffs-triage.md",
       "maintenance-reports/issue-23-vcb-skill-smoke-test.md",
       "maintenance-reports/issue-3-shortcut-id-audit.md",
       "maintenance-reports/issue-4-ai-coding-tools-pricing-snapshot.md",
@@ -1440,6 +1448,7 @@
       "topics/field-practices/agents-md-first.md",
       "topics/field-practices/chatgpt-pm-codex-implementer.md",
       "topics/field-practices/context-reset-between-tasks.md",
+      "topics/field-practices/contract-first-segmented-handoffs.md",
       "topics/field-practices/fresh-agent-review.md",
       "topics/field-practices/greenfield-vs-production-rule.md",
       "topics/field-practices/lessons-file-loop.md",
@@ -1631,6 +1640,7 @@
       "CHUNK_42_REPORT.md",
       "CHUNK_43_REPORT.md",
       "CHUNK_44_REPORT.md",
+      "CHUNK_45_REPORT.md",
       "CHUNK_4_REPORT.md",
       "CHUNK_5_REPORT.md",
       "CHUNK_6_REPORT.md",
@@ -1664,15 +1674,15 @@
       "mkdocs.yml",
       "requirements-docs.txt"
     ],
-    "actual_package_inventory_count": 387,
-    "source_file_count": 387,
-    "source_files_count": 387,
-    "all_tracked_files_count": 387,
-    "manifest_source_file_count": 387,
-    "all_tracked_file_count": 387,
-    "file_count": 387,
+    "actual_package_inventory_count": 390,
+    "source_file_count": 390,
+    "source_files_count": 390,
+    "all_tracked_files_count": 390,
+    "manifest_source_file_count": 390,
+    "all_tracked_file_count": 390,
+    "file_count": 390,
     "chapter_files_count": 47,
-    "topic_files_count": 197,
+    "topic_files_count": 198,
     "tool_catalog_files": [
       "topics/tool-catalog/auth0.md",
       "topics/tool-catalog/bolt.md",
@@ -1728,7 +1738,7 @@
       "topics/tool-catalog/windsurf.md"
     ],
     "tool_catalog_files_count": 52,
-    "report_files_count": 45,
+    "report_files_count": 46,
     "index_files_count": 14,
     "schema_files_count": 7,
     "register_files_count": 7,
@@ -1737,8 +1747,8 @@
     "review_package": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip",
     "all_tracked_files_match_package": false,
     "source_files_match_package": false,
-    "root_files_count": 74,
-    "root_artifacts_count": 74,
+    "root_files_count": 75,
+    "root_artifacts_count": 75,
     "script_files_count": 2,
     "pricing_snapshot_files_count": 2,
     "validation_scripts_count": 1,
@@ -1819,6 +1829,7 @@
     "CHUNK_42_REPORT.md",
     "CHUNK_43_REPORT.md",
     "CHUNK_44_REPORT.md",
+    "CHUNK_45_REPORT.md",
     "CHUNK_4_REPORT.md",
     "CHUNK_5_REPORT.md",
     "CHUNK_6_REPORT.md",
@@ -1922,6 +1933,7 @@
     "llms-full.txt",
     "llms.txt",
     "maintenance-reports/fix-pr17-shortcut-routing-metadata.md",
+    "maintenance-reports/issue-23-contract-first-segmented-handoffs-triage.md",
     "maintenance-reports/issue-23-vcb-skill-smoke-test.md",
     "maintenance-reports/issue-3-shortcut-id-audit.md",
     "maintenance-reports/issue-4-ai-coding-tools-pricing-snapshot.md",
@@ -2006,6 +2018,7 @@
     "topics/field-practices/agents-md-first.md",
     "topics/field-practices/chatgpt-pm-codex-implementer.md",
     "topics/field-practices/context-reset-between-tasks.md",
+    "topics/field-practices/contract-first-segmented-handoffs.md",
     "topics/field-practices/fresh-agent-review.md",
     "topics/field-practices/greenfield-vs-production-rule.md",
     "topics/field-practices/lessons-file-loop.md",
@@ -2185,6 +2198,8 @@
   },
   "artifact_hygiene": {
     "canonical_review_package": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip",
+    "inventory_basis": "historical_final_release_1_package",
+    "source_tree_status": "historical Final Release 1 package aliases only; live post-release source-tree counts live in manifest.live_repository_inventory",
     "policy": "one timestamped authoritative final-release zip only",
     "tree_txt_policy": "TREE.txt is generated/non-canonical inventory support. manifest.json remains the machine-readable source map.",
     "do_not_submit_prior_artifacts": [
@@ -2195,9 +2210,9 @@
     "generated_non_canonical_files": [
       "TREE.txt"
     ],
-    "source_file_count": 387,
-    "source_files_count": 387,
-    "actual_package_inventory_count": 387,
+    "source_file_count": 333,
+    "source_files_count": 333,
+    "actual_package_inventory_count": 333,
     "duplicate_zip_entries": 0,
     "pycache_entries": 0,
     "integrity_report": "FINAL_RELEASE_1_INTEGRITY.md",
@@ -2211,33 +2226,33 @@
       "source_tree_status": "living_source_package_after_final_release_1",
       "historical_package_reference": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip",
       "tree_txt": "TREE.txt",
-      "total_files": 387,
-      "file_count": 387,
-      "source_file_count": 387,
-      "source_files_count": 387,
-      "actual_package_inventory_count": 387,
-      "all_tracked_file_count": 387,
-      "manifest_source_file_count": 387,
+      "total_files": 390,
+      "file_count": 390,
+      "source_file_count": 390,
+      "source_files_count": 390,
+      "actual_package_inventory_count": 390,
+      "all_tracked_file_count": 390,
+      "manifest_source_file_count": 390,
       "active_tool_cards": 52,
       "deferred_planned_tool_ids": 23,
       "active_shortcut_cards": 58,
       "planned_shortcut_cards": 40,
-      "candidate_field_practices": 5,
+      "candidate_field_practices": 6,
       "active_pricing_snapshots": 2,
       "deferred_pricing_snapshots": 3,
       "package_comparison": "live repository inventory may exceed the historical Final Release 1 zip without mutating that package record",
-      "active_field_practice_cards": 9,
+      "active_field_practice_cards": 10,
       "reproduced_field_practices": 2,
       "needs_more_evidence_field_practices": 2,
       "promoted_field_practices": 0,
       "deferred_field_practices": 0,
       "retired_field_practices": 0,
       "field_practice_status_counts": {
-        "candidate": 5,
+        "candidate": 6,
         "needs_more_evidence": 2,
         "reproduced": 2
       },
-      "field_practice_status_audit": "issue_7_field_practice_grading",
+      "field_practice_status_audit": "issue_23_contract_first_segmented_handoffs_triage",
       "pricing_snapshot_status_audit": "issue_4_ai_coding_tools_pricing_snapshot"
     },
     "historical_final_release_package": {
@@ -2456,28 +2471,24 @@
     }
   },
   "active_chunk": {
-    "id": "chunk_44_final_release_packaging",
-    "status": "final_release_packaged_waiting_for_editor_review",
-    "canonical_review_package": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip",
+    "id": "chunk_45_issue_23_usage_insight_triage",
+    "status": "post_release_issue_23_triage_waiting_for_editor_review",
+    "review_artifact": "current_live_repository_source_tree",
+    "historical_package_reference": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip",
     "scope": [
-      "packaging-only final-release artifact creation and verification from approved Release Candidate 1 revision 2",
-      "convert RC status metadata to final-release status",
-      "update package names, aliases, manifest fields, README status, LLM maps, changelog/report status, and package-integrity/checksum references",
-      "verify package inventory, TREE.txt, manifest aliases, root governance, validator output, register counts, and report terminal marker",
-      "include final artifact hygiene checks, source-tree integrity reporting, and sidecar checksum convention",
-      "preserve curated-not-exhaustive tool catalog limitation",
-      "preserve deferred non-OpenAI pricing limitation",
-      "preserve candidate-only field-practice limitation",
-      "preserve changelog ordering convention",
+      "triage Issue #23 as a scoped post-release usage insight",
+      "allow exactly one candidate field-practice/workflow-pattern card for Issue #23",
+      "preserve historical Final Release 1 package metadata",
+      "update live routing, field-practice registers, LLM maps, source records, manifest inventory, and TREE.txt for the Issue #23 candidate card",
+      "no field-practice promotions or reproduction claims",
       "no new tool cards",
-      "no field-practice cards",
       "no shortcut cards",
       "no pricing snapshots",
       "no broad workflow expansion",
       "no broad security/secrets expansion",
       "no broad tool-catalog expansion",
       "no source-map migration",
-      "no narrative chapters"
+      "no narrative chapter rewrites; Chapter 36 may receive only the narrow candidate-inventory row for the Issue #23 route"
     ]
   },
   "pricing_snapshot_ids": {
@@ -2507,33 +2518,33 @@
     "source_tree_status": "living_source_package_after_final_release_1",
     "historical_package_reference": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip",
     "tree_txt": "TREE.txt",
-    "total_files": 387,
-    "file_count": 387,
-    "source_file_count": 387,
-    "source_files_count": 387,
-    "actual_package_inventory_count": 387,
-    "all_tracked_file_count": 387,
-    "manifest_source_file_count": 387,
+    "total_files": 390,
+    "file_count": 390,
+    "source_file_count": 390,
+    "source_files_count": 390,
+    "actual_package_inventory_count": 390,
+    "all_tracked_file_count": 390,
+    "manifest_source_file_count": 390,
     "active_tool_cards": 52,
     "deferred_planned_tool_ids": 23,
     "active_shortcut_cards": 58,
     "planned_shortcut_cards": 40,
-    "candidate_field_practices": 5,
+    "candidate_field_practices": 6,
     "active_pricing_snapshots": 2,
     "deferred_pricing_snapshots": 3,
     "package_comparison": "live repository inventory may exceed the historical Final Release 1 zip without mutating that package record",
-    "active_field_practice_cards": 9,
+    "active_field_practice_cards": 10,
     "reproduced_field_practices": 2,
     "needs_more_evidence_field_practices": 2,
     "promoted_field_practices": 0,
     "deferred_field_practices": 0,
     "retired_field_practices": 0,
     "field_practice_status_counts": {
-      "candidate": 5,
+      "candidate": 6,
       "needs_more_evidence": 2,
       "reproduced": 2
     },
-    "field_practice_status_audit": "issue_7_field_practice_grading",
+    "field_practice_status_audit": "issue_23_contract_first_segmented_handoffs_triage",
     "pricing_snapshot_status_audit": "issue_4_ai_coding_tools_pricing_snapshot"
   },
   "validation_expectations": {
@@ -2585,7 +2596,7 @@
     "duplicate_failure_mode_full_list_sections_rejected": true,
     "chunk_18_task_index_atomic_routes": true,
     "active_validator": "scripts/validate_repository.py",
-    "current_chunk_checks": "Chunk 44 final-release packaging, final-release identity/status, package aliases, root count aliases, register-count agreement, documented limitations, validator output, report inventory, integrity-file/sidecar-convention reporting, no false sidecar-submission claims, approved-RC baseline linkage, and no-new-card/no-pricing/no-source-map-migration scope guardrails.",
+    "current_chunk_checks": "Chunk 45 post-release Issue #23 usage-insight triage, candidate-only field-practice evidence labeling, live inventory/register consistency, validator output, docs build output, historical Final Release 1 package preservation, narrow Chapter 36 candidate-inventory row allowance, and no tool/shortcut/pricing/narrative-rewrite scope guardrails.",
     "chunk_21_manifest_current_chunk_checks_mentions_active_chunk": true,
     "chunk_21_llm_generic_shortcut_route_covers_active_shortcut_slices": true,
     "chunk_21_semantic_risk_and_shortcut_sections_route_active_cards": true,
@@ -2667,7 +2678,7 @@
     "chunk_36_semantic_routes_prioritize_active_tool_cards": true,
     "chunk_36_scope_guardrails_enforced": true,
     "chunk_36_report_inventory_checked": true,
-    "current_chunk_scope_boundaries": "Chunk 44 boundary: Final Release 1 packaging only. No new tool cards, No field-practice cards, No shortcut cards, No pricing snapshots, No broad workflow expansion, No broad security/secrets expansion, No broad tool-catalog expansion, No source-map migration, and No narrative chapters.",
+    "current_chunk_scope_boundaries": "Chunk 45 boundary: scoped post-release Issue #23 usage-insight triage. Allows exactly one candidate field-practice/workflow-pattern card for Issue #23 with E4 evidence and one narrow Chapter 36 candidate-inventory row for route consistency; No field-practice promotion or reproduction claim, No new tool cards, No shortcut cards, No pricing snapshots, No broad workflow expansion, No broad security/secrets expansion, No broad tool-catalog expansion, No source-map migration, and No narrative chapter rewrites.",
     "tool_catalog_coverage_gap_audit": true,
     "deferred_planned_ecosystem_ids_required": true,
     "chunk_41_finalization_readiness_audit": true,
@@ -3027,7 +3038,7 @@
     "vcb.shortcut.unattended_mutation",
     "vcb.shortcut.always_allow_sensitive_apps"
   ],
-  "source_file_count": 387,
+  "source_file_count": 390,
   "process_setup_shortcut_cards": {
     "vcb.shortcut.skipping_setup": "topics/shortcuts/skipping-setup.md",
     "vcb.shortcut.default_config_forever": "topics/shortcuts/default-config-forever.md",
@@ -3048,7 +3059,7 @@
     "vcb.shortcut.hook_overreach",
     "vcb.shortcut.trusting_external_tool_output"
   ],
-  "source_files_count": 387,
+  "source_files_count": 390,
   "tool_sprawl_skill_shortcut_cards": {
     "vcb.shortcut.skill_overkill": "topics/shortcuts/skill-overkill.md",
     "vcb.shortcut.skill_sprawl": "topics/shortcuts/skill-sprawl.md",
@@ -3305,7 +3316,7 @@
     "topics/tool-catalog/github-copilot.md",
     "topics/tool-catalog/windsurf.md"
   ],
-  "actual_package_inventory_count": 387,
+  "actual_package_inventory_count": 390,
   "browser_app_builder_ui_prototyping_tool_cards": {
     "tool.replit": "topics/tool-catalog/replit.md",
     "tool.lovable": "topics/tool-catalog/lovable.md",
@@ -3380,15 +3391,16 @@
     ]
   },
   "field_practice_candidate_cards": {
-    "vcb.field.chatgpt_pm_codex_implementer": "topics/field-practices/chatgpt-pm-codex-implementer.md",
-    "vcb.field.fresh_agent_review": "topics/field-practices/fresh-agent-review.md",
-    "vcb.field.context_reset_between_tasks": "topics/field-practices/context-reset-between-tasks.md",
     "vcb.field.agents_md_first": "topics/field-practices/agents-md-first.md",
-    "vcb.field.skeleton_todo_first": "topics/field-practices/skeleton-todo-first.md",
-    "vcb.field.strict_typecheck_lint_gates": "topics/field-practices/strict-typecheck-lint-gates.md",
+    "vcb.field.chatgpt_pm_codex_implementer": "topics/field-practices/chatgpt-pm-codex-implementer.md",
+    "vcb.field.context_reset_between_tasks": "topics/field-practices/context-reset-between-tasks.md",
+    "vcb.field.contract_first_segmented_handoffs": "topics/field-practices/contract-first-segmented-handoffs.md",
+    "vcb.field.fresh_agent_review": "topics/field-practices/fresh-agent-review.md",
     "vcb.field.greenfield_vs_production_rule": "topics/field-practices/greenfield-vs-production-rule.md",
     "vcb.field.lessons_file_loop": "topics/field-practices/lessons-file-loop.md",
-    "vcb.field.multi_agent_review_consensus": "topics/field-practices/multi-agent-review-consensus.md"
+    "vcb.field.multi_agent_review_consensus": "topics/field-practices/multi-agent-review-consensus.md",
+    "vcb.field.skeleton_todo_first": "topics/field-practices/skeleton-todo-first.md",
+    "vcb.field.strict_typecheck_lint_gates": "topics/field-practices/strict-typecheck-lint-gates.md"
   },
   "chunk_38_required_field_practice_files": [
     "topics/field-practices/chatgpt-pm-codex-implementer.md",
@@ -3501,7 +3513,7 @@
       "narrative chapters"
     ],
     "disposition_pointer": "final_release_packaging",
-    "final_release_status": "final_release_1_packaged_waiting_for_editor_review",
+    "final_release_status": "final_release_1_packaged_and_editor_approved",
     "final_release_package": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip"
   },
   "release_candidate_scope_disposition_cleanup": {
@@ -3616,7 +3628,7 @@
   },
   "final_release_packaging": {
     "id": "chunk_44_final_release_packaging",
-    "status": "final_release_package_produced_waiting_for_editor_review",
+    "status": "final_release_package_produced_and_editor_approved",
     "final_release_label": "Final Release 1",
     "final_release_package": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip",
     "approved_source_baseline": "vibe-coding-bible-release-candidate-1-revision-2-20260612T040000Z-authoritative.zip",
@@ -3658,6 +3670,7 @@
   },
   "public_repository_governance": {
     "status": "v1.0.1_public_repo_governance_branch",
+    "snapshot_scope": "historical_v1.0.1_public_repository_governance_branch",
     "branch": "v1.0.1-public-repo-governance",
     "content_license": "Creative Commons Attribution 4.0 International",
     "content_license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -3686,15 +3699,24 @@
       "normalizes_relative_paths_to_posix": true,
       "final_release_integrity_records_preserved_as_historical": true
     },
-    "substantive_vcb_content_changed": false
+    "substantive_vcb_content_changed": false,
+    "substantive_vcb_content_changed_scope": "false applies only to the historical v1.0.1 public-governance branch snapshot before post-release candidate-card additions",
+    "current_live_chunk_45": {
+      "substantive_vcb_content_changed": true,
+      "content_change": "one candidate field-practice/workflow-pattern card added for Issue #23",
+      "topic_id": "vcb.field.contract_first_segmented_handoffs",
+      "evidence_level": "E4_COMMUNITY_FIELD_REPORT",
+      "not_promoted": true,
+      "not_reproduced": true
+    }
   },
   "field_practice_status_audit": {
-    "issue": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/7",
-    "status": "issue_7_review_complete",
+    "issue": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/23",
+    "status": "issue_23_triage_complete",
     "date": "2026-06-12",
-    "active_field_practice_cards": 9,
+    "active_field_practice_cards": 10,
     "status_counts": {
-      "candidate": 5,
+      "candidate": 6,
       "needs_more_evidence": 2,
       "reproduced": 2
     },
@@ -3707,7 +3729,8 @@
       "vcb.field.agents_md_first",
       "vcb.field.skeleton_todo_first",
       "vcb.field.greenfield_vs_production_rule",
-      "vcb.field.lessons_file_loop"
+      "vcb.field.lessons_file_loop",
+      "vcb.field.contract_first_segmented_handoffs"
     ],
     "needs_more_evidence": [
       "vcb.field.chatgpt_pm_codex_implementer",
@@ -3717,6 +3740,10 @@
     "deferred": [],
     "retired": [],
     "official_best_practice_promotions": 0,
-    "notes": "Issue #7 grades live post-release source cards; historical Final Release 1 candidate-only package records remain unchanged."
+    "notes": "Issue #7 grades the original live post-release source cards; Issue #23 adds one candidate E4 usage-insight card. Historical Final Release 1 package records remain unchanged.",
+    "issue_23": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/23",
+    "current_issue": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/23",
+    "prior_issue_7_grading": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/7",
+    "issue_7": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/7"
   }
 }

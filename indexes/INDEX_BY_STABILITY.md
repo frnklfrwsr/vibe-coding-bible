@@ -98,6 +98,7 @@ review_cadence: quarterly
 - `vcb.field.greenfield_vs_production_rule` → active candidate: explicit project phase and compatibility posture
 - `vcb.field.lessons_file_loop` → active candidate: temporary lessons loop before durable guidance promotion
 - `vcb.field.multi_agent_review_consensus` → active needs_more_evidence: multi-agent review must not treat agreement as proof
+- `vcb.field.contract_first_segmented_handoffs` → active candidate: contract-first segmented Codex handoffs based on one sanitized usage insight
 - `vcb.chapter.field_notes_unofficial_practices` → active fallback
 - `vcb.chapter.maintaining_updating_bible` → active companion
 

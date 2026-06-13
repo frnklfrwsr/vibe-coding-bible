@@ -109,6 +109,7 @@ review_cadence: quarterly
 - `tool.cursor` → active: AI IDE workflow when local edits and review ownership are explicit
 - `tool.windsurf` → active: agentic IDE workflow when checkpoints and team controls are explicit
 - `vcb.concepts.pull_request` → active
+- `vcb.field.contract_first_segmented_handoffs` → active candidate: long bounded team handoffs where one reviewed segment contract limits drift
 - `vcb.chapter.github_pr_review_with_codex` → active
 - `vcb.chapter.prompt_library_to_team_workflow` → active
 - `vcb.chapter.agents_md_operating_manual` → active
@@ -125,6 +126,7 @@ review_cadence: quarterly
 ## Public or production project considering shortcut
 - `vcb.chapter.risk_managed_shortcuts` → active
 - `vcb.chapter.security_for_vibe_coders` → active
+- `vcb.field.contract_first_segmented_handoffs` → active candidate: production-adjacent long handoffs need explicit contract, owner, checks, and rollback
 - `vcb.concepts.blast_radius` → active
 - `vcb.concepts.recoverability` → active
 

@@ -76,6 +76,7 @@ review_cadence: quarterly
 - `vcb.field.context_reset_between_tasks` → active candidate: recover from stale thread state by resetting with a handoff packet
 - `vcb.field.lessons_file_loop` → active candidate: recover repeated corrections before promoting durable guidance
 - `vcb.field.agents_md_first` → active candidate: recover missing durable guidance with a minimal project rule only after it proves durable
+- `vcb.field.contract_first_segmented_handoffs` → active candidate: recover ambiguity before mutation by handing Codex one reviewed segment contract
 - `tool.codex_feature_maturity` → active: Codex maturity-label governance, feature-readiness posture, fallback requirements, and review cadence
 - `tool.codex_changelog_monitoring` → active: official Codex release monitoring and route/source refreshes
 - `vcb.chapter.maintaining_updating_bible` → active fallback
