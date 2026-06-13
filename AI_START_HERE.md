@@ -20,6 +20,14 @@ This file is the universal entry point for using the Vibe Coding Bible (VCB) wit
 
 If no pathway fits, retrieve `llms.txt`, then use `indexes/INDEX_BY_TASK.md` or `indexes/INDEX_FOR_AI_COACHES.md` to route narrowly.
 
+## Source Selection
+
+The canonical VCB repository is `https://github.com/frnklfrwsr/vibe-coding-bible`.
+
+Use a local VCB clone for fast retrieval only when it is clearly this repository and reasonably current. If local VCB is missing, stale, dirty in relevant governance or contribution files, or not obviously the canonical repo, use the public GitHub repository.
+
+For public submissions, always target the canonical GitHub repository. If local and public versions disagree, prefer the public repository for contribution templates, governance files, and issue or PR destination. Do not rely on stale local templates for public contribution. If unsure, ask before posting.
+
 ## Pathways
 
 | Situation | Intent | First file to retrieve | Next files if needed | Stop condition | Contribution opportunity |

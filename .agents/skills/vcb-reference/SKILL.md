@@ -17,6 +17,14 @@ Use the Vibe Coding Bible as a routeable reference, not as a corpus to ingest.
 6. Stop at `VCB:STOP_RETRIEVAL` unless the user explicitly needs related context.
 7. If a route is missing or stale, say so and suggest a VCB issue instead of guessing.
 
+## Source Selection
+
+The canonical VCB repository is `https://github.com/frnklfrwsr/vibe-coding-bible`.
+
+Use a local VCB clone for fast retrieval only when it is clearly this repository and reasonably current. If the local clone is missing, stale, dirty in relevant governance or contribution files, or not obviously VCB, use the public GitHub repository.
+
+For public submissions, always target the canonical GitHub repository. If local and public versions disagree, prefer the public repository for contribution templates, governance files, and issue or PR destination. Do not rely on stale local templates for public contribution. If unsure, ask before posting.
+
 ## Classification
 
 Classify the user as one or more of:
