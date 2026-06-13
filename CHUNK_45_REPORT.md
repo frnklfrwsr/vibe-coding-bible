@@ -55,8 +55,15 @@ Explicit non-scope:
 - `README.md`
 - `SOURCE_REGISTER.md`
 - `TREE.txt`
+- `docs/navigation/field-practices.md`
+- `indexes/INDEX_BY_BUDGET_PROFILE.md`
+- `indexes/INDEX_BY_CODEX_SURFACE.md`
+- `indexes/INDEX_BY_CONCEPT.md`
 - `indexes/INDEX_BY_FAILURE_MODE.md`
 - `indexes/GLOSSARY.md`
+- `indexes/INDEX_BY_PROJECT_TYPE.md`
+- `indexes/INDEX_BY_RECOVERABILITY.md`
+- `indexes/INDEX_BY_RISK_LEVEL.md`
 - `indexes/INDEX_BY_SHORTCUT.md`
 - `indexes/INDEX_BY_STABILITY.md`
 - `indexes/INDEX_BY_TASK.md`
@@ -90,6 +97,7 @@ The card remains candidate-only. It is not official guidance, not reproduced loc
 - Live field-practice status counts: 2 reproduced, 6 candidate, 2 needs_more_evidence, 0 promoted, 0 deferred, 0 retired.
 - Historical Final Release 1 package metadata remains unchanged.
 - Current chunk metadata now identifies this as a scoped post-release Issue #23 triage slice rather than Chunk 44 final-release packaging.
+- The active chunk review artifact is the current live repository source tree. The Final Release 1 zip remains only a historical package reference.
 
 ## Validation
 
@@ -112,7 +120,7 @@ Documentation built successfully.
 
 ## Codex Review Follow-Up
 
-Codex Review flagged that adding a live field-practice card while the manifest still advertised Chunk 44 `No field-practice cards` scope created governance drift. This report and the manifest/README metadata update address that by making the PR an explicit Chunk 45 post-release triage slice. Follow-up review also required replacing stale active chunk scope packaging entries, refreshing LLM map current-content metadata, adding the Chunk 45 authorization source record, extending the remaining field-practice index routes, and splitting Issue #7 from the current Issue #23 audit pointer.
+Codex Review flagged that adding a live field-practice card while the manifest still advertised Chunk 44 `No field-practice cards` scope created governance drift. This report and the manifest/README metadata update address that by making the PR an explicit Chunk 45 post-release triage slice. Follow-up review also required replacing stale active chunk scope packaging entries, refreshing LLM map current-content metadata, adding the Chunk 45 authorization source record, extending the remaining field-practice index routes, splitting Issue #7 from the current Issue #23 audit pointer, and making the active chunk use the live source tree instead of the historical Final Release 1 zip as its review artifact.
 
 Recommended next chunk after approval: `post_release_maintenance_requires_editor_scope`.
 

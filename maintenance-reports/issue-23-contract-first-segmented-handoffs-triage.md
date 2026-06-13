@@ -49,11 +49,18 @@ This is not official guidance, not reproduced, and not promoted. It is a routeab
 - `README.md`
 - `llms.txt`
 - `llms-full.txt`
+- `docs/navigation/field-practices.md`
 - `indexes/GLOSSARY.md`
 - `indexes/PROMPT_LIBRARY.md`
 - `indexes/INDEX_FOR_AI_COACHES.md`
+- `indexes/INDEX_BY_BUDGET_PROFILE.md`
+- `indexes/INDEX_BY_CODEX_SURFACE.md`
+- `indexes/INDEX_BY_CONCEPT.md`
 - `indexes/INDEX_BY_TASK.md`
 - `indexes/INDEX_BY_FAILURE_MODE.md`
+- `indexes/INDEX_BY_PROJECT_TYPE.md`
+- `indexes/INDEX_BY_RECOVERABILITY.md`
+- `indexes/INDEX_BY_RISK_LEVEL.md`
 - `indexes/INDEX_BY_SHORTCUT.md`
 - `indexes/INDEX_BY_STABILITY.md`
 - `SOURCE_REGISTER.md`
@@ -68,7 +75,7 @@ This is not official guidance, not reproduced, and not promoted. It is a routeab
 
 ## Codex Review Follow-Up
 
-Codex Review flagged that the new live candidate card conflicted with stale Chunk 44 "no field-practice cards" scope metadata. The fix updates the active live metadata to `chunk_45_issue_23_usage_insight_triage` and adds `CHUNK_45_REPORT.md`, while preserving the historical Final Release 1 package record. Follow-up review also required replacing stale `active_chunk.scope` packaging entries, refreshing LLM map current-content metadata, adding the Chunk 45 authorization source record, extending the remaining field-practice index routes, and splitting Issue #7 from the current Issue #23 audit pointer.
+Codex Review flagged that the new live candidate card conflicted with stale Chunk 44 "no field-practice cards" scope metadata. The fix updates the active live metadata to `chunk_45_issue_23_usage_insight_triage` and adds `CHUNK_45_REPORT.md`, while preserving the historical Final Release 1 package record. Follow-up review also required replacing stale `active_chunk.scope` packaging entries, refreshing LLM map current-content metadata, adding the Chunk 45 authorization source record, extending the remaining field-practice index routes, splitting Issue #7 from the current Issue #23 audit pointer, and making the active chunk use the live source tree instead of the historical Final Release 1 zip as its review artifact.
 
 ## Follow-Up Evidence Needed
 

@@ -111,6 +111,7 @@ review_cadence: quarterly
 - `vcb.field.fresh_agent_review` → active reproduced: independent review signal before commit or merge
 - `vcb.field.multi_agent_review_consensus` → active needs_more_evidence: compare evidence and disagreement; do not treat agreement as proof
 - `vcb.field.lessons_file_loop` → active candidate: convert repeated corrections into durable guidance only after review
+- `vcb.field.contract_first_segmented_handoffs` → active candidate: use only when handoff packaging is cheaper than review churn on long bounded work
 - `vcb.chapter.field_notes_unofficial_practices` → active fallback
 - `vcb.chapter.risk_managed_shortcuts` → active fallback
 
