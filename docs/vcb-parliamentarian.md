@@ -35,6 +35,28 @@ Gatekeeping mode is reserved for sensitive transitions: first repo mutation, dep
 - budget or usage constraints were considered;
 - contribution opportunity was considered.
 
+## Minimal existing-project smoke-test inventory
+
+For advisory mode in an existing project, inspect only the smallest safe inventory needed to understand project posture:
+
+- README or project overview;
+- durable project instructions such as `AGENTS.md`;
+- project state or planning file if present;
+- package/project config;
+- `.gitignore`;
+- git branch and status;
+- test inventory;
+- ignored secret/data paths by name only, without reading contents.
+
+Guardrails:
+
+- Do not read secrets.
+- Do not inspect broad source code unless the user asks or the checkpoint requires it.
+- Do not read private logs, local evidence folders, protected data folders, or credential files.
+- If a path looks sensitive, report its presence by name/category only.
+- Keep the Parliamentarian read-only.
+- Escalate from advisory to gatekeeping only for sensitive transitions such as PR, merge, deploy, release, production data, credentials, dependency adoption, or high-blast-radius mutation.
+
 ## What it must not do
 
 - implement code;
