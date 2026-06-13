@@ -37,6 +37,10 @@ Scoped post-release Issue #23 triage from Chunk 45 is active. Final Release 1 re
 - User asks about licensing, attribution, or notices → retrieve `LICENSE.md`, `LICENSE-CODE.md`, or `NOTICE.md` as narrowly as possible.
 - User asks about contribution rules, security reporting, or contributor behavior → retrieve `CONTRIBUTING.md`, `SECURITY.md`, or `CODE_OF_CONDUCT.md`.
 - User asks about owner review, issue forms, PR template, or the public validation workflow → retrieve `CODEOWNERS`, `.github/PULL_REQUEST_TEMPLATE.md`, the matching `.github/ISSUE_TEMPLATE/*.yml` form, or `.github/workflows/validate.yml`.
+- User asks how to handle a post-release usage insight without PR #25-style overhead -> retrieve `POST_RELEASE_CONTRIBUTION_WORKFLOW.md` before adding active routes or metadata.
+- User asks how ChatGPT web or a web agent should use VCB -> retrieve `docs/use-with-chatgpt-web.md`.
+- User asks for a VCB Parliamentarian / Constitutionalist checkpoint -> retrieve `docs/vcb-parliamentarian.md`.
+- User asks how to delegate Codex work to subagents -> retrieve `SUBAGENT_DELEGATION_POLICY.md` before spawning agents.
 - Treat public-governance files as repository support artifacts, not primary VCB guidance. For substantive Codex or vibe-coding questions, keep topic-card-first retrieval and use the smallest active topic card, register, or index before support files.
 
 ## Final Release Package Fast Routing

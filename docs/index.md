@@ -14,12 +14,16 @@ Use this site to find the right source file quickly. Use the GitHub repository f
 |---|---|
 | New human reader | [Start here](start-here.md) |
 | AI coach or LLM workflow | [LLM usage guide](for-ai-coaches.md) |
+| ChatGPT web or public web-agent use | [Use with ChatGPT web](use-with-chatgpt-web.md) |
+| Codex checkpoint review | [VCB Parliamentarian](vcb-parliamentarian.md) |
 | Task-based lookup | [Task index](navigation/task-index.md) |
 | Concept lookup | [Concept index](navigation/concept-index.md) |
 | Shortcut risk review | [Shortcut index](navigation/shortcut-index.md) |
 | Tool and stack guidance | [Tool index](navigation/tool-index.md) |
 | Candidate field practices | [Field practices](navigation/field-practices.md) |
 | Source packages and release records | [Downloads and releases](navigation/downloads-and-releases.md) |
+| Lightweight post-release contributions | [POST_RELEASE_CONTRIBUTION_WORKFLOW.md](https://github.com/frnklfrwsr/vibe-coding-bible/blob/main/POST_RELEASE_CONTRIBUTION_WORKFLOW.md) |
+| Subagent delegation policy | [SUBAGENT_DELEGATION_POLICY.md](https://github.com/frnklfrwsr/vibe-coding-bible/blob/main/SUBAGENT_DELEGATION_POLICY.md) |
 
 ## Canonical-source rule
 

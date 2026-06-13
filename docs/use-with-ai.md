@@ -10,6 +10,8 @@ Use the Vibe Coding Bible as a reference: https://github.com/frnklfrwsr/vibe-cod
 
 Then describe the task, project phase, skill level, budget constraint, and whether the work is private or public.
 
+For ChatGPT web or web-agent use, see [Use VCB With ChatGPT Web](use-with-chatgpt-web.md).
+
 ## Source Selection
 
 Use the canonical VCB repository when an AI needs public contribution templates or a public destination: [frnklfrwsr/vibe-coding-bible](https://github.com/frnklfrwsr/vibe-coding-bible).
@@ -28,3 +30,5 @@ The AI should prefer the smallest relevant topic card, shortcut card, tool card,
 ## Contribution Safety
 
 Reusable lessons are useful to the VCB community only when sanitized. The default mode is suggestion only. See [CONTRIBUTION_MODES.md](https://github.com/frnklfrwsr/vibe-coding-bible/blob/main/CONTRIBUTION_MODES.md).
+
+For post-release contribution triage, use [POST_RELEASE_CONTRIBUTION_WORKFLOW.md](https://github.com/frnklfrwsr/vibe-coding-bible/blob/main/POST_RELEASE_CONTRIBUTION_WORKFLOW.md).
