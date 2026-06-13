@@ -27,7 +27,7 @@ Final-release packaging from Chunk 44 is active.
 
 - This package is **Final Release 1** produced from the approved RC gate using Release Candidate 1 revision 2.
 - Narrative chapters `chapters/00-*.md` through `chapters/46-*.md` are active.
-- Field-practice cards from Chunk 38 remain active retrieval targets; Issue #7 live source grades are 2 bounded reproduced, 5 candidate, and 2 needs_more_evidence.
+- Field-practice cards from Chunk 38 remain active retrieval targets; Issue #7 live source grades were 2 bounded reproduced, 5 candidate, and 2 needs_more_evidence. Issue #23 adds one candidate usage-insight route.
 - Chunk 40 active/deferred ecosystem coverage, Chunk 41 finalization audit, Chunk 42 RC disposition cleanup, Chunk 43 approved RC packaging, and Chunk 44 final packaging remain active governance context.
 - Use `README.md` / `## Active Tool Cards` or `TOOL_REGISTER.md` for the canonical active tool-card inventory.
 - `pricing-snapshots/2026-06-09-openai-codex.md` and `pricing-snapshots/2026-06-12-ai-coding-tools.md` are the active exact pricing snapshots for Codex-specific OpenAI/Codex economics and non-OpenAI AI coding/app-builder tools; ChatGPT plan pricing plus hosting, database, and observability pricing remain uncaptured/deferred.
@@ -52,15 +52,16 @@ Final-release packaging from Chunk 44 is active.
 
 ## Field Practice Status Fast Routing
 
-- User asks whether to adopt, test, promote, retire, or trust an unofficial Codex/vibe-coding practice -> retrieve the smallest matching active field-practice card before broad field-notes chapters; preserve the card status and evidence label exactly. Current live grades: `vcb.field.fresh_agent_review` and `vcb.field.strict_typecheck_lint_gates` are bounded `reproduced`; `vcb.field.chatgpt_pm_codex_implementer` and `vcb.field.multi_agent_review_consensus` are `needs_more_evidence`; the other five remain `candidate`.
+- User asks whether to adopt, test, promote, retire, or trust an unofficial Codex/vibe-coding practice -> retrieve the smallest matching active field-practice card before broad field-notes chapters; preserve the card status and evidence label exactly. Current live grades: `vcb.field.fresh_agent_review` and `vcb.field.strict_typecheck_lint_gates` are bounded `reproduced`; `vcb.field.chatgpt_pm_codex_implementer` and `vcb.field.multi_agent_review_consensus` are `needs_more_evidence`; the other six remain `candidate`.
 - User asks for PM/planning model plus Codex implementation split → retrieve `vcb.field.chatgpt_pm_codex_implementer` first; use `tool.chatgpt`, `tool.codex`, and `vcb.chapter.when_to_use_other_ais` as companions.
+- User asks about contract-first handoffs, segmented Codex packages, or review churn from inferred contracts → retrieve `vcb.field.contract_first_segmented_handoffs` first; use `vcb.field.chatgpt_pm_codex_implementer`, `vcb.field.fresh_agent_review`, and `vcb.field.strict_typecheck_lint_gates` as companions.
 - User asks for independent or fresh review → retrieve `vcb.field.fresh_agent_review` first; use `vcb.field.multi_agent_review_consensus`, `tool.codex_github_review`, and `vcb.workflow.reviewing_diffs` as companions.
 - User asks about stale context, starting fresh, or context reset between tasks → retrieve `vcb.field.context_reset_between_tasks` first; use `vcb.prompting.context_management` and `vcb.failure.context_pollution` as companions.
 - User asks when to write AGENTS.md, a lessons file, or durable repo guidance → retrieve `vcb.field.agents_md_first` or `vcb.field.lessons_file_loop` first; use `tool.codex_agents_md` as the official mechanics companion.
 - User asks about skeleton/TODO-first, strict checks, or greenfield-versus-production prompting → retrieve `vcb.field.skeleton_todo_first`, `vcb.field.strict_typecheck_lint_gates`, or `vcb.field.greenfield_vs_production_rule` first.
 - User asks about multiple agents agreeing, fresh-agent consensus, or multi-agent review reliability → retrieve `vcb.field.multi_agent_review_consensus` first; use `vcb.shortcut.consensus_as_correctness` and `vcb.shortcut.best_of_n_without_review` as risk companions.
 
-## Active Field Practice Cards After Issue #7
+## Active Field Practice Cards After Issue #7 and Issue #23
 
 - `vcb.field.chatgpt_pm_codex_implementer` — `topics/field-practices/chatgpt-pm-codex-implementer.md` — active needs_more_evidence: ChatGPT PM / Codex implementer split remains too broad for bounded local reproduction.
 - `vcb.field.fresh_agent_review` — `topics/field-practices/fresh-agent-review.md` — active reproduced: bounded local reproduction through PR review gate; not promoted as universal proof.
@@ -71,6 +72,7 @@ Final-release packaging from Chunk 44 is active.
 - `vcb.field.greenfield_vs_production_rule` — `topics/field-practices/greenfield-vs-production-rule.md` — active candidate: explicit project phase and compatibility posture.
 - `vcb.field.lessons_file_loop` — `topics/field-practices/lessons-file-loop.md` — active candidate: temporary lessons loop before durable guidance promotion.
 - `vcb.field.multi_agent_review_consensus` — `topics/field-practices/multi-agent-review-consensus.md` — active needs_more_evidence: multi-agent review must not treat agreement as proof.
+- `vcb.field.contract_first_segmented_handoffs` — `topics/field-practices/contract-first-segmented-handoffs.md` — active candidate: contract-first segmented Codex handoffs based on one sanitized usage insight.
 
 
 ## Tool-Catalog Coverage Gap Fast Routing

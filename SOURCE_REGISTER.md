@@ -565,6 +565,12 @@ These records are maintainer-authored synthesis aids. They are not evidence leve
 
 - Chunk 44 is packaging-only final-release artifact creation and verification from the approved RC1 revision 2 package. It adds no product/vendor facts, pricing claims, model-availability claims, cards, source-map migration, or narrative content.
 
+## Issue 23 Source Records
+
+| Source ID | Title | URL / Location | Evidence | Verification status | Use for | Volatility |
+|---|---|---|---|---|---|---|
+| `vcb.usage_insight.issue_23_contract_first_segmented_handoffs` | Issue #23 usage insight - Contract-first segmented Codex handoffs | https://github.com/frnklfrwsr/vibe-coding-bible/issues/23 | E4_COMMUNITY_FIELD_REPORT | sanitized public issue checked 2026-06-12 | candidate field-practice evidence for contract-first segmented handoffs; not reproduction or official guidance | stable report / practice unverified |
+
 ## Notes
 
 - Chunk 15 reuses existing OpenAI Codex source IDs for workflow/prompting topic cards; no new external source IDs were required.

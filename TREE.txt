@@ -154,6 +154,7 @@ indexes/PROMPT_LIBRARY.md
 llms-full.txt
 llms.txt
 maintenance-reports/fix-pr17-shortcut-routing-metadata.md
+maintenance-reports/issue-23-contract-first-segmented-handoffs-triage.md
 maintenance-reports/issue-23-vcb-skill-smoke-test.md
 maintenance-reports/issue-3-shortcut-id-audit.md
 maintenance-reports/issue-4-ai-coding-tools-pricing-snapshot.md
@@ -238,6 +239,7 @@ topics/field-practices/.gitkeep
 topics/field-practices/agents-md-first.md
 topics/field-practices/chatgpt-pm-codex-implementer.md
 topics/field-practices/context-reset-between-tasks.md
+topics/field-practices/contract-first-segmented-handoffs.md
 topics/field-practices/fresh-agent-review.md
 topics/field-practices/greenfield-vs-production-rule.md
 topics/field-practices/lessons-file-loop.md

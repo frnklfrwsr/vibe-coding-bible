@@ -367,7 +367,7 @@
     ]
   },
   "source_artifacts": {
-    "total_files": 387,
+    "total_files": 389,
     "required_chunk_0_files": 19,
     "report_files": [
       "CHUNK_0_REPORT.md",
@@ -523,6 +523,7 @@
       "topics/field-practices/agents-md-first.md",
       "topics/field-practices/chatgpt-pm-codex-implementer.md",
       "topics/field-practices/context-reset-between-tasks.md",
+      "topics/field-practices/contract-first-segmented-handoffs.md",
       "topics/field-practices/fresh-agent-review.md",
       "topics/field-practices/greenfield-vs-production-rule.md",
       "topics/field-practices/lessons-file-loop.md",
@@ -882,6 +883,7 @@
       "llms-full.txt",
       "llms.txt",
       "maintenance-reports/fix-pr17-shortcut-routing-metadata.md",
+      "maintenance-reports/issue-23-contract-first-segmented-handoffs-triage.md",
       "maintenance-reports/issue-23-vcb-skill-smoke-test.md",
       "maintenance-reports/issue-3-shortcut-id-audit.md",
       "maintenance-reports/issue-4-ai-coding-tools-pricing-snapshot.md",
@@ -966,6 +968,7 @@
       "topics/field-practices/agents-md-first.md",
       "topics/field-practices/chatgpt-pm-codex-implementer.md",
       "topics/field-practices/context-reset-between-tasks.md",
+      "topics/field-practices/contract-first-segmented-handoffs.md",
       "topics/field-practices/fresh-agent-review.md",
       "topics/field-practices/greenfield-vs-production-rule.md",
       "topics/field-practices/lessons-file-loop.md",
@@ -1356,6 +1359,7 @@
       "llms-full.txt",
       "llms.txt",
       "maintenance-reports/fix-pr17-shortcut-routing-metadata.md",
+      "maintenance-reports/issue-23-contract-first-segmented-handoffs-triage.md",
       "maintenance-reports/issue-23-vcb-skill-smoke-test.md",
       "maintenance-reports/issue-3-shortcut-id-audit.md",
       "maintenance-reports/issue-4-ai-coding-tools-pricing-snapshot.md",
@@ -1440,6 +1444,7 @@
       "topics/field-practices/agents-md-first.md",
       "topics/field-practices/chatgpt-pm-codex-implementer.md",
       "topics/field-practices/context-reset-between-tasks.md",
+      "topics/field-practices/contract-first-segmented-handoffs.md",
       "topics/field-practices/fresh-agent-review.md",
       "topics/field-practices/greenfield-vs-production-rule.md",
       "topics/field-practices/lessons-file-loop.md",
@@ -1664,15 +1669,15 @@
       "mkdocs.yml",
       "requirements-docs.txt"
     ],
-    "actual_package_inventory_count": 387,
-    "source_file_count": 387,
-    "source_files_count": 387,
-    "all_tracked_files_count": 387,
-    "manifest_source_file_count": 387,
-    "all_tracked_file_count": 387,
-    "file_count": 387,
+    "actual_package_inventory_count": 389,
+    "source_file_count": 389,
+    "source_files_count": 389,
+    "all_tracked_files_count": 389,
+    "manifest_source_file_count": 389,
+    "all_tracked_file_count": 389,
+    "file_count": 389,
     "chapter_files_count": 47,
-    "topic_files_count": 197,
+    "topic_files_count": 198,
     "tool_catalog_files": [
       "topics/tool-catalog/auth0.md",
       "topics/tool-catalog/bolt.md",
@@ -1922,6 +1927,7 @@
     "llms-full.txt",
     "llms.txt",
     "maintenance-reports/fix-pr17-shortcut-routing-metadata.md",
+    "maintenance-reports/issue-23-contract-first-segmented-handoffs-triage.md",
     "maintenance-reports/issue-23-vcb-skill-smoke-test.md",
     "maintenance-reports/issue-3-shortcut-id-audit.md",
     "maintenance-reports/issue-4-ai-coding-tools-pricing-snapshot.md",
@@ -2006,6 +2012,7 @@
     "topics/field-practices/agents-md-first.md",
     "topics/field-practices/chatgpt-pm-codex-implementer.md",
     "topics/field-practices/context-reset-between-tasks.md",
+    "topics/field-practices/contract-first-segmented-handoffs.md",
     "topics/field-practices/fresh-agent-review.md",
     "topics/field-practices/greenfield-vs-production-rule.md",
     "topics/field-practices/lessons-file-loop.md",
@@ -2195,9 +2202,9 @@
     "generated_non_canonical_files": [
       "TREE.txt"
     ],
-    "source_file_count": 387,
-    "source_files_count": 387,
-    "actual_package_inventory_count": 387,
+    "source_file_count": 389,
+    "source_files_count": 389,
+    "actual_package_inventory_count": 389,
     "duplicate_zip_entries": 0,
     "pycache_entries": 0,
     "integrity_report": "FINAL_RELEASE_1_INTEGRITY.md",
@@ -2211,33 +2218,33 @@
       "source_tree_status": "living_source_package_after_final_release_1",
       "historical_package_reference": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip",
       "tree_txt": "TREE.txt",
-      "total_files": 387,
-      "file_count": 387,
-      "source_file_count": 387,
-      "source_files_count": 387,
-      "actual_package_inventory_count": 387,
-      "all_tracked_file_count": 387,
-      "manifest_source_file_count": 387,
+      "total_files": 389,
+      "file_count": 389,
+      "source_file_count": 389,
+      "source_files_count": 389,
+      "actual_package_inventory_count": 389,
+      "all_tracked_file_count": 389,
+      "manifest_source_file_count": 389,
       "active_tool_cards": 52,
       "deferred_planned_tool_ids": 23,
       "active_shortcut_cards": 58,
       "planned_shortcut_cards": 40,
-      "candidate_field_practices": 5,
+      "candidate_field_practices": 6,
       "active_pricing_snapshots": 2,
       "deferred_pricing_snapshots": 3,
       "package_comparison": "live repository inventory may exceed the historical Final Release 1 zip without mutating that package record",
-      "active_field_practice_cards": 9,
+      "active_field_practice_cards": 10,
       "reproduced_field_practices": 2,
       "needs_more_evidence_field_practices": 2,
       "promoted_field_practices": 0,
       "deferred_field_practices": 0,
       "retired_field_practices": 0,
       "field_practice_status_counts": {
-        "candidate": 5,
+        "candidate": 6,
         "needs_more_evidence": 2,
         "reproduced": 2
       },
-      "field_practice_status_audit": "issue_7_field_practice_grading",
+      "field_practice_status_audit": "issue_23_contract_first_segmented_handoffs_triage",
       "pricing_snapshot_status_audit": "issue_4_ai_coding_tools_pricing_snapshot"
     },
     "historical_final_release_package": {
@@ -2507,33 +2514,33 @@
     "source_tree_status": "living_source_package_after_final_release_1",
     "historical_package_reference": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip",
     "tree_txt": "TREE.txt",
-    "total_files": 387,
-    "file_count": 387,
-    "source_file_count": 387,
-    "source_files_count": 387,
-    "actual_package_inventory_count": 387,
-    "all_tracked_file_count": 387,
-    "manifest_source_file_count": 387,
+    "total_files": 389,
+    "file_count": 389,
+    "source_file_count": 389,
+    "source_files_count": 389,
+    "actual_package_inventory_count": 389,
+    "all_tracked_file_count": 389,
+    "manifest_source_file_count": 389,
     "active_tool_cards": 52,
     "deferred_planned_tool_ids": 23,
     "active_shortcut_cards": 58,
     "planned_shortcut_cards": 40,
-    "candidate_field_practices": 5,
+    "candidate_field_practices": 6,
     "active_pricing_snapshots": 2,
     "deferred_pricing_snapshots": 3,
     "package_comparison": "live repository inventory may exceed the historical Final Release 1 zip without mutating that package record",
-    "active_field_practice_cards": 9,
+    "active_field_practice_cards": 10,
     "reproduced_field_practices": 2,
     "needs_more_evidence_field_practices": 2,
     "promoted_field_practices": 0,
     "deferred_field_practices": 0,
     "retired_field_practices": 0,
     "field_practice_status_counts": {
-      "candidate": 5,
+      "candidate": 6,
       "needs_more_evidence": 2,
       "reproduced": 2
     },
-    "field_practice_status_audit": "issue_7_field_practice_grading",
+    "field_practice_status_audit": "issue_23_contract_first_segmented_handoffs_triage",
     "pricing_snapshot_status_audit": "issue_4_ai_coding_tools_pricing_snapshot"
   },
   "validation_expectations": {
@@ -3027,7 +3034,7 @@
     "vcb.shortcut.unattended_mutation",
     "vcb.shortcut.always_allow_sensitive_apps"
   ],
-  "source_file_count": 387,
+  "source_file_count": 389,
   "process_setup_shortcut_cards": {
     "vcb.shortcut.skipping_setup": "topics/shortcuts/skipping-setup.md",
     "vcb.shortcut.default_config_forever": "topics/shortcuts/default-config-forever.md",
@@ -3048,7 +3055,7 @@
     "vcb.shortcut.hook_overreach",
     "vcb.shortcut.trusting_external_tool_output"
   ],
-  "source_files_count": 387,
+  "source_files_count": 389,
   "tool_sprawl_skill_shortcut_cards": {
     "vcb.shortcut.skill_overkill": "topics/shortcuts/skill-overkill.md",
     "vcb.shortcut.skill_sprawl": "topics/shortcuts/skill-sprawl.md",
@@ -3305,7 +3312,7 @@
     "topics/tool-catalog/github-copilot.md",
     "topics/tool-catalog/windsurf.md"
   ],
-  "actual_package_inventory_count": 387,
+  "actual_package_inventory_count": 389,
   "browser_app_builder_ui_prototyping_tool_cards": {
     "tool.replit": "topics/tool-catalog/replit.md",
     "tool.lovable": "topics/tool-catalog/lovable.md",
@@ -3380,15 +3387,16 @@
     ]
   },
   "field_practice_candidate_cards": {
-    "vcb.field.chatgpt_pm_codex_implementer": "topics/field-practices/chatgpt-pm-codex-implementer.md",
-    "vcb.field.fresh_agent_review": "topics/field-practices/fresh-agent-review.md",
-    "vcb.field.context_reset_between_tasks": "topics/field-practices/context-reset-between-tasks.md",
     "vcb.field.agents_md_first": "topics/field-practices/agents-md-first.md",
-    "vcb.field.skeleton_todo_first": "topics/field-practices/skeleton-todo-first.md",
-    "vcb.field.strict_typecheck_lint_gates": "topics/field-practices/strict-typecheck-lint-gates.md",
+    "vcb.field.chatgpt_pm_codex_implementer": "topics/field-practices/chatgpt-pm-codex-implementer.md",
+    "vcb.field.context_reset_between_tasks": "topics/field-practices/context-reset-between-tasks.md",
+    "vcb.field.contract_first_segmented_handoffs": "topics/field-practices/contract-first-segmented-handoffs.md",
+    "vcb.field.fresh_agent_review": "topics/field-practices/fresh-agent-review.md",
     "vcb.field.greenfield_vs_production_rule": "topics/field-practices/greenfield-vs-production-rule.md",
     "vcb.field.lessons_file_loop": "topics/field-practices/lessons-file-loop.md",
-    "vcb.field.multi_agent_review_consensus": "topics/field-practices/multi-agent-review-consensus.md"
+    "vcb.field.multi_agent_review_consensus": "topics/field-practices/multi-agent-review-consensus.md",
+    "vcb.field.skeleton_todo_first": "topics/field-practices/skeleton-todo-first.md",
+    "vcb.field.strict_typecheck_lint_gates": "topics/field-practices/strict-typecheck-lint-gates.md"
   },
   "chunk_38_required_field_practice_files": [
     "topics/field-practices/chatgpt-pm-codex-implementer.md",
@@ -3690,11 +3698,11 @@
   },
   "field_practice_status_audit": {
     "issue": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/7",
-    "status": "issue_7_review_complete",
+    "status": "issue_23_triage_complete",
     "date": "2026-06-12",
-    "active_field_practice_cards": 9,
+    "active_field_practice_cards": 10,
     "status_counts": {
-      "candidate": 5,
+      "candidate": 6,
       "needs_more_evidence": 2,
       "reproduced": 2
     },
@@ -3707,7 +3715,8 @@
       "vcb.field.agents_md_first",
       "vcb.field.skeleton_todo_first",
       "vcb.field.greenfield_vs_production_rule",
-      "vcb.field.lessons_file_loop"
+      "vcb.field.lessons_file_loop",
+      "vcb.field.contract_first_segmented_handoffs"
     ],
     "needs_more_evidence": [
       "vcb.field.chatgpt_pm_codex_implementer",
@@ -3717,6 +3726,7 @@
     "deferred": [],
     "retired": [],
     "official_best_practice_promotions": 0,
-    "notes": "Issue #7 grades live post-release source cards; historical Final Release 1 candidate-only package records remain unchanged."
+    "notes": "Issue #7 grades the original live post-release source cards; Issue #23 adds one candidate E4 usage-insight card. Historical Final Release 1 package records remain unchanged.",
+    "issue_23": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/23"
   }
 }

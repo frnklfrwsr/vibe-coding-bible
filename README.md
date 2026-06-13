@@ -422,7 +422,7 @@ This repository is the living source package. Issue #3 promoted eight high-prior
 
 ## Active Field Practice Cards
 
-These cards are active retrieval targets. Issue #7 graded their live source status after Final Release 1: 2 reproduced with bounded local evidence, 5 candidate, 2 needs_more_evidence, 0 promoted, 0 deferred, and 0 retired. Do not present any field practice as official best practice.
+These cards are active retrieval targets. Issue #7 graded the original live set after Final Release 1, and Issue #23 adds one sanitized usage-insight candidate: 2 reproduced with bounded local evidence, 6 candidate, 2 needs_more_evidence, 0 promoted, 0 deferred, and 0 retired. Do not present any field practice as official best practice.
 
 - `vcb.field.chatgpt_pm_codex_implementer` - `topics/field-practices/chatgpt-pm-codex-implementer.md` - active needs_more_evidence: ChatGPT PM / Codex implementer split remains too broad for bounded local reproduction.
 - `vcb.field.fresh_agent_review` - `topics/field-practices/fresh-agent-review.md` - active reproduced: bounded local reproduction through PR review gate; not promoted as universal proof.
@@ -433,6 +433,7 @@ These cards are active retrieval targets. Issue #7 graded their live source stat
 - `vcb.field.greenfield_vs_production_rule` - `topics/field-practices/greenfield-vs-production-rule.md` - active candidate: explicit project phase and compatibility posture.
 - `vcb.field.lessons_file_loop` - `topics/field-practices/lessons-file-loop.md` - active candidate: temporary lessons loop before durable guidance promotion.
 - `vcb.field.multi_agent_review_consensus` - `topics/field-practices/multi-agent-review-consensus.md` - active needs_more_evidence: multi-agent review must not treat agreement as proof.
+- `vcb.field.contract_first_segmented_handoffs` - `topics/field-practices/contract-first-segmented-handoffs.md` - active candidate: contract-first segmented Codex handoffs based on one sanitized usage insight.
 
 ## Chunk Gate
 
