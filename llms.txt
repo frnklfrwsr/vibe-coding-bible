@@ -1,14 +1,14 @@
 ---
 id: vcb.llms
 artifact_type: llm_source_map
-version: 1.0.0-final.1.chunk44
-status: chunk_44_updated
-last_verified: '2026-06-11'
-next_review_due: '2026-07-11'
+version: 1.0.1-post-release.issue23.chunk45
+status: chunk_45_updated
+last_verified: '2026-06-12'
+next_review_due: '2026-07-12'
 review_cadence: monthly
 ---
 
-<!-- VCB:BEGIN_LLMS id=vcb.llms version=1.0.0-final.1.chunk44 -->
+<!-- VCB:BEGIN_LLMS id=vcb.llms version=1.0.1-post-release.issue23.chunk45 -->
 
 # The Vibe Coding Bible — llms.txt
 
@@ -41,12 +41,12 @@ Canonical review package: one timestamped authoritative zip.
 
 ## Current Active Content
 
-Final-release packaging from Chunk 44 is active.
+Scoped post-release Issue #23 triage from Chunk 45 is active. Final Release 1 remains a historical package record.
 
-- This package is **Final Release 1** produced from the approved RC gate using Release Candidate 1 revision 2.
+- Final Release 1 was produced from the approved RC gate using Release Candidate 1 revision 2.
 - Narrative chapters `chapters/00-*.md` through `chapters/46-*.md` are active.
 - Field-practice cards from Chunk 38 remain active retrieval targets; Issue #7 live source grades were 2 bounded reproduced, 5 candidate, and 2 needs_more_evidence. Issue #23 adds one candidate usage-insight route.
-- Chunk 40 active/deferred ecosystem coverage, Chunk 41 finalization audit, Chunk 42 RC disposition cleanup, Chunk 43 approved RC packaging, and Chunk 44 final packaging remain active governance context.
+- Chunk 40 active/deferred ecosystem coverage, Chunk 41 finalization audit, Chunk 42 RC disposition cleanup, Chunk 43 approved RC packaging, Chunk 44 final packaging, and Chunk 45 Issue #23 usage-insight triage remain active governance context.
 - Use `README.md` / `## Active Tool Cards` or `TOOL_REGISTER.md` for the canonical active tool-card inventory.
 - `pricing-snapshots/2026-06-09-openai-codex.md` and `pricing-snapshots/2026-06-12-ai-coding-tools.md` are the active exact pricing snapshots for Codex-specific OpenAI/Codex economics and non-OpenAI AI coding/app-builder tools; ChatGPT plan pricing plus hosting, database, and observability pricing remain uncaptured/deferred.
 

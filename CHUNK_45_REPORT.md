@@ -56,10 +56,12 @@ Explicit non-scope:
 - `SOURCE_REGISTER.md`
 - `TREE.txt`
 - `indexes/INDEX_BY_FAILURE_MODE.md`
+- `indexes/GLOSSARY.md`
 - `indexes/INDEX_BY_SHORTCUT.md`
 - `indexes/INDEX_BY_STABILITY.md`
 - `indexes/INDEX_BY_TASK.md`
 - `indexes/INDEX_FOR_AI_COACHES.md`
+- `indexes/PROMPT_LIBRARY.md`
 - `llms-full.txt`
 - `llms.txt`
 - `manifest.json`
@@ -110,7 +112,7 @@ Documentation built successfully.
 
 ## Codex Review Follow-Up
 
-Codex Review flagged that adding a live field-practice card while the manifest still advertised Chunk 44 `No field-practice cards` scope created governance drift. This report and the manifest/README metadata update address that by making the PR an explicit Chunk 45 post-release triage slice.
+Codex Review flagged that adding a live field-practice card while the manifest still advertised Chunk 44 `No field-practice cards` scope created governance drift. This report and the manifest/README metadata update address that by making the PR an explicit Chunk 45 post-release triage slice. Follow-up review also required replacing stale active chunk scope packaging entries, refreshing LLM map current-content metadata, adding the Chunk 45 authorization source record, extending the remaining field-practice index routes, and splitting Issue #7 from the current Issue #23 audit pointer.
 
 Recommended next chunk after approval: `post_release_maintenance_requires_editor_scope`.
 

@@ -61,6 +61,7 @@ review_cadence: quarterly
 - `greenfield vs production rule` → `vcb.field.greenfield_vs_production_rule` active candidate; companion: `vcb.constraints.build_vs_maintenance`.
 - `lessons file loop` → `vcb.field.lessons_file_loop` active candidate.
 - `multi-agent review consensus` → `vcb.field.multi_agent_review_consensus` active needs_more_evidence; risk companion: `vcb.shortcut.consensus_as_correctness`.
+- `contract-first segmented handoffs` → `vcb.field.contract_first_segmented_handoffs` active candidate; companions: `vcb.field.chatgpt_pm_codex_implementer`, `vcb.field.fresh_agent_review`, `vcb.field.strict_typecheck_lint_gates`.
 
 ## Review, security, and shipping terms
 

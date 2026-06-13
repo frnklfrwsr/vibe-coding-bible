@@ -49,6 +49,8 @@ This is not official guidance, not reproduced, and not promoted. It is a routeab
 - `README.md`
 - `llms.txt`
 - `llms-full.txt`
+- `indexes/GLOSSARY.md`
+- `indexes/PROMPT_LIBRARY.md`
 - `indexes/INDEX_FOR_AI_COACHES.md`
 - `indexes/INDEX_BY_TASK.md`
 - `indexes/INDEX_BY_FAILURE_MODE.md`
@@ -66,7 +68,7 @@ This is not official guidance, not reproduced, and not promoted. It is a routeab
 
 ## Codex Review Follow-Up
 
-Codex Review flagged that the new live candidate card conflicted with stale Chunk 44 "no field-practice cards" scope metadata. The fix updates the active live metadata to `chunk_45_issue_23_usage_insight_triage` and adds `CHUNK_45_REPORT.md`, while preserving the historical Final Release 1 package record.
+Codex Review flagged that the new live candidate card conflicted with stale Chunk 44 "no field-practice cards" scope metadata. The fix updates the active live metadata to `chunk_45_issue_23_usage_insight_triage` and adds `CHUNK_45_REPORT.md`, while preserving the historical Final Release 1 package record. Follow-up review also required replacing stale `active_chunk.scope` packaging entries, refreshing LLM map current-content metadata, adding the Chunk 45 authorization source record, extending the remaining field-practice index routes, and splitting Issue #7 from the current Issue #23 audit pointer.
 
 ## Follow-Up Evidence Needed
 

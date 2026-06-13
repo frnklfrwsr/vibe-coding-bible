@@ -308,7 +308,7 @@ Routes: `tool.docker` → active for local reproducibility/containerized service
 
 ## Field-practice assessment prompt
 
-Routes: `vcb.field.chatgpt_pm_codex_implementer`, `vcb.field.fresh_agent_review`, `vcb.field.context_reset_between_tasks`, `vcb.field.agents_md_first`, `vcb.field.skeleton_todo_first`, `vcb.field.strict_typecheck_lint_gates`, `vcb.field.greenfield_vs_production_rule`, `vcb.field.lessons_file_loop`, `vcb.field.multi_agent_review_consensus`; `vcb.chapter.field_notes_unofficial_practices` → active fallback; `vcb.chapter.maintaining_updating_bible` → active companion.
+Routes: `vcb.field.chatgpt_pm_codex_implementer`, `vcb.field.fresh_agent_review`, `vcb.field.context_reset_between_tasks`, `vcb.field.agents_md_first`, `vcb.field.skeleton_todo_first`, `vcb.field.strict_typecheck_lint_gates`, `vcb.field.greenfield_vs_production_rule`, `vcb.field.lessons_file_loop`, `vcb.field.multi_agent_review_consensus`, `vcb.field.contract_first_segmented_handoffs`; `vcb.chapter.field_notes_unofficial_practices` → active fallback; `vcb.chapter.maintaining_updating_bible` → active companion.
 
 ```text
 Assess this Codex field practice before I adopt it.

@@ -565,6 +565,14 @@ These records are maintainer-authored synthesis aids. They are not evidence leve
 
 - Chunk 44 is packaging-only final-release artifact creation and verification from the approved RC1 revision 2 package. It adds no product/vendor facts, pricing claims, model-availability claims, cards, source-map migration, or narrative content.
 
+## Chunk 45 Source Records
+
+| Source ID | Title | URL / Location | Evidence | Verification status | Use for | Volatility |
+|---|---|---|---|---|---|---|
+| `vcb.register.editor_feedback_chunk_44` | Editor approval for Chunk 44 / Chunk 45 post-release triage gate | conversation/editor feedback | internal review | applied | Chunk 45 scoped Issue #23 usage-insight triage scope and non-scope | stable for this revision |
+
+- Chunk 45 is a scoped post-release usage-insight triage slice. It allows one candidate field-practice/workflow-pattern card for Issue #23 and does not promote or reproduce field practices.
+
 ## Issue 23 Source Records
 
 | Source ID | Title | URL / Location | Evidence | Verification status | Use for | Volatility |

@@ -2473,19 +2473,12 @@
     "status": "post_release_issue_23_triage_waiting_for_editor_review",
     "canonical_review_package": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip",
     "scope": [
-      "packaging-only final-release artifact creation and verification from approved Release Candidate 1 revision 2",
-      "convert RC status metadata to final-release status",
-      "update package names, aliases, manifest fields, README status, LLM maps, changelog/report status, and package-integrity/checksum references",
-      "verify package inventory, TREE.txt, manifest aliases, root governance, validator output, register counts, and report terminal marker",
-      "include final artifact hygiene checks, source-tree integrity reporting, and sidecar checksum convention",
-      "preserve curated-not-exhaustive tool catalog limitation",
-      "preserve deferred non-OpenAI pricing limitation",
-      "preserve candidate-only field-practice limitation",
       "triage Issue #23 as a scoped post-release usage insight",
       "allow exactly one candidate field-practice/workflow-pattern card for Issue #23",
       "preserve historical Final Release 1 package metadata",
-      "no new tool cards",
+      "update live routing, field-practice registers, LLM maps, source records, manifest inventory, and TREE.txt for the Issue #23 candidate card",
       "no field-practice promotions or reproduction claims",
+      "no new tool cards",
       "no shortcut cards",
       "no pricing snapshots",
       "no broad workflow expansion",
@@ -3705,7 +3698,7 @@
     "substantive_vcb_content_changed": false
   },
   "field_practice_status_audit": {
-    "issue": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/7",
+    "issue": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/23",
     "status": "issue_23_triage_complete",
     "date": "2026-06-12",
     "active_field_practice_cards": 10,
@@ -3735,6 +3728,9 @@
     "retired": [],
     "official_best_practice_promotions": 0,
     "notes": "Issue #7 grades the original live post-release source cards; Issue #23 adds one candidate E4 usage-insight card. Historical Final Release 1 package records remain unchanged.",
-    "issue_23": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/23"
+    "issue_23": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/23",
+    "current_issue": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/23",
+    "prior_issue_7_grading": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/7",
+    "issue_7": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/7"
   }
 }
