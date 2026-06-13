@@ -57,4 +57,8 @@ Before drafting or submitting:
 - Use `.github/ISSUE_TEMPLATE/tool-card-update.yml` for tool-card or source updates.
 - Use a PR only when the user asks for a concrete repository edit and the change does not expose private information.
 
+## Post-Release Intake
+
+Use `POST_RELEASE_CONTRIBUTION_WORKFLOW.md` before turning a usage insight into repository content. The default intake level is issue/comment only. Escalate to maintenance report, candidate card, or full chunk-style metadata only when the observation passes the documented threshold and the extra route surface is justified.
+
 <!-- VCB:STOP_RETRIEVAL reason="contribution_modes_complete" -->

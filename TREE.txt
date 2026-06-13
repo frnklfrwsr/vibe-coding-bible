@@ -69,12 +69,14 @@ FINAL_RELEASE_1_INTEGRITY.md
 LICENSE-CODE.md
 LICENSE.md
 NOTICE.md
+POST_RELEASE_CONTRIBUTION_WORKFLOW.md
 PRICING_SNAPSHOT_REGISTER.md
 README.md
 RELEASE_CANDIDATE_1_INTEGRITY.md
 SECURITY.md
 SHORTCUT_REGISTER.md
 SOURCE_REGISTER.md
+SUBAGENT_DELEGATION_POLICY.md
 TOOL_REGISTER.md
 TREE.txt
 UPDATE_PROTOCOL.md
@@ -137,7 +139,9 @@ docs/navigation/task-index.md
 docs/navigation/tool-index.md
 docs/start-here.md
 docs/use-with-ai.md
+docs/use-with-chatgpt-web.md
 docs/use-with-codex.md
+docs/vcb-parliamentarian.md
 indexes/GLOSSARY.md
 indexes/INDEX_BY_BUDGET_PROFILE.md
 indexes/INDEX_BY_CODEX_SURFACE.md
@@ -157,6 +161,7 @@ llms.txt
 maintenance-reports/fix-pr17-shortcut-routing-metadata.md
 maintenance-reports/issue-23-contract-first-segmented-handoffs-triage.md
 maintenance-reports/issue-23-vcb-skill-smoke-test.md
+maintenance-reports/issue-26-lightweight-contribution-and-integration-modes.md
 maintenance-reports/issue-3-shortcut-id-audit.md
 maintenance-reports/issue-4-ai-coding-tools-pricing-snapshot.md
 maintenance-reports/issue-5-docs-site-design.md

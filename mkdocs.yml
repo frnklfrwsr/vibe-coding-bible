@@ -15,8 +15,13 @@ nav:
   - Home: index.md
   - Start here: start-here.md
   - Use with AI: use-with-ai.md
+  - Use with ChatGPT web: use-with-chatgpt-web.md
   - Use with Codex: use-with-codex.md
+  - VCB Parliamentarian: vcb-parliamentarian.md
   - LLM usage guide: for-ai-coaches.md
+  - Repository support:
+      - Lightweight post-release workflow: https://github.com/frnklfrwsr/vibe-coding-bible/blob/main/POST_RELEASE_CONTRIBUTION_WORKFLOW.md
+      - Subagent delegation policy: https://github.com/frnklfrwsr/vibe-coding-bible/blob/main/SUBAGENT_DELEGATION_POLICY.md
   - Navigation:
       - Task index: navigation/task-index.md
       - Concept index: navigation/concept-index.md

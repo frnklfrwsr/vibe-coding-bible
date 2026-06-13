@@ -33,11 +33,17 @@ If you want an AI to use VCB as a reference, start at `AI_START_HERE.md`. Do not
 |---|---|
 | Universal AI entryway | `AI_START_HERE.md` |
 | Human setup and copy-paste prompts | `USE_VCB_WITH_AI.md` |
+| ChatGPT web / web-agent route | `docs/use-with-chatgpt-web.md` |
 | Codex skill | `.agents/skills/vcb-reference/SKILL.md` |
 | Human docs for any AI | `docs/use-with-ai.md` |
 | Human docs for Codex | `docs/use-with-codex.md` |
+| VCB Parliamentarian checkpoint | `docs/vcb-parliamentarian.md` |
+| Lightweight post-release contribution workflow | `POST_RELEASE_CONTRIBUTION_WORKFLOW.md` |
+| Subagent delegation policy | `SUBAGENT_DELEGATION_POLICY.md` |
 
 Default contribution behavior is `suggest`: AIs may suggest sanitized usage insights, corrections, or field observations, but automatic public posting is not the default.
+
+This repository documents VCB Parliamentarian / Constitutionalist mode without shipping `.codex/agents/vcb-parliamentarian.toml`; no clear current project custom-agent convention for `.codex/agents/*.toml` was found locally.
 
 ## Current Chunk
 

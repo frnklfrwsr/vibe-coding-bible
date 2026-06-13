@@ -12,6 +12,8 @@ Use the Vibe Coding Bible as a reference: https://github.com/frnklfrwsr/vibe-cod
 
 Then describe your task in one or two paragraphs. Include whether you are new to coding, new to Codex, working in a new project, debugging an existing project, low on budget, or comparing tools.
 
+For ChatGPT web or other public web-agent use, see `docs/use-with-chatgpt-web.md`.
+
 ## Which VCB Source To Use
 
 The canonical VCB repository is `https://github.com/frnklfrwsr/vibe-coding-bible`.
@@ -65,5 +67,7 @@ The default contribution mode is `suggest`.
 That means the AI may say: "This looks like a reusable VCB lesson. Consider filing a sanitized usage insight." It must not post publicly or open a PR unless you explicitly ask and the content is safe.
 
 Use `CONTRIBUTION_MODES.md` for privacy rules and `.github/ISSUE_TEMPLATE/usage-insight.yml` for sanitized usage observations.
+
+For post-release triage, use `POST_RELEASE_CONTRIBUTION_WORKFLOW.md` to choose between issue/comment only, maintenance report only, candidate card, and full chunk-style metadata.
 
 <!-- VCB:STOP_RETRIEVAL reason="human_ai_usage_guide_complete" -->

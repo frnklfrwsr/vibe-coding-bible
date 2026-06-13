@@ -24,6 +24,12 @@ The repository skill file is:
 
 The skill tells Codex to classify the situation, route through `AI_START_HERE.md` and the LLM maps, retrieve only the smallest useful VCB files, respect stop markers, preserve evidence status, and suggest only sanitized contributions by default.
 
+## VCB Parliamentarian checkpoint
+
+For a read-only checkpoint before mutation, dependency/tool adoption, PR creation, merge, deploy, release, or a "done" claim, use [VCB Parliamentarian / Constitutionalist Mode](vcb-parliamentarian.md).
+
+This repository does not ship `.codex/agents/vcb-parliamentarian.toml` because no clear current local project custom-agent convention was found. Use the documented prompt/skill route unless your Codex environment provides an official custom-agent convention.
+
 ## Source Selection
 
 The canonical VCB repository is `https://github.com/frnklfrwsr/vibe-coding-bible`.
@@ -39,6 +45,8 @@ For public issues, comments, and PRs, target the canonical GitHub repo. If local
 3. Ask Codex to apply the guidance to your current repo or plan.
 4. Ask for verification steps before accepting code changes.
 5. If a reusable lesson appears, ask Codex to draft a sanitized usage insight instead of publishing private details.
+
+For bounded parallel work, use the repository source policy: [SUBAGENT_DELEGATION_POLICY.md](https://github.com/frnklfrwsr/vibe-coding-bible/blob/main/SUBAGENT_DELEGATION_POLICY.md).
 
 ## What To Avoid
 
