@@ -529,6 +529,31 @@ def validate_field_practice_register(errors: list[str]) -> None:
             errors.append(f"FIELD_PRACTICES.md status {status!r} is not declared in Status Labels {sorted(statuses)}")
 
 
+def field_practice_register_status_by_id() -> dict[str, str]:
+    text = read(ROOT / "FIELD_PRACTICES.md")
+    if "## Candidate Field Practice Routing Table" not in text or "## Field-Practice Evaluation Prompt" not in text:
+        return {}
+    block = text.split("## Candidate Field Practice Routing Table", 1)[1].split("## Field-Practice Evaluation Prompt", 1)[0]
+    header: list[str] | None = None
+    rows: dict[str, str] = {}
+    for line in block.splitlines():
+        s = line.strip()
+        if not s.startswith("|") or set(s.replace("|", "").strip()) <= {"-", ":"}:
+            continue
+        cells = [c.strip() for c in s.strip("|").split("|")]
+        if header is None:
+            header = cells
+            continue
+        id_index = next((i for i, cell in enumerate(header) if cell == "ID" or cell.endswith(" ID")), None)
+        if len(cells) != len(header) or id_index is None or "Current register status" not in header:
+            continue
+        id_cell = cells[id_index]
+        match = re.search(r"`(vcb\.field\.[A-Za-z0-9_.-]+)`", id_cell)
+        if match:
+            rows[match.group(1)] = cells[header.index("Current register status")]
+    return rows
+
+
 def active_topic_files() -> list[Path]:
     files = [p for p in (ROOT / "chapters").glob("*.md")]
     files.extend(p for p in (ROOT / "topics").glob("*/*.md"))
@@ -8569,7 +8594,10 @@ def _register_status_counts(path: Path, id_prefix: str) -> Counter:
             continue
         cells = [c.strip() for c in line.strip().strip("|").split("|")]
         for cell in cells[1:]:
-            if cell in {"active", "planned", "deferred_planned", "candidate", "promoted", "deprecated", "retired", "active_snapshot", "deferred"}:
+            if cell in {
+                "active", "planned", "deferred_planned", "candidate", "reproduced", "needs_more_evidence",
+                "promoted", "deprecated", "retired", "active_snapshot", "deferred",
+            }:
                 counts[cell] += 1
                 break
     return counts
@@ -9029,6 +9057,34 @@ def _chunk_43_integrity_table_value(text: str, key: str) -> str | None:
     pattern = rf"`{re.escape(key)}`\s*\|\s*`?([^`|\n]+)`?"
     match = re.search(pattern, text)
     return match.group(1).strip() if match else None
+
+
+def validate_final_release_1_historical_integrity_record(errors: list[str]) -> str:
+    integrity_rel = "FINAL_RELEASE_1_INTEGRITY.md"
+    integrity_path = ROOT / integrity_rel
+    if not integrity_path.exists():
+        errors.append(f"{integrity_rel} missing")
+        return ""
+    integrity = read(integrity_path)
+    observed_inventory_hash = _chunk_43_integrity_table_value(integrity, "manifest_inventory_sha256")
+    observed_content_hash = _chunk_43_integrity_table_value(integrity, "source_content_manifest_sha256_excluding_this_file")
+    observed_count = _chunk_43_integrity_table_value(integrity, "source_file_count")
+    if observed_inventory_hash != FINAL_RELEASE_1_HISTORICAL_INVENTORY_SHA256:
+        errors.append(
+            f"{integrity_rel} historical manifest_inventory_sha256 changed: "
+            f"{observed_inventory_hash!r} != {FINAL_RELEASE_1_HISTORICAL_INVENTORY_SHA256}"
+        )
+    if observed_content_hash != FINAL_RELEASE_1_HISTORICAL_CONTENT_SHA256:
+        errors.append(
+            f"{integrity_rel} historical source_content_manifest_sha256_excluding_this_file changed: "
+            f"{observed_content_hash!r} != {FINAL_RELEASE_1_HISTORICAL_CONTENT_SHA256}"
+        )
+    if observed_count != FINAL_RELEASE_1_HISTORICAL_SOURCE_FILE_COUNT:
+        errors.append(
+            f"{integrity_rel} historical source_file_count changed: "
+            f"{observed_count!r} != {FINAL_RELEASE_1_HISTORICAL_SOURCE_FILE_COUNT}"
+        )
+    return integrity
 
 
 def validate_chunk_43_release_candidate_packaging(manifest: dict[str, Any], errors: list[str]) -> None:
@@ -9521,6 +9577,7 @@ def validate_chunk_45_issue_23_usage_insight_triage(manifest: dict[str, Any], er
     report_rel = "CHUNK_45_REPORT.md"
     maintenance_rel = "maintenance-reports/issue-23-contract-first-segmented-handoffs-triage.md"
     expected_package = "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip"
+    validate_final_release_1_historical_integrity_record(errors)
 
     def require_terms(rel: str, terms: list[str]) -> str:
         path = ROOT / rel
@@ -9616,13 +9673,41 @@ def validate_chunk_45_issue_23_usage_insight_triage(manifest: dict[str, Any], er
             errors.append(f"manifest.source_files missing Chunk 45 file: {rel}")
 
     live_inventory = manifest.get("live_repository_inventory", {})
-    if live_inventory.get("active_field_practice_cards") != 10:
-        errors.append("manifest.live_repository_inventory.active_field_practice_cards must be 10 after Issue #23 triage")
-    if live_inventory.get("candidate_field_practices") != 6:
-        errors.append("manifest.live_repository_inventory.candidate_field_practices must be 6 after Issue #23 triage")
+    field_register_rows = field_practice_register_status_by_id()
+    field_register_counts = _register_status_counts(ROOT / "FIELD_PRACTICES.md", "vcb.field.")
+    expected_field_counts = {
+        "candidate": 6,
+        "reproduced": 2,
+        "needs_more_evidence": 2,
+        "promoted": 0,
+        "deferred": 0,
+        "retired": 0,
+    }
+    if len(field_register_rows) != 10:
+        errors.append(f"FIELD_PRACTICES.md must derive 10 active field-practice cards after Issue #23 triage: {len(field_register_rows)}")
+    if live_inventory.get("active_field_practice_cards") != len(field_register_rows):
+        errors.append(
+            "manifest.live_repository_inventory.active_field_practice_cards must match FIELD_PRACTICES.md "
+            f"derived count: {live_inventory.get('active_field_practice_cards')!r} != {len(field_register_rows)}"
+        )
     status_counts = live_inventory.get("field_practice_status_counts", {})
-    if status_counts.get("candidate") != 6 or status_counts.get("reproduced") != 2 or status_counts.get("needs_more_evidence") != 2:
-        errors.append("manifest.live_repository_inventory.field_practice_status_counts must be candidate=6, reproduced=2, needs_more_evidence=2")
+    for status, expected_count in expected_field_counts.items():
+        register_count = int(field_register_counts.get(status, 0))
+        manifest_count = int(status_counts.get(status, 0))
+        if register_count != expected_count:
+            errors.append(f"FIELD_PRACTICES.md derived {status} count must be {expected_count}: {register_count}")
+        if manifest_count != register_count:
+            errors.append(
+                f"manifest.live_repository_inventory.field_practice_status_counts.{status} must match FIELD_PRACTICES.md: "
+                f"{manifest_count} != {register_count}"
+            )
+    if live_inventory.get("candidate_field_practices") != int(field_register_counts.get("candidate", 0)):
+        errors.append(
+            "manifest.live_repository_inventory.candidate_field_practices must match FIELD_PRACTICES.md "
+            f"candidate count: {live_inventory.get('candidate_field_practices')!r} != {int(field_register_counts.get('candidate', 0))}"
+        )
+    if field_register_rows.get(card_id) != "candidate":
+        errors.append(f"FIELD_PRACTICES.md must include {card_id} with candidate status")
     if live_inventory.get("field_practice_status_audit") != "issue_23_contract_first_segmented_handoffs_triage":
         errors.append("manifest.live_repository_inventory.field_practice_status_audit must point to the Issue #23 triage")
 

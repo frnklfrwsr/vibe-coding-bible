@@ -387,7 +387,7 @@ Chunk 44 packages **Final Release 1** as a packaging-only artifact from approved
 
 **Final release artifact:** `vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip`  
 **Approved source baseline:** `vibe-coding-bible-release-candidate-1-revision-2-20260612T040000Z-authoritative.zip`  
-**Final release state:** final-release package produced from the approved RC gate; package acceptance remains subject to the active editor gate.
+**Final release state:** Final Release 1 was produced from the approved RC gate and editor-approved; later post-release maintenance such as Chunk 45 remains subject to its own active editor gate.
 
 The historical Final Release 1 package preserves the documented limitations approved through the RC gate:
 
