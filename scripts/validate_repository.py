@@ -391,8 +391,17 @@ def validate_manifest_package_counts(manifest: dict[str, Any], actual: list[str]
             errors.append(f"manifest.source_artifacts.{key} does not match actual package inventory: {source_artifacts.get(key)!r} != {expected}")
 
     artifact_hygiene = manifest.get("artifact_hygiene", {}) if isinstance(manifest.get("artifact_hygiene"), dict) else {}
+    artifact_hygiene_is_historical_final_release = artifact_hygiene.get("inventory_basis") == "historical_final_release_1_package"
     for key in ("actual_package_inventory_count", "source_file_count", "source_files_count"):
-        if key in artifact_hygiene and int(artifact_hygiene.get(key, -1)) != expected:
+        if key not in artifact_hygiene:
+            continue
+        if artifact_hygiene_is_historical_final_release:
+            if int(artifact_hygiene.get(key, -1)) != FINAL_RELEASE_1_HISTORICAL_SOURCE_FILE_COUNT_INT:
+                errors.append(
+                    f"manifest.artifact_hygiene.{key} must preserve historical Final Release 1 inventory count: "
+                    f"{artifact_hygiene.get(key)!r} != {FINAL_RELEASE_1_HISTORICAL_SOURCE_FILE_COUNT_INT}"
+                )
+        elif int(artifact_hygiene.get(key, -1)) != expected:
             errors.append(f"manifest.artifact_hygiene.{key} does not match actual package inventory: {artifact_hygiene.get(key)!r} != {expected}")
     hygiene_live = artifact_hygiene.get("live_repository_inventory", {}) if isinstance(artifact_hygiene.get("live_repository_inventory"), dict) else {}
     for key in package_count_keys:
@@ -9533,6 +9542,30 @@ def validate_chunk_45_issue_23_usage_insight_triage(manifest: dict[str, Any], er
         errors.append("manifest.active_chunk must not use canonical_review_package for post-release Chunk 45 live review")
     if active.get("historical_package_reference") != expected_package:
         errors.append("manifest.active_chunk.historical_package_reference must preserve the Final Release 1 package reference")
+    final_packaging = manifest.get("final_release_packaging", {}) if isinstance(manifest.get("final_release_packaging"), dict) else {}
+    if final_packaging.get("status") != "final_release_package_produced_and_editor_approved":
+        errors.append("manifest.final_release_packaging.status must mark Final Release 1 as produced and editor-approved after Chunk 44 approval")
+    finalization = manifest.get("finalization_readiness_audit", {}) if isinstance(manifest.get("finalization_readiness_audit"), dict) else {}
+    if finalization.get("final_release_status") != "final_release_1_packaged_and_editor_approved":
+        errors.append("manifest.finalization_readiness_audit.final_release_status must mark Final Release 1 as packaged and editor-approved")
+
+    artifact_hygiene = manifest.get("artifact_hygiene", {}) if isinstance(manifest.get("artifact_hygiene"), dict) else {}
+    if artifact_hygiene.get("inventory_basis") != "historical_final_release_1_package":
+        errors.append("manifest.artifact_hygiene.inventory_basis must keep top-level package aliases historical")
+    for key in ("source_file_count", "source_files_count", "actual_package_inventory_count"):
+        if int(artifact_hygiene.get(key, -1)) != FINAL_RELEASE_1_HISTORICAL_SOURCE_FILE_COUNT_INT:
+            errors.append(f"manifest.artifact_hygiene.{key} must preserve Final Release 1 historical count")
+    if not isinstance(artifact_hygiene.get("live_repository_inventory"), dict):
+        errors.append("manifest.artifact_hygiene.live_repository_inventory must carry live source-tree counts")
+
+    governance = manifest.get("public_repository_governance", {}) if isinstance(manifest.get("public_repository_governance"), dict) else {}
+    if governance.get("snapshot_scope") != "historical_v1.0.1_public_repository_governance_branch":
+        errors.append("manifest.public_repository_governance.snapshot_scope must mark the governance block as historical")
+    current_governance = governance.get("current_live_chunk_45", {}) if isinstance(governance.get("current_live_chunk_45"), dict) else {}
+    if current_governance.get("substantive_vcb_content_changed") is not True:
+        errors.append("manifest.public_repository_governance.current_live_chunk_45.substantive_vcb_content_changed must be true")
+    if current_governance.get("topic_id") != card_id:
+        errors.append("manifest.public_repository_governance.current_live_chunk_45.topic_id must name the Issue #23 candidate card")
 
     scope_text = " ".join(map(str, active.get("scope", [])))
     for term in [
@@ -9605,8 +9638,16 @@ def validate_chunk_45_issue_23_usage_insight_triage(manifest: dict[str, Any], er
     if candidate_cards.get(card_id) != card_rel:
         errors.append("manifest.field_practice_candidate_cards must map the Issue #23 candidate card")
 
-    card = require_terms(card_rel, [
-        "field_practice_status: candidate",
+    card_path = ROOT / card_rel
+    card_fm = parse_frontmatter(card_path) or {}
+    if card_fm.get("status") != "active":
+        errors.append(f"{card_rel} frontmatter status must be active")
+    if card_fm.get("field_practice_status") != "candidate":
+        errors.append(f"{card_rel} frontmatter field_practice_status must be candidate")
+    if str(card_fm.get("officially_endorsed", "")).lower() != "false":
+        errors.append(f"{card_rel} frontmatter officially_endorsed must be false")
+
+    require_terms(card_rel, [
         "evidence_level: E4_COMMUNITY_FIELD_REPORT",
         "not official guidance",
         "not reproduced",
@@ -9614,8 +9655,6 @@ def validate_chunk_45_issue_23_usage_insight_triage(manifest: dict[str, Any], er
         source_id,
         "VCB:STOP_RETRIEVAL",
     ])
-    if "status: active" not in card:
-        errors.append(f"{card_rel} must remain an active retrieval card while its field_practice_status is candidate")
 
     for rel in [
         "README.md",
@@ -9642,9 +9681,14 @@ def validate_chunk_45_issue_23_usage_insight_triage(manifest: dict[str, Any], er
 
     require_terms("chapters/36-field-notes-unofficial-practices.md", [
         "Contract-first segmented handoffs",
-        "candidate / E4 community field report only; not reproduced or official",
+        "candidate / E4_COMMUNITY_FIELD_REPORT only; not reproduced or official",
     ])
     require_terms("SOURCE_REGISTER.md", [source_id, "E4_COMMUNITY_FIELD_REPORT", "not reproduction or official guidance"])
+    source_register_fm = parse_frontmatter(ROOT / "SOURCE_REGISTER.md") or {}
+    if source_register_fm.get("status") != "chunk_45_updated":
+        errors.append("SOURCE_REGISTER.md frontmatter status must be chunk_45_updated")
+    if source_register_fm.get("version") != "1.0.1-post-release.issue23.chunk45":
+        errors.append("SOURCE_REGISTER.md frontmatter version must identify Issue #23 Chunk 45")
     require_terms("CHANGELOG.md", ["Chunk 45", card_id, "narrow Chapter 36"])
     require_terms("TREE.txt", [card_rel, report_rel, maintenance_rel])
     require_terms(report_rel, [
@@ -9653,6 +9697,7 @@ def validate_chunk_45_issue_23_usage_insight_triage(manifest: dict[str, Any], er
         "Chapter 36",
         "candidate-inventory row",
         "No narrative chapter rewrites",
+        "scripts/validate_repository.py",
     ])
     require_terms(maintenance_rel, [
         "E4_COMMUNITY_FIELD_REPORT",

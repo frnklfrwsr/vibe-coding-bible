@@ -2,15 +2,15 @@
 id: vcb.register.sources
 title: SOURCE_REGISTER
 artifact_type: register
-version: 1.0.1-postrelease.issue4
-status: issue_4_ai_coding_tools_pricing_sources
+version: 1.0.1-post-release.issue23.chunk45
+status: chunk_45_updated
 created_on: '2026-06-08'
 last_verified: '2026-06-12'
 next_review_due: '2026-07-12'
 review_cadence: monthly
 ---
 
-<!-- VCB:BEGIN_REGISTER id=vcb.register.sources version=1.0.1-postrelease.issue4 -->
+<!-- VCB:BEGIN_REGISTER id=vcb.register.sources version=1.0.1-post-release.issue23.chunk45 -->
 
 # SOURCE_REGISTER
 

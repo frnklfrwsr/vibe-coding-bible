@@ -77,6 +77,7 @@ Explicit non-scope:
 - `llms-full.txt`
 - `llms.txt`
 - `manifest.json`
+- `scripts/validate_repository.py`
 
 ## Triage Result
 

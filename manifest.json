@@ -2198,6 +2198,8 @@
   },
   "artifact_hygiene": {
     "canonical_review_package": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip",
+    "inventory_basis": "historical_final_release_1_package",
+    "source_tree_status": "historical Final Release 1 package aliases only; live post-release source-tree counts live in manifest.live_repository_inventory",
     "policy": "one timestamped authoritative final-release zip only",
     "tree_txt_policy": "TREE.txt is generated/non-canonical inventory support. manifest.json remains the machine-readable source map.",
     "do_not_submit_prior_artifacts": [
@@ -2208,9 +2210,9 @@
     "generated_non_canonical_files": [
       "TREE.txt"
     ],
-    "source_file_count": 390,
-    "source_files_count": 390,
-    "actual_package_inventory_count": 390,
+    "source_file_count": 333,
+    "source_files_count": 333,
+    "actual_package_inventory_count": 333,
     "duplicate_zip_entries": 0,
     "pycache_entries": 0,
     "integrity_report": "FINAL_RELEASE_1_INTEGRITY.md",
@@ -3511,7 +3513,7 @@
       "narrative chapters"
     ],
     "disposition_pointer": "final_release_packaging",
-    "final_release_status": "final_release_1_packaged_waiting_for_editor_review",
+    "final_release_status": "final_release_1_packaged_and_editor_approved",
     "final_release_package": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip"
   },
   "release_candidate_scope_disposition_cleanup": {
@@ -3626,7 +3628,7 @@
   },
   "final_release_packaging": {
     "id": "chunk_44_final_release_packaging",
-    "status": "final_release_package_produced_waiting_for_editor_review",
+    "status": "final_release_package_produced_and_editor_approved",
     "final_release_label": "Final Release 1",
     "final_release_package": "vibe-coding-bible-final-release-1-20260612T050000Z-authoritative.zip",
     "approved_source_baseline": "vibe-coding-bible-release-candidate-1-revision-2-20260612T040000Z-authoritative.zip",
@@ -3668,6 +3670,7 @@
   },
   "public_repository_governance": {
     "status": "v1.0.1_public_repo_governance_branch",
+    "snapshot_scope": "historical_v1.0.1_public_repository_governance_branch",
     "branch": "v1.0.1-public-repo-governance",
     "content_license": "Creative Commons Attribution 4.0 International",
     "content_license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -3696,7 +3699,16 @@
       "normalizes_relative_paths_to_posix": true,
       "final_release_integrity_records_preserved_as_historical": true
     },
-    "substantive_vcb_content_changed": false
+    "substantive_vcb_content_changed": false,
+    "substantive_vcb_content_changed_scope": "false applies only to the historical v1.0.1 public-governance branch snapshot before post-release candidate-card additions",
+    "current_live_chunk_45": {
+      "substantive_vcb_content_changed": true,
+      "content_change": "one candidate field-practice/workflow-pattern card added for Issue #23",
+      "topic_id": "vcb.field.contract_first_segmented_handoffs",
+      "evidence_level": "E4_COMMUNITY_FIELD_REPORT",
+      "not_promoted": true,
+      "not_reproduced": true
+    }
   },
   "field_practice_status_audit": {
     "issue": "https://github.com/frnklfrwsr/vibe-coding-bible/issues/23",
